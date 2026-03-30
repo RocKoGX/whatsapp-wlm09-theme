@@ -22,8 +22,8 @@
     --btn-danger-from:  #e05050;
     --btn-danger-to:    #b02020;
 
-    --text-mid:      #2c4a7c;
-    --text-light:    #ffffff;
+    --text-mid:  #2c4a7c;
+    --text-light:#ffffff;
 
     --radius-sm: 4px;
     --radius-md: 7px;
@@ -64,10 +64,7 @@ body {
 
 .titlebar__left { display: flex; align-items: center; gap: 6px; }
 
-.titlebar__icon {
-    width: 16px; height: 16px;
-    image-rendering: pixelated;
-}
+.titlebar__icon { width: 16px; height: 16px; image-rendering: pixelated; }
 
 .titlebar__text {
     font-size: 11px; font-weight: bold;
@@ -85,11 +82,10 @@ body {
     color: rgba(255,255,255,0.85);
     background: rgba(255,255,255,0.12);
     border: 1px solid rgba(255,255,255,0.2);
-    transition: background 0.12s;
-    line-height: 1;
+    transition: background 0.12s; line-height: 1;
 }
-.titlebar__btn:hover           { background: rgba(255,255,255,0.28); }
-.titlebar__btn--close:hover    { background: rgba(200,40,40,0.75); }
+.titlebar__btn:hover        { background: rgba(255,255,255,0.28); }
+.titlebar__btn--close:hover { background: rgba(200,40,40,0.75); }
 
 /* ── Cuerpo ─────────────────────────────────────────────────── */
 .body {
@@ -114,11 +110,7 @@ body {
     border-bottom: 1px solid rgba(100,160,220,0.3);
 }
 
-.section__icon {
-    width: 14px; height: 14px;
-    image-rendering: pixelated;
-}
-
+.section__icon      { width: 14px; height: 14px; image-rendering: pixelated; }
 .section__icon-text { font-size: 13px; line-height: 1; }
 
 .section__title {
@@ -135,37 +127,18 @@ body {
 }
 
 .theme-swatch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    cursor: pointer;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 4px; cursor: pointer;
 }
 
 .theme-swatch__circle {
-    width: 36px; height: 36px;
-    border-radius: 50%;
+    width: 36px; height: 36px; border-radius: 50%;
     border: 2px solid rgba(0,0,0,0.15);
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.45), 0 1px 3px rgba(0,0,0,0.2);
-    transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s;
-    position: relative;
+    transition: transform 0.12s, box-shadow 0.12s;
 }
 
-.theme-swatch:hover .theme-swatch__circle {
-    transform: scale(1.1);
-    box-shadow: inset 0 2px 0 rgba(255,255,255,0.55), 0 2px 6px rgba(0,0,0,0.3);
-}
-
-/* Check de selección */
-.theme-swatch__circle::after {
-    content: '';
-    display: none;
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    border: 3px solid rgba(255,255,255,0.9);
-    box-shadow: 0 0 0 2px rgba(0,0,0,0.25);
-}
+.theme-swatch:hover .theme-swatch__circle { transform: scale(1.1); }
 
 .theme-swatch.active .theme-swatch__circle {
     border-color: rgba(0,0,0,0.4);
@@ -177,31 +150,73 @@ body {
 }
 
 .theme-swatch__name {
-    font-size: 9px;
-    color: var(--text-mid);
-    text-align: center;
-    letter-spacing: 0.02em;
-    line-height: 1.2;
+    font-size: 9px; color: var(--text-mid);
+    text-align: center; letter-spacing: 0.02em; line-height: 1.2;
 }
+.theme-swatch.active .theme-swatch__name { font-weight: bold; color: #1a3a6a; }
 
-.theme-swatch.active .theme-swatch__name {
-    font-weight: bold;
-    color: #1a3a6a;
-}
-
-/* Fila de etiqueta del tema activo */
 .theme-label-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 2px;
+    display: flex; align-items: center; justify-content: center; padding-top: 2px;
 }
 
 .theme-active-label {
-    font-size: 10px;
-    color: rgba(44,74,124,0.6);
-    font-style: italic;
-    letter-spacing: 0.02em;
+    font-size: 10px; color: rgba(44,74,124,0.6);
+    font-style: italic; letter-spacing: 0.02em;
+}
+
+/* ── Escena de fondo ─────────────────────────────────────────── */
+.scene-preview {
+    width: 100%; height: 70px;
+    border: 1px solid rgba(100,160,220,0.45);
+    border-radius: var(--radius-sm);
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(180,210,240,0.25) 0px, rgba(180,210,240,0.25) 4px,
+        transparent 4px, transparent 12px
+    );
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; position: relative;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.scene-preview__placeholder {
+    font-size: 10px; color: rgba(44,74,124,0.45);
+    font-style: italic; letter-spacing: 0.02em; text-align: center;
+    padding: 0 8px;
+}
+
+.scene-preview__img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: none; position: absolute; inset: 0;
+}
+.scene-preview__img.visible { display: block; }
+
+/* Badge "activa" sobre la escena seleccionada en el grid */
+.scene-preview__badge {
+    position: absolute; top: 4px; right: 4px;
+    font-size: 8px; color: rgba(255,255,255,0.85);
+    background: rgba(0,0,0,0.35); border-radius: 2px;
+    padding: 1px 5px; display: none;
+}
+.scene-preview__badge.visible { display: block; }
+
+/* ── Escenas en el grid: selección única ─────────────────────── */
+/* Reutiliza .image-grid e .image-item del banner,
+   pero la escena seleccionada tiene un check verde en lugar de X roja */
+
+.image-item.scene-active {
+    border-color: #2a9d4e;
+    box-shadow: 0 0 0 2px #2a9d4e;
+}
+
+.image-item.scene-active::after {
+    content: '✓';
+    position: absolute; inset: 0;
+    background: rgba(30,140,60,0.25);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 20px; font-weight: bold;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
 /* ── Banner preview ──────────────────────────────────────────── */
@@ -211,10 +226,8 @@ body {
     border-radius: var(--radius-sm);
     background: repeating-linear-gradient(
         45deg,
-        rgba(180,210,240,0.25) 0px,
-        rgba(180,210,240,0.25) 4px,
-        transparent 4px,
-        transparent 12px
+        rgba(180,210,240,0.25) 0px, rgba(180,210,240,0.25) 4px,
+        transparent 4px, transparent 12px
     );
     display: flex; align-items: center; justify-content: center;
     overflow: hidden; position: relative;
@@ -222,14 +235,12 @@ body {
 }
 
 .banner-preview__placeholder {
-    font-size: 10px;
-    color: rgba(44,74,124,0.45);
+    font-size: 10px; color: rgba(44,74,124,0.45);
     font-style: italic; letter-spacing: 0.02em;
 }
 
 .banner-preview__img {
-    width: 100%; height: 100%;
-    object-fit: contain;
+    width: 100%; height: 100%; object-fit: contain;
     display: none; position: absolute; inset: 0;
 }
 .banner-preview__img.visible { display: block; }
@@ -247,8 +258,7 @@ body {
 
 .btn--primary {
     background: linear-gradient(to bottom, var(--btn-primary-from), var(--btn-primary-to));
-    border-color: rgba(0,80,160,0.55);
-    color: #fff;
+    border-color: rgba(0,80,160,0.55); color: #fff;
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.45), 0 1px 3px rgba(0,0,0,0.25);
     text-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
@@ -256,8 +266,7 @@ body {
 
 .btn--ghost {
     background: rgba(255,255,255,0.5);
-    border-color: rgba(100,160,220,0.5);
-    color: var(--text-mid);
+    border-color: rgba(100,160,220,0.5); color: var(--text-mid);
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
 }
 .btn--ghost:hover { background: rgba(255,255,255,0.75); }
@@ -273,12 +282,12 @@ body {
 .btn__icon { font-size: 14px; line-height: 1; }
 .hidden    { display: none !important; }
 
-/* ── Grid de imágenes ────────────────────────────────────────── */
+/* ── Grid de imágenes (compartido por escena y banner) ───────── */
 .image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
-    max-height: 150px;
+    max-height: 120px;
     overflow-y: auto;
     padding-right: 2px;
 }
@@ -303,6 +312,7 @@ body {
 .image-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .image-item:hover { border-color: var(--aero-2); box-shadow: 0 0 0 1px var(--aero-2); }
 
+/* Seleccionado para borrar (banner) */
 .image-item.selected { border-color: #e04040; box-shadow: 0 0 0 2px #e04040; }
 .image-item.selected::after {
     content: '✕'; position: absolute; inset: 0;

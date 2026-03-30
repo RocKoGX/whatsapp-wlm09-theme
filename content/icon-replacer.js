@@ -195,11 +195,31 @@ const IconReplacer = (() => {
 
         container.parentElement.replaceChild(placeholder, container);
 
-        container.style.transform = 'scale(1.3)';
+        container.style.transform = 'scale(1.7)';
         container.style.transformOrigin = 'left center';
+        container.style.top = '7px';
 
         // 🔥 mover el nodo REAL
         logo.replaceWith(container);
+
+        // 👇 TEXTO AL LADO DEL AVATAR
+        if (!container.querySelector('.wlm-userinfo')) {
+            const userInfo = document.createElement('div');
+            userInfo.className = 'wlm-userinfo';
+
+            const name = document.createElement('div');
+            name.className = 'wlm-username';
+            name.textContent = 'RocKo24';
+
+            const status = document.createElement('div');
+            status.className = 'wlm-status';
+            status.textContent = 'Disponible';
+
+            userInfo.appendChild(name);
+            userInfo.appendChild(status);
+
+            container.appendChild(userInfo);
+        }
 
         // ✅ 👇 AGREGA ESTA LÍNEA
         container.classList.add('wlm-avatar-frame');
@@ -337,6 +357,38 @@ function injectWLMTitleBar2() {
         `);
     }
 
+    function injectAvatarNickname() {
+
+        injectCSS('wlm-username-style', `
+            .wlm-avatar-frame {
+                display: flex !important;
+                align-items: center !important;
+                gap: 12px;
+            }
+
+            /* contenedor vertical */
+            .wlm-userinfo {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 32px;
+            }
+
+            /* nombre */
+            .wlm-username {
+                font: 9pt "Segoe UI", sans-serif;
+                color: black;
+                text-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 5px #fff, 0 0 1px #fff;
+            }
+
+            /* estado */
+            .wlm-status {
+                font: 6pt "Segoe UI", sans-serif;
+                color: #000000;
+            }
+            `);
+    }
+
     // ─── Inicialización única de estilos CSS ─────────────────────────────────
     // (se llaman una sola vez, no en cada mutación)
     function initStyles() {
@@ -347,7 +399,7 @@ function injectWLMTitleBar2() {
         injectDefaultProfilePictures();
         injectAvatarFrame();
         keepAvatarFrame();
-
+        injectAvatarNickname();
     }
 
     // ─── Función pública: ejecutar en cada mutación del DOM ──────────────────

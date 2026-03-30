@@ -1,7 +1,7 @@
 {
-  "manifest_version": 1.0,
+  "manifest_version": 3,
   "name": "WhatsApp Web WLM Layout",
-  "version": "1.0",
+  "version": "1.1.0",
   "description": "Tema completo de Windows Live Messenger para WhatsApp Web. Incluye colores personalizados",
   "permissions": [
     "storage",

@@ -1,9 +1,7 @@
 // content/style-injector.js
-// Inyecta wlm-theme.css y restaura el tema de color guardado
+// Inyecta wlm-theme.css, restaura el tema de color y la escena de fondo guardados
 
 (() => {
-
-    const STORAGE_KEY_THEME = 'wlm_color_theme';
 
     // ─── Inyectar hoja de estilos principal ──────────────────
     function injectThemeCSS() {
@@ -17,14 +15,10 @@
     }
 
     // ─── Restaurar variables del tema guardado ────────────────
-    // Las variables se definen en popup.js (WLM_THEMES).
-    // El content script no tiene acceso al array del popup,
-    // así que guardamos el CSS completo de variables junto al ID.
     function restoreSavedTheme() {
-        chrome.storage.local.get(['wlm_color_theme', 'wlm_theme_css'], result => {
+        chrome.storage.local.get('wlm_theme_css', result => {
             const css = result['wlm_theme_css'];
-            if (!css) return;  // sin tema guardado → usa el azul por defecto del :root
-
+            if (!css) return;
             let el = document.getElementById('wlm-color-theme');
             if (!el) {
                 el = document.createElement('style');
@@ -35,10 +29,35 @@
         });
     }
 
-    // ─── Esperar a que <head> esté disponible ─────────────────
+    // ─── Restaurar escena de fondo seleccionada ───────────────
+    // Si el usuario eligió una imagen propia, sobreescribe el
+    // <style id="wlm-gradient-scene"> que crea icon-replacer.js.
+    // Usamos un retry porque icon-replacer.js lo inyecta después.
+    function restoreSavedScene() {
+        chrome.storage.local.get('wlm_scene_selected', result => {
+            const url = result['wlm_scene_selected'];
+            if (!url) return; // null → escena predeterminada, no hacer nada
+
+            const cls = '.x570efc.x9f619.x78zum5.x1okw0bk.x6s0dn4.x1peatla.x14ug900.x1280gxy.x889kno.x1a8lsjc.x106a9eq.x1xnnf8n';
+            const css = `${cls} { background: url('${url}') no-repeat center / cover, var(--wlm-1) !important; }`;
+
+            let attempts = 0;
+            const tryInject = setInterval(() => {
+                const el = document.getElementById('wlm-gradient-scene');
+                if (el) {
+                    el.textContent = css;
+                    clearInterval(tryInject);
+                }
+                if (++attempts > 20) clearInterval(tryInject); // máx ~2 segundos
+            }, 100);
+        });
+    }
+
+    // ─── Inicializar ──────────────────────────────────────────
     function init() {
         injectThemeCSS();
         restoreSavedTheme();
+        restoreSavedScene();
     }
 
     if (document.head) {

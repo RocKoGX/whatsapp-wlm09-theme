@@ -30,13 +30,41 @@
                 <span class="section__icon-text">🎨</span>
                 <span class="section__title">Tema de color</span>
             </div>
-
-            <div class="theme-grid" id="themeGrid">
-                <!-- Generado por popup.js -->
-            </div>
-
+            <div class="theme-grid" id="themeGrid"></div>
             <div class="theme-label-row">
                 <span class="theme-active-label" id="themeActiveLabel">Azul (predeterminado)</span>
+            </div>
+        </section>
+
+        <!-- ── Sección: Escena de fondo ── -->
+        <section class="section">
+            <div class="section__header">
+                <span class="section__icon-text">🖼️</span>
+                <span class="section__title">Escena de fondo</span>
+            </div>
+
+            <div class="scene-preview" id="scenePreview">
+                <span class="scene-preview__placeholder" id="scenePlaceholder">
+                    Usando escena predeterminada
+                </span>
+                <img class="scene-preview__img" id="scenePreviewImg" src="" alt="Escena activa" />
+                <div class="scene-preview__badge" id="sceneBadge"></div>
+            </div>
+
+            <label class="btn btn--primary" for="sceneInput">
+                <span class="btn__icon">＋</span> Agregar escenas
+            </label>
+            <input type="file" id="sceneInput" accept="image/*" multiple hidden />
+
+            <div class="image-grid" id="sceneList"></div>
+
+            <div class="actions">
+                <button class="btn btn--ghost" id="sceneDeleteToggle">
+                    Seleccionar para borrar
+                </button>
+                <button class="btn btn--danger hidden" id="sceneConfirmDelete">
+                    Borrar seleccionadas
+                </button>
             </div>
         </section>
 
@@ -73,7 +101,6 @@
 
     </div>
 
-    <!-- ── Pie de página ── -->
     <div class="footer">
         <span>WhatsApp WLM &nbsp;·&nbsp; v1.0</span>
     </div>

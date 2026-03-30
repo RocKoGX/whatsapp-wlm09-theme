@@ -646,18 +646,35 @@ div.x78zum5.x6s0dn4.x1qughib.x1gg8mnh.x1y1aw1k.x1pi30zi.xwib8y2.x1swvt13.xm0mufa
     color: #000;
 }
 
-/* ── Fondo de inicio al iniciar sesión ──────────────────────── */
+/* ── Fondo de inicio al iniciar sesión y temas ──────────────────────── */
 .x14bqcqg.x9f619.x78zum5.x1okw0bk.x6s0dn4.x1peatla.x14ug900.x1280gxy.x889kno.x1a8lsjc.x106a9eq.x1xnnf8n {
     background-size: 101% 105%;
     height: 90px;
 }
 
 .x1n2onr6.x11uqc5h.x9f619.x78zum5.x1okw0bk.xl2dz39.xexx8yu.x18d9i69.x1280gxy.x73uwhe.x1qhh985.x1sy0etr.x1phvje8.xcldk2z.x7a106z.x4tpdpg, .xa3a66u {
-    background: linear-gradient(var(--wlm-body), transparent);  /* #e4e9eb */
+    background: linear-gradient(var(--wlm-search-bg), transparent);  /* #e4e9eb */
 }
 
 ._aigw._as6h.x9f619.x1n2onr6.x5yr21d.x17dzmu4.x1i1dayz.x2ipvbc.xjdofhw.x78zum5.xdt5ytf.x12xzxwr.x1plvlek.xryxfnj.x570efc.x18dvir5.xxljpkc.xwfak60.x18pi947 header {
-    height: 80px;
+    height: 95px;
+}
+
+.x570efc.x9f619.x78zum5.x1okw0bk.x6s0dn4.x1peatla.x14ug900.x1280gxy.x889kno.x1a8lsjc.x106a9eq.x1xnnf8n .html-span.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.xyri2b.x18d9i69.x1c1uobl.x1hl2dhg.x16tdsg8.x1vvkbs.x1lliihq.x193iq5w.x6ikm8r.x10wlt62.xlyipyv.xuxw1ft{  /* subir header un poco */
+    height: 60px;
+    text-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 5px #fff, 0 0 1px #fff;
+}
+
+/* SVG con brillo blanco */
+.x570efc.x9f619.x78zum5.x1okw0bk.x6s0dn4.x1peatla.x14ug900.x1280gxy.x889kno.x1a8lsjc.x106a9eq.x1xnnf8n .xxk0z11.xvy4d1p svg{
+    filter: 
+drop-shadow(0px 0px 6px rgb(255, 255, 255))
+drop-shadow(0px 0px 3px rgb(255, 255, 255))
+drop-shadow(0px 0px 3px rgb(255, 255, 255));
+}
+
+.x570efc.x9f619.x78zum5.x1okw0bk.x6s0dn4.x1peatla.x14ug900.x1280gxy.x889kno.x1a8lsjc.x106a9eq.x1xnnf8n .xxk0z11.xvy4d1p {
+    color: #000;
 }
 
 /* ── Buscador de chats y stickers ───────────────────────────── */
