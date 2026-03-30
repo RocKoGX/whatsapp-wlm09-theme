@@ -198,6 +198,7 @@ const IconReplacer = (() => {
         container.style.transform = 'scale(1.7)';
         container.style.transformOrigin = 'left center';
         container.style.top = '7px';
+        container.style.left = '-7px';
 
         // 🔥 mover el nodo REAL
         logo.replaceWith(container);
@@ -384,7 +385,9 @@ function injectWLMTitleBar2() {
             /* estado */
             .wlm-status {
                 font: 6pt "Segoe UI", sans-serif;
-                color: #000000;
+                color: black;
+                text-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 5px #fff, 0 0 1px #fff;
+
             }
             `);
     }
