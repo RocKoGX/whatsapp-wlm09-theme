@@ -1,0 +1,62 @@
+{
+  "manifest_version": 1.0,
+  "name": "WhatsApp Web WLM Layout",
+  "version": "1.0",
+  "description": "Tema completo de Windows Live Messenger para WhatsApp Web. Incluye colores personalizados",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "48": "icons/icon48.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": [
+        "content/style-injector.js",
+        "content/icon-replacer.js",
+        "content/ad-banner.js",
+        "content/main.js"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "https://web.whatsapp.com/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "styles/wlm-theme.css",
+        "assets/icons/msn_logo.png",
+        "assets/icons/AddFriend.png",
+        "assets/icons/ShowMenu.png",
+        "assets/icons/Archived.png",
+        "assets/icons/MSN_Loading.gif",
+        "assets/icons/Star.png",
+        "assets/icons/Clock.png",
+        "assets/icons/Typing.gif",
+        "assets/icons/ThumbsUp.png",
+        "assets/icons/Heart.png",
+        "assets/icons/Grin.png",
+        "assets/icons/Surprise.png",
+        "assets/icons/Sob.png",
+        "assets/icons/LargeFrameOffline.png",
+        "assets/icons/LargeFrameActive.png",
+        "assets/icons/XLFrameOffline.png",
+        "assets/icons/wlm_logo.png",
+        "assets/icons/default-scene.png",
+        "assets/icons/frutiger-1.jpg",
+        "assets/icons/windows7.jpg",
+        "assets/icons/pointblank-1.jpg",
+        "assets/icons/placeholder-pfp-contact.png",
+        "assets/icons/placeholder-pfp-group.jpg"
+      ],
+      "matches": ["https://web.whatsapp.com/*"]
+    }
+  ]
+}

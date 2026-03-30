@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp WLM</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+    <!-- ── Barra de título estilo Aero ── -->
+    <div class="titlebar">
+        <div class="titlebar__left">
+            <img class="titlebar__icon" src="../assets/icons/wlm_logo.png" alt="WLM" />
+            <span class="titlebar__text">Windows Live Messenger</span>
+        </div>
+        <div class="titlebar__controls">
+            <span class="titlebar__btn titlebar__btn--min">─</span>
+            <span class="titlebar__btn titlebar__btn--max">□</span>
+            <span class="titlebar__btn titlebar__btn--close">✕</span>
+        </div>
+    </div>
+
+    <!-- ── Cuerpo principal ── -->
+    <div class="body">
+
+        <!-- ── Sección: Tema de color ── -->
+        <section class="section">
+            <div class="section__header">
+                <span class="section__icon-text">🎨</span>
+                <span class="section__title">Tema de color</span>
+            </div>
+
+            <div class="theme-grid" id="themeGrid">
+                <!-- Generado por popup.js -->
+            </div>
+
+            <div class="theme-label-row">
+                <span class="theme-active-label" id="themeActiveLabel">Azul (predeterminado)</span>
+            </div>
+        </section>
+
+        <!-- ── Sección: Banner publicitario ── -->
+        <section class="section">
+            <div class="section__header">
+                <img class="section__icon" src="../assets/icons/msn_logo.png" alt="" />
+                <span class="section__title">Banner publicitario</span>
+            </div>
+
+            <div class="banner-preview" id="bannerPreview">
+                <span class="banner-preview__placeholder" id="bannerPlaceholder">
+                    Sin imágenes cargadas
+                </span>
+                <img class="banner-preview__img" id="bannerPreviewImg" src="" alt="Banner activo" />
+            </div>
+
+            <label class="btn btn--primary" for="imageInput">
+                <span class="btn__icon">＋</span> Agregar imágenes
+            </label>
+            <input type="file" id="imageInput" accept="image/*" multiple hidden />
+
+            <div class="image-grid" id="imageList"></div>
+
+            <div class="actions">
+                <button class="btn btn--ghost" id="deleteToggle">
+                    Seleccionar para borrar
+                </button>
+                <button class="btn btn--danger hidden" id="confirmDelete">
+                    Borrar seleccionadas
+                </button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ── Pie de página ── -->
+    <div class="footer">
+        <span>WhatsApp WLM &nbsp;·&nbsp; v1.0</span>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
