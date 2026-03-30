@@ -94,7 +94,7 @@
 .x570efc.x9f619.x78zum5.x1okw0bk.x6s0dn4.x1peatla.x14ug900.x1280gxy.x889kno.x2vl965.x1a8lsjc.xe2zdcy {
     background: linear-gradient(to bottom, var(--wlm-1), var(--wlm-2) 50%, var(--wlm-3) 50%, var(--wlm-4));
     outline: solid thin rgba(51, 51, 51, .49);
-    box-shadow: inset 0 0 0 1px #ffffff80, 0 0 16px #01385f;
+    box-shadow: inset 0 0 0 1px #ffffff80, 0 0 16px var(--wlm-aero);    /* #01385f */
     display: flex;
     align-items: center;
     z-index: 9;
@@ -196,11 +196,18 @@
 /* ── Burbuja al responder un mensaje sin enviar ──────────────── */
 ._aju5 {
     border-width: 1px;
-    background: linear-gradient(to bottom, #ffffff8f, #e8e8e866 50%, #ececec40 50%, #0a73951a);
+    background: linear-gradient(to bottom, #ffffff8f, #ececec40 50%, #ececec40 50%, #0a73951a);
     text-decoration: none;
     box-shadow: inset 0 0 0 1px #aae9ff80;
     color: #000;
 }
+/* Transparencia en la burbuja al responder un mensaje sin enviar */
+    .x9f619.x1okw0bk.x6s0dn4.xl56j7k.xv371q9.xf9nvzp.xhslqc4.x1bu39yj.x1lliihq.x1n2onr6{
+        background: #fff0;
+    }
+    .xk7ee7b {
+        background: #fff0;
+    }
 
 /* ── Mensaje con link de previsualización ───────────────────── */
 .x1sapvj0 {
@@ -606,6 +613,7 @@ div.x78zum5.x6s0dn4.x1qughib.x1gg8mnh.x1y1aw1k.x1pi30zi.xwib8y2.x1swvt13.xm0mufa
         linear-gradient(315deg, #fff5 70px, transparent 100px),
         linear-gradient(135deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #bbb2 44% 45%, #bbb2 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #bbb2 57% 63%, #0002 67% 69%, #bbb2 69.5% 70%, #0002 73.5% 74%, #bbb2 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #bbb1 90%) 0 / 100vh 100vw no-repeat fixed;
     box-shadow: inset 0 1px 0 #fffd, inset 1px 0 0 #fffd, inset -1px 0 0 #fffd;
+    background-color: #4580c42e;
     z-index: -1;
 }
 
@@ -662,6 +670,12 @@ div.x78zum5.x6s0dn4.x1qughib.x1gg8mnh.x1y1aw1k.x1pi30zi.xwib8y2.x1swvt13.xm0mufa
 
 .x570efc.x9f619.x78zum5.x1okw0bk.x6s0dn4.x1peatla.x14ug900.x1280gxy.x889kno.x1a8lsjc.x106a9eq.x1xnnf8n .html-span.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.xyri2b.x18d9i69.x1c1uobl.x1hl2dhg.x16tdsg8.x1vvkbs.x1lliihq.x193iq5w.x6ikm8r.x10wlt62.xlyipyv.xuxw1ft{  /* subir header un poco */
     height: 60px;
+}
+
+/* Barra de busqueda ajustado mas abajo */
+._ak9t .x1n2onr6.x11uqc5h.x9f619.x78zum5.x1okw0bk.xl2dz39.xexx8yu.x18d9i69.x1280gxy.x73uwhe.x1qhh985.x1sy0etr.x1phvje8.xcldk2z.x7a106z.x4tpdpg {
+    padding-top: 7px;
+    height: 55px;
 }
 
 /* SVG con brillo blanco */
@@ -925,7 +939,7 @@ body.dark.color-refresh {
 
 /* ── Input para mensaje más hacia arriba ────────────────────── */
 ._ak1r .xod5an3 {
-    margin-bottom: 32px;
+    margin-bottom: 25px;
 }
 
 /* ── Fecha de mensaje, mensajes anteriores, emojis ───────────── */
@@ -1604,9 +1618,13 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
     background: #fff0;
 }
 
-/* ── Separador dentro del cuerpo ────────────────────────────── */
+/* ── Separador dentro del cuerpo y eliminacion de fade extraño en imagenes ────────────────────────────── */
 .xsm26vf {
     background: linear-gradient(to bottom, #b8c7da00, #fff0 50%, #b8c7da7a 10%, #e0eaf400);
+}
+
+.xsm26vf.x10l6tqk.x1ey2m1c.xoxg7ud.x9f619.x78zum5.xdt5ytf.x6s0dn4.x1nhvcw1.xh8yej3.xpyat2d.x6ikm8r.x10wlt62.x13fuv20.x178xt8z.xx42vgk.xg01cxk.xqu7myx{
+    background: #fff0 !important;
 }
 
 /* ── Búsqueda de mensajes: fondo transparente ───────────────── */
@@ -1682,4 +1700,31 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
 .xjb2p0i.xk390pu.x1heor9g.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x6s0dn4.x1280gxy.x1ubxc9n.xnj1f2r.x2uibgs.xkveyfu.x12llq9.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1s70e7g.x1ypdohk.x1s07b3s.x78zum5.x1ba4aug.x1hc1fzr.x1lfpgzf.x16ovd2e.x12xbjc7.xdx6fka.xvtqlqk.x150mmf0.xqf2s3x {
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
     border: none;
+}
+
+/* ── Burbuja en mensajes de contacto/grupo en archivos multimedia ──────────────────────────────────────── */
+    
+.x1od0jb8 {
+    border: 1px solid #8dbbd6;
+    background: linear-gradient(to bottom, #f0f9ff40, #9dd8ff66 50%, #9dd8ff66 50%, #9dd8ff66);
+    text-decoration: none;
+    box-shadow: inset 0 0 0 1.5px #c7eaff;
+    color: #000;
+    border-radius: 7px;
+}
+.xc28ydg {
+    background-image: linear-gradient(#0000 70%, #38444e1a);
+}
+
+/* ── Color de texto e iconos SVG en la barra superior derecha y multimedia convertido a blanco ──────────────────────────────────────── */
+.x140p0ai.x1gufx9m.x1s928wv.xhkezso.x1gmr53x.x1cpjm7i.x1fgarty.x1943h6x.x193iq5w.xeuugli.x13faqbe.x1vvkbs.x1lliihq.x1fj9vlw.x14ug900.x13fj5qh.x1hx0egp.x1jchvi3.xjb2p0i.xo1l8bm.x17mssa0.x1ic7a3i{
+    color: #fff;
+}
+
+.x78zum5.x1okw0bk.x6s0dn4.xh8yej3.x14wi4xw.xo1l8bm.x14ug900.xexx8yu.xyri2b.x18d9i69.x1c1uobl svg{
+    color: #fff;
+}
+
+.x78zum5.x6s0dn4.x1afcbsf.xhslqc4.x1s70e7g svg{ /* multimedia */
+    color: #fff;
 }

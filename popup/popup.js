@@ -30,6 +30,9 @@ const TEXT_INVERTED = `
     }
     .wlm-status {
         color: #ffffff;
+        text-shadow: 0 0 2px #000, 0 0 10px #000, 0 0 1px #000,
+            0 0 2px #000, 0 0 1px #000, 0 0 1px #000,
+            0 0 5px #000, 0 0 1px #000;
     }
 `;
 

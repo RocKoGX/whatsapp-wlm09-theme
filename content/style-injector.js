@@ -18,11 +18,7 @@
                 0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff,
                 0 0 5px #fff, 0 0 1px #fff; 
         }
-        .x570efc.x9f619.x78zum5.x1okw0bk.x6s0dn4.x1peatla.x14ug900.x1280gxy.x889kno.x1a8lsjc.x106a9eq.x1xnnf8n .html-span.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.xyri2b.x18d9i69.x1c1uobl.x1hl2dhg.x16tdsg8.x1vvkbs.x1lliihq.x193iq5w.x6ikm8r.x10wlt62.xlyipyv.xuxw1ft{
-            text-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 1px #fff,
-                0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff,
-                0 0 5px #fff, 0 0 1px #fff; 
-        }
+
     `;
 
     const TEXT_INVERTED = `
@@ -40,11 +36,7 @@
                 0 0 2px #000, 0 0 1px #000, 0 0 1px #000,
                 0 0 5px #000, 0 0 1px #000;
         }
-        .x570efc.x9f619.x78zum5.x1okw0bk.x6s0dn4.x1peatla.x14ug900.x1280gxy.x889kno.x1a8lsjc.x106a9eq.x1xnnf8n .html-span.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.xyri2b.x18d9i69.x1c1uobl.x1hl2dhg.x16tdsg8.x1vvkbs.x1lliihq.x193iq5w.x6ikm8r.x10wlt62.xlyipyv.xuxw1ft{
-            text-shadow: 0 0 2px #000, 0 0 10px #000, 0 0 1px #000,
-                0 0 2px #000, 0 0 1px #000, 0 0 1px #000,
-                0 0 5px #000, 0 0 1px #000;
-        }
+
     `;
 
     // ─── Inyectar hoja de estilos principal ──────────────────
