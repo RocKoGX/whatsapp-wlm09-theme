@@ -101,6 +101,19 @@
     height: 65px;
 }
 
+/* ── Barra superior para foto de perfil de contacto ───────────────────── */
+.x78zum5.x3psx0u.x15zctf7.x6s0dn4.xng8ra.x1280gxy.xqu7myx{
+    background: linear-gradient(to bottom, var(--wlm-1), var(--wlm-2) 50%, var(--wlm-3) 50%, var(--wlm-4));
+    outline: solid thin rgba(51, 51, 51, .49);
+    box-shadow: inset 0 0 0 1px #ffffff80, 0 0 4px var(--wlm-shadow);
+    display: flex;
+    align-items: center;
+}
+
+.x78zum5.x3psx0u.x15zctf7.x6s0dn4.xng8ra.x1280gxy.xqu7myx ._ak8q{
+    color: #fff;
+}
+
 /* ── Font de barra superior: blanco ─────────────────────────── */
 .x1n2onr6.x9f619.x78zum5.x6s0dn4.xh8yej3.x7j6532.x1j6awrg.x1te75w5.x1iygr5g.x4eaejv.xcock1l.xl9llhp.x1qj619r.x1r9ni5o.xb1pvdl.x42zw1d.x889kno.x1a8lsjc.xf7dkkf.xv54qhq.x1s928wv.x1h1zc6f.x1280gxy.xstzfhl.x11iowje .x14ug900,
 .x1n2onr6.x9f619.x78zum5.x6s0dn4.xh8yej3.x7j6532.x1j6awrg.x1te75w5.x1iygr5g.x4eaejv.xcock1l.xl9llhp.x1qj619r.x1r9ni5o.xb1pvdl.x42zw1d.x889kno.x1a8lsjc.xf7dkkf.xv54qhq.x1s928wv.x1h1zc6f.x1280gxy.xstzfhl.x11iowje .xuwfzo9,
@@ -160,7 +173,7 @@
 /* ── Texto marcado al encontrar mensaje ─────────────────────── */
 .matched-text {
     font-weight: 700;
-    color: #2aa5c7;
+    color: var(--wlm-3);
 }
 
 /* ── Burbujas de mensajes ────────────────────────────────────── */
@@ -260,6 +273,17 @@
     color: #000;
 }
 
+    /* CORRECCIÓN HOVER PARA SELECCIONAR CHAT (ELIMINADO PARA BARRA SUPERIOR y demás) */
+    /*
+    .x78zum5.x3psx0u.x15zctf7.x6s0dn4.xng8ra.x1280gxy.xqu7myx ._ak72:hover, .xh8yej3 ._ak72:hover{
+        border: none;
+        background: none;
+        text-decoration: none;
+        box-shadow: unset;
+        color: none;;
+    }
+        */
+
 /* ── Chat seleccionado del sidebar ──────────────────────────── */
 ._ak72._ak7p {
     border-width: 1px;
@@ -323,14 +347,16 @@
     color: #000;
 }
 
-/* ── Boton de bajar "flechita" y flecha "siguiente" estilo W7 ── */
+/* ── Boton de bajar "flechita" y flecha "siguiente"── */
 .xjb2p0i.xk390pu.x1heor9g.x1ypdohk.x972fbf.x10w94by.x1qhh985.x14e42zd.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.xhji94x.x6s0dn4.x1ew7x2d.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x78zum5.xdt5ytf.xl56j7k.x1n2onr6.x1qvou4u.x889kno.x2vl965.x1a8lsjc.xe2zdcy {
-    border: 1px solid #F3F3F3;
-    box-shadow: 0 0 0 1px #707070;
-    background: linear-gradient(to bottom, #F2F2F2 0%, #EBEBEB 50%, #DDDDDD 51%, #CFCFCF 100%);
-    font: normal 13px sans-serif;
-    color: black;
-    text-decoration: none;
+    background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
+    border: 0.8px solid;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b52;
+}
+
+.xjb2p0i.xk390pu.x1heor9g.x1ypdohk.x972fbf.x10w94by.x1qhh985.x14e42zd.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.xhji94x.x6s0dn4.x1ew7x2d.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x78zum5.xdt5ytf.xl56j7k.x1n2onr6.x1qvou4u.x889kno.x2vl965.x1a8lsjc.xe2zdcy .xhslqc4{
+    color: #246191;
 }
 
 /* ── Bolita de mensajes no leídos (flechita) ────────────────── */
@@ -512,6 +538,7 @@ div.x78zum5.x6s0dn4.x1qughib.x1gg8mnh.x1y1aw1k.x1pi30zi.xwib8y2.x1swvt13.xm0mufa
 }
 
 /* ── Frames de WLM (GIFs de tenor) ──────────────────────────── */
+/*
 #pane-side.x1n2onr6.xyw6214.x78zum5.xdt5ytf.x1iyjqo2.x1odjw0f.x150wa6m ._ak8h {
     background: url("https://media1.tenor.com/m/3wEIZTpN0dsAAAAC/frame-windows.gif") no-repeat;
     background-position: 6.5px 10px;
@@ -542,6 +569,7 @@ div.x78zum5.x6s0dn4.x1qughib.x1gg8mnh.x1y1aw1k.x1pi30zi.xwib8y2.x1swvt13.xm0mufa
     background-attachment: scroll;
 }
 
+
 .x1y332i5.x1n2onr6.x6ikm8r.x10wlt62 ._ak8h {
     background: url("https://media1.tenor.com/m/3wEIZTpN0dsAAAAC/frame-windows.gif") no-repeat;
     background-position: 6.2px 8.5px;
@@ -554,6 +582,7 @@ div.x78zum5.x6s0dn4.x1qughib.x1gg8mnh.x1y1aw1k.x1pi30zi.xwib8y2.x1swvt13.xm0mufa
     background-size: 64px 62px;
 }
 
+
 .x15g3fpr.x78zum5.xdt5ytf.x5yr21d.x17qophe.x6ikm8r.x10wlt62.x67bb7w.x10l6tqk.x13vifvy.xh8yej3.xnpuxes.copyable-area ._ak8h {
     background: url("https://media1.tenor.com/m/3wEIZTpN0dsAAAAC/frame-windows.gif") no-repeat;
     background-position: 5.5px 6.5px;
@@ -565,6 +594,7 @@ div.x78zum5.x6s0dn4.x1qughib.x1gg8mnh.x1y1aw1k.x1pi30zi.xwib8y2.x1swvt13.xm0mufa
     background-position: 4.2px 9.5px;
     background-size: 52px 53px;
 }
+    */
 
 /* ── Foto de perfil rectangular ─────────────────────────────── */
 .x1y332i5.x1n2onr6.x6ikm8r.x10wlt62 .xww2gxu { border-bottom-left-radius: 2%; }
@@ -660,8 +690,11 @@ div.x78zum5.x6s0dn4.x1qughib.x1gg8mnh.x1y1aw1k.x1pi30zi.xwib8y2.x1swvt13.xm0mufa
     height: 90px;
 }
 
+/* Barra busqueda seleccionada */
 .x1n2onr6.x11uqc5h.x9f619.x78zum5.x1okw0bk.xl2dz39.xexx8yu.x18d9i69.x1280gxy.x73uwhe.x1qhh985.x1sy0etr.x1phvje8.xcldk2z.x7a106z.x4tpdpg, .xa3a66u {
     background: linear-gradient(var(--wlm-search-bg), transparent);  /* #e4e9eb */
+    padding-top: 7px;
+    height: 55px;
 }
 
 ._aigw._as6h.x9f619.x1n2onr6.x5yr21d.x17dzmu4.x1i1dayz.x2ipvbc.xjdofhw.x78zum5.xdt5ytf.x12xzxwr.x1plvlek.xryxfnj.x570efc.x18dvir5.xxljpkc.xwfak60.x18pi947 header {
@@ -691,7 +724,7 @@ drop-shadow(0px 0px 3px rgb(255, 255, 255));
 }
 
 /* ── Buscador de chats y stickers ───────────────────────────── */
-.x4wrhlh,
+.x1gxa6cn.x1j8ymqv.xa0aww2.x4tra6z .x4wrhlh,
 .x1lliihq.x1iyjqo2.x6ikm8r.x1odjw0f.x1g51xa9.xdxvlk3.x1fglp.x1rp6h8o.xg6i1s1,
 .x78zum5.x6s0dn4.x889kno.xpdmqnj.x1a8lsjc.x1g0dm76.xua3uq3.x9dyr19.xz4gly6.xnldykx {
     background: linear-gradient(180deg, var(--wlm-search-bg) 0%, white 35%, white 67%, var(--wlm-search-bg) 100%);
@@ -894,6 +927,18 @@ body.dark.color-refresh {
     background: linear-gradient(to bottom, #E5F4FC 0%, #C4E5F6 50%, #98D1EF 51%, #68B3DB 100%);
 }
 
+/* Hover botón descartar */
+.html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xfn3atn.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x6nhntm.x2lah0s.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xeq5yr9.xfijbtm.xfenqrj.xgy0gl7.x19igvu.x89bh2v{
+        border: 1px solid #ECF7FD;
+        box-shadow: 0 0 0 1px #3C7FB1;
+        background: linear-gradient(to bottom, #EAF6FD 0%, #D9F0FC 50%, #BEE6FD 51%, #A7D9F5 100%);
+        font: normal 13px sans-serif;
+        color: black;
+        text-decoration: none;
+        border-radius: 3px;
+        height: 23px;
+    }
+
 /* Active botón OK */
 .x889kno.x1a8lsjc.x13jy36j.x64bnmy.x1n2onr6.x1rg5ohu.xk50ysn.x1f6kntn.xyesn5m.x1rl75mt.x19t5iym.xz7t8uv.x13xmedi.x178xt8z.x1lun4ml.xso031l.xpilrb4.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x1v8p93f.x1o3jo1z.x16stqrj.xv5lvn5.x1hl8ikr.xfagghw.x9dyr19.x9lcvmn.x1pse0pq.xcjl5na.xfn3atn.x1k3x3db.x9qntcr.xuxw1ft.xv52azi:active {
     padding: 4px 25px;
@@ -920,6 +965,11 @@ body.dark.color-refresh {
 /* ── Fotos de perfil cuadradas ───────────────────────────────── */
 .x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p { border-radius: 2%; }
 .x78zum5.x6s0dn4.xl56j7k.x1q0g3np.xh8yej3.x5yr21d.x6ikm8r.x10wlt62.xvs2etk.xg3wpu6.x1jwbhkm.xgg4q86.x1od0jb8 { border-radius: 2%; }
+
+    /* Estados cuadrado a circulo CORREGIDO */
+    .statusList .x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p{
+        border-radius: 100%;
+    }
 
 /* ── Switch Button ──────────────────────────────────────────── */
 .x19mwmfm {
@@ -951,6 +1001,16 @@ body.dark.color-refresh {
     box-shadow: inset 0 0 0 1px #aeaeae80;
     color: #5e5e5e;
 }
+
+/* ── Burbuja para Haz clic aqui para obtener mensajes anteriores ───────────── */
+.x1bvqhpb.x6f6fmj.x1b9z3ur.x9f619.x1rg5ohu.x1okw0bk.x193iq5w.x123j3cw.xpdmqnj.x10b6aqq.x1g0dm76.x13a8xbf.xdod15v.x2b8uid.xyi3aci.xwf5gio.x1p453bz.x1suzm8a{
+    border-width: 1px;
+    background: linear-gradient(to bottom, #ffffff40, #fff6 50%, #ffffff40 50%, #2020201a);
+    text-decoration: none;
+    box-shadow: inset 0 0 0 1px #aeaeae80;
+    color: #5e5e5e;
+}
+
 
 /* ── Ventanas estilo Windows 7 ──────────────────────────────── */
 .x9f619.x1n2onr6.xyw6214.x5yr21d.x6ikm8r.x10wlt62.x17dzmu4.x1i1dayz.x2ipvbc.x1w8yi2h.xyyilfv.x1iyjqo2.xy80clv.x26u7qi.x1ux35ld {
@@ -1099,7 +1159,7 @@ div#main._ajx_ {
 
 /* ── Borde al seleccionar archivo cargado ────────────────────── */
 ._ak3k._ak3l {
-    border: 2px solid #35a9d5;
+    border: 2px solid var(--wlm-3) !important;
 }
 
 /* ── Botón enviar mensaje (W7) ──────────────────────────────── */
@@ -1207,8 +1267,10 @@ div.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.
     display: none;
 }
 
-/* ── Previsualización de enlace en burbuja ───────────────────── */
-.x9f619.x78zum5.x1iyjqo2.xs83m0k.xdl72j9.xdt5ytf.xl56j7k.x17fgdl5.x1q2aixq.x6ikm8r.x10wlt62.x1yrsyyn.x2vl965.x10b6aqq.xe2zdcy.xh8yej3.x1y8v6su {
+/* ── Previsualización de enlace, archivo y pdf en burbuja ───────────────────── */
+.x9f619.x78zum5.x1iyjqo2.xs83m0k.xdl72j9.xdt5ytf.xl56j7k.x17fgdl5.x1q2aixq.x6ikm8r.x10wlt62.x1yrsyyn.x2vl965.x10b6aqq.xe2zdcy.xh8yej3.x1y8v6su, 
+.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.x1nhvcw1.x1q0g3np.x1cy8zhl.x1d0ri9u.xl3akx1.x1ug4tga.x11ahuha.x1n2onr6,
+.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.x1nhvcw1.x1q0g3np.x1cy8zhl.x1d0ri9u.xl3akx1.x1ug4tga.x11ahuha.x1n2onr6 {
     background: linear-gradient(#ffffffd1, #ffffff57);
 }
 
@@ -1220,13 +1282,13 @@ div.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.
     color: #fff;
 }
 
+.x1pse0pq { color: #000000cb; }
 .x1n2onr6._ak9y .x1pse0pq { color: #fff; }
 
 /* ── Cuadro de menú de opciones ─────────────────────────────── */
 .x1qjc9v5.x9f619.x78zum5.xdt5ytf.x129bwdz.x1trrmfo.xt7fyls.x1tiyuxx.x1nbhmlj.x181vq82.x1uc92m.x1280gxy.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x1ekq09l.xlmuga0.x54tcbp.xlzwp1d.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x178xt8z.x1lun4ml.xso031l.xpilrb4.xvktan5.x4afe7t.xuqacwm.x10e4vud.xf68679.xf6vlc6.x65gd29,
 .x1qjc9v5.x9f619.x78zum5.xdt5ytf.x129bwdz.x1trrmfo.xt7fyls.x1tiyuxx.x1nbhmlj.x181vq82.x1uc92m.x1280gxy.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x1ekq09l.xlmuga0.x54tcbp.xlzwp1d.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x178xt8z.x1lun4ml.xso031l.xpilrb4.xvktan5.x4afe7t.xuqacwm.x10e4vud.xf6vlc6.x65gd29,
-.x1qjc9v5.x9f619.x78zum5.xdt5ytf.x129bwdz.x1trrmfo.xt7fyls.x1tiyuxx.x1nbhmlj.x181vq82.x1uc92m.x1280gxy.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x1ekq09l.xlmuga0.x54tcbp.xlzwp1d.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x178xt8z.x1lun4ml.xso031l.xpilrb4.xvktan5.x4afe7t.xuqacwm.x10e4vud.xf68679.xf6vlc6.xet5ma0,
-._ak4w{
+.x1qjc9v5.x9f619.x78zum5.xdt5ytf.x129bwdz.x1trrmfo.xt7fyls.x1tiyuxx.x1nbhmlj.x181vq82.x1uc92m.x1280gxy.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x1ekq09l.xlmuga0.x54tcbp.xlzwp1d.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x178xt8z.x1lun4ml.xso031l.xpilrb4.xvktan5.x4afe7t.xuqacwm.x10e4vud.xf68679.xf6vlc6.xet5ma0{
     background: linear-gradient(to bottom, #c6def9, #e9f6fd 70%, #e9f6fd 30%, #dff0fe);
     border-left: 1.5px solid #eff5fe;
     border-top: 1.5px solid #eff5fe;
@@ -1248,7 +1310,34 @@ div.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.
     border-bottom: 1.5px solid #5ed1f3;
     border-right: 1.5px solid #5ed1f3;
     box-shadow: inset 0 0 0 1px #ffffff80, 0 0 16px #000000b8;
-    border-radius: 20px;
+    border-radius: 10px;
+}
+
+/* ── Cuadro menú texto (negrita, cursiva, tachado, codigo, etc) ────────────────────── */
+.x78zum5.x1311tq3.x1y1aw1k.xf159sx.xwib8y2.xmzvs34.xxymvpz.x10l6tqk.x13vifvy.x1o0tod.xg01cxk.xvh3i5d.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x19991ni.x1wsgiic.x1so62im.x1oy9qf3{
+    background: linear-gradient(to bottom, #c6def9, #e9f6fd 70%, #e9f6fd 30%, #dff0fe);
+    border-left: 1.5px solid #eff5fe;
+    border-top: 1.5px solid #eff5fe;
+    border-bottom: 1.5px solid #5ed1f3;
+    border-right: 1.5px solid #5ed1f3;
+    box-shadow: inset 0 0 0 1px #ffffff80, 0 0 16px #000000b8;
+    border-radius: 10px;
+}
+
+.x78zum5.x1311tq3.x1y1aw1k.xf159sx.xwib8y2.xmzvs34.xxymvpz.x10l6tqk.x13vifvy.x1o0tod.xg01cxk.xvh3i5d.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x19991ni.x1wsgiic.x1so62im.x1oy9qf3 .xluxjuk{
+    background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
+    border: 0.8px solid;
+    border-radius: 4px;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b52;
+}
+    
+.x78zum5.x1311tq3.x1y1aw1k.xf159sx.xwib8y2.xmzvs34.xxymvpz.x10l6tqk.x13vifvy.x1o0tod.xg01cxk.xvh3i5d.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x19991ni.x1wsgiic.x1so62im.x1oy9qf3 .x4wrhlh{
+    background: linear-gradient(#00000052 1%, #0000001a 50%, #00000030 1%, #00000042);
+    border: 0.8px solid;
+    border-radius: 3px;
+    box-shadow: inset 0 0.5px 1px 1px rgba(0, 0, 0, .14), inset 0 0 0 #0003, 0 0 3px 0.4px #00000021;
+    border-color: #0000009e;
 }
 
 ._ak72.false.false.false._ak73._asiw._ak82._ak83._ap1-._ap1_ {
@@ -1436,26 +1525,23 @@ div.xfect85 { color: #686868; }
     box-sizing: border-box;
 }
 
-/* ── Boton para micrófono ───────────────────────────────────── */
-.x9f619.x78zum5.x6s0dn4.xl56j7k.xpvyfi4.x2lah0s.x1c4vz4f.x1fns5xo.x1ba4aug.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x1pse0pq.xpcyujq{
-    background: linear-gradient(#f2f2f2 45%, #ebebeb 45%, #cfcfcf);
-    border: 1px solid #8e8f8f91;
-    border-radius: 3px;
-    box-shadow: inset 0 0 0 1px #fffc;
-    box-sizing: border-box;
-    color: #222;
-}
+
 
 /* ── Hover para micrófono ───────────────────────────────────── */
-.x9f619.x78zum5.x6s0dn4.xl56j7k.xpvyfi4.x2lah0s.x1c4vz4f.x1fns5xo.x1ba4aug.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x1pse0pq.xpcyujq:hover{
-    border-radius: 3px;
-    border: 0.5px solid #73a7c499;
-    box-shadow: 0 0 0 0.2px #2C628B;
-    background: linear-gradient(to bottom, #E5F4FC 0%, #C4E5F6 50%, #98D1EF 51%, #68B3DB 100%);
+.x9f619.x78zum5.x6s0dn4.xl56j7k.xpvyfi4.x2lah0s.x1c4vz4f.x1fns5xo.x1ba4aug.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x1pse0pq.xpcyujq .x1yxkqql:hover:after{
+    background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
+    border: 0.8px solid;
+    border-radius: 4px;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b52;
+}
+
+.x9f619.x78zum5.x6s0dn4.xl56j7k.xpvyfi4.x2lah0s.x1c4vz4f.x1fns5xo.x1ba4aug.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x1pse0pq.xpcyujq .x1pse0pq:hover{
+    color: #000
 }
 
 /* ── Burbujas reenviar y reaccionar ─────────────────────────── */
-.x78zum5.x6s0dn4.xl56j7k.xexx8yu.xyri2b.x18d9i69.x1c1uobl.x1f6kntn.xk50ysn.x17t9dm2.xtvhhri.x12s1jxh.xkdsq27.xwwtwea.x1gfkgh9.x23j0i4.xd7y6wv.x1280gxy.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.xx43kwn {
+.x78zum5.x6s0dn4.xl56j7k.xexx8yu.xyri2b.x18d9i69.x1c1uobl.x1f6kntn.xk50ysn.x17t9dm2.xtvhhri.x12s1jxh.xkdsq27.xwwtwea.x1gfkgh9.x23j0i4.xd7y6wv.x1280gxy.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.xx43kwn, .x1ew7x2d {
     border-width: 1px;
     background: linear-gradient(to bottom, #ffffff40, #fff6 50%, #ffffff40 50%, #2020201a);
     text-decoration: none;
@@ -1614,8 +1700,13 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
 .x1n2onr6.x1vjfegm.x78zum5.xdt5ytf.x1iyjqo2.x1odjw0f.x1280gxy,
 .x13mwh8y.x1q3qbx4.x1wg5k15.x1n2onr6.x1c4vz4f.x2lah0s.xdl72j9.xyorhqc.x1280gxy.xyinxu5.x5zjp28.x1a8lsjc.x162tt16,
 .x1yrsyyn.x5zjp28.x1g2khh7.x162tt16.x1280gxy.x1bnvlk4,
-.x3psx0u.xat24cr.x1280gxy.x1h678fw.xv6tirj.x1c1uobl.xyri2b {
+.x3psx0u.xat24cr.x1280gxy.x1h678fw.xv6tirj.x1c1uobl.xyri2b, .x1n2onr6.x1c4vz4f.xdl72j9.x1280gxy.xat24cr.x1sk1jro.x2lah0s, ._alzb {
     background: #fff0;
+}
+
+/* ── Color de icono de agregar persona o grupo negro ───────────────────────────── */
+.x1c4vz4f.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.x1nhvcw1.x1q0g3np.x6s0dn4.x2lah0s .x1pse0pq {
+    color: #000;
 }
 
 /* ── Separador dentro del cuerpo y eliminacion de fade extraño en imagenes ────────────────────────────── */
@@ -1727,4 +1818,193 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
 
 .x78zum5.x6s0dn4.x1afcbsf.xhslqc4.x1s70e7g svg{ /* multimedia */
     color: #fff;
+}
+
+/* ── Botones y hover para algunas opciones (toolbar) ──────────────────────────────────────── */
+
+.x1iorvi4.x10b6aqq.x106a9eq.x2vl965.x1280gxy.x78zum5.x1q0g3np.xozqiw3.x2lah0s.xfex06f.xeuugli.x2lwn1j.x6ikm8r.x10wlt62 .xjbqb8w {
+    background-color: transparent;
+    border: none;
+}
+
+.x1iorvi4.x10b6aqq.x106a9eq.x2vl965.x1280gxy.x78zum5.x1q0g3np.xozqiw3.x2lah0s.xfex06f.xeuugli.x2lwn1j.x6ikm8r.x10wlt62 .x1sftees:after, .x1wb366y:hover:after {
+    background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
+    border: 0.8px solid;
+    border-radius: 4px;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b52;
+}
+
+.x1wjp2x:hover:after {
+    background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
+    border: 0.8px solid;
+    border-radius: 4px;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b52;
+}
+
+/* ── Botones para algunas opciones seleccionadas (toolbar) ──────────────────────────────────────── */
+.x1iorvi4.x10b6aqq.x106a9eq.x2vl965.x1280gxy.x78zum5.x1q0g3np.xozqiw3.x2lah0s.xfex06f.xeuugli.x2lwn1j.x6ikm8r.x10wlt62 .x1abdmlv, .x4wrhlh {
+    background: linear-gradient(#00000036 1%, #0000000d 50%, #0000001a 1%, #00000024);
+    border: 0.8px solid;
+    border-radius: 3px;
+    box-shadow: inset 0 0.5px 1px 1px rgba(0, 0, 0, .14), inset 0 0 0 #00000021, 0 0 3px 0.4px #00000021;
+    border-color: #00000075;
+    /* - Mas oscuro -
+    background: linear-gradient(#00000052 1%, #0000001a 50%, #00000030 1%, #00000042);
+    border: 0.8px solid;
+    border-radius: 3px;
+    box-shadow: inset 0 0.5px 1px 1px rgba(0, 0, 0, .14), inset 0 0 0 #0003, 0 0 3px 0.4px #00000021;
+    border-color: #0000009e;
+    */
+}
+
+/* ── cuadro emoji seleccionado para reaccionar ──────────────────────────────────────── */
+.x4wrhlh {
+    background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
+    border: 0.8px solid;
+    border-radius: 4px !important;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b52;
+}
+    
+.x1iorvi4.x10b6aqq.x106a9eq.x2vl965.x1280gxy.x78zum5.x1q0g3np.xozqiw3.x2lah0s.xfex06f.xeuugli.x2lwn1j.x6ikm8r.x10wlt62 .xk4n5i7 {
+    color: #000000b8;
+}
+
+.x1iorvi4.x10b6aqq.x106a9eq.x2vl965.x1280gxy.x78zum5.x1q0g3np.xozqiw3.x2lah0s.xfex06f.xeuugli.x2lwn1j.x6ikm8r.x10wlt62 .x1hlseku:after {
+    background: none;
+}
+
+/* Eliminar fondo blanco de personas que reaccionaron */
+._ak82._ak72, ._ak73._ak82._ak7l:hover {
+    background: #fff0;
+}
+
+/* ── Selección de un texto ──────────────────────────────────────── */
+
+.xkrh14z::selection {
+    background-color: none;
+    background: var(--wlm-input-br);
+}
+
+/* ── Botones adelante y atras para ver archivos multimedia ──────────────────────────────────────── */
+/* IZQ */
+.x1pb5qga.xauphjq.x1cz6cy1.xlv9dir.x10l6tqk.x1osxwv1 .x1rk1j4g {
+    background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
+    border: 0.8px solid;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b52;
+}
+
+.x1pb5qga.xauphjq.x1cz6cy1.xlv9dir.x10l6tqk.x1osxwv1 .x17t9dm2 {
+    color: #246191;
+}
+
+/* DER */
+.x1pb5qga.xauphjq.x145ocyf.x1p6ui73.x10l6tqk.x1fm9i1x .x1rk1j4g {
+    background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
+    border: 0.8px solid;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b52;
+}
+
+.x1pb5qga.xauphjq.x145ocyf.x1p6ui73.x10l6tqk.x1fm9i1x .x17t9dm2 {
+    color: #246191;
+}
+
+/* ── Bolita verde en Estados ──────────────────────────────────────── */
+.xyp3urf {
+    background: linear-gradient(to bottom, var(--wlm-1), var(--wlm-2) 50%, var(--wlm-3) 50%, var(--wlm-4));
+    border-color: var(--wlm-3);
+}
+
+/* ── Borde verde para archivos multimedia ──────────────────────────────────────── */
+.x1rrvw3c {
+    border-bottom-color: var(--wlm-3);
+}
+
+/* ── Seleccion de archivos en archivos multimedia ──────────────────────────────────────── */
+.x10l6tqk.x13vifvy.x1o0tod.xhtitgo.x9f619.xh8yej3.x5yr21d.x6ikm8r.x10wlt62.x47corl.x1whkhu0.x3emv5x.x1ydeqjr.xyg86qh.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x18p79ws.xc28ydg.xvxx97b.x1028phh.x1es37l9.xq7a5ml {
+    border: 4px solid;
+    border-color: var(--wlm-3);
+}
+
+/* ── Barra superior e inferior cuando se ve archivos multimedia ──────────────────────────────────────── */
+.x1c7u0tx {
+    border-width: 1px;
+    background: linear-gradient(to bottom, var(--wlm-body-4), var(--wlm-body-2) 50%, var(--wlm-body-2) 50%, var(--wlm-body-3));
+    /*
+    box-shadow: inset 0 0 0 1px #ffffff80, 0 0 16px #11394b99;
+    outline: solid 2px rgb(179, 190, 202);
+    */
+    box-shadow: inset 0 0 0 1px #ffffff80, 0 0 16px var(--wlm-search-bg);
+    outline: solid 2px var(--wlm-body-3);
+}
+
+/* ── Error en rojo al enviar un mensaje ──────────────────────────────────────── */
+.xk0ssx3 {
+    background: linear-gradient(to bottom, #ea0038, #bb2549 50%, #ac314f 50%, #6f1f32);
+    border-color: #ea0038;
+}
+
+/* ── Menu de reacciones - emoji seleccionado ──────────────────────────────────────── */
+.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x78zum5.x1oa3qoh.x12fk4p8.x3pnbk8.xfex06f.xeuugli.x2lwn1j.x1nhvcw1.x1q0g3np.x1cy8zhl.x1aoj0v.x1odjw0f.x16ovd2e.xscbp6u.x1iw51ew.xde1mab.xozqiw3.xw2csxc .x1abdmlv {
+    background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
+    border: 0.8px solid;
+    border-radius: 4px;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b52;
+}
+
+.x1hlseku:after {
+    background: none;
+}
+
+.xk4n5i7 {
+    color: #000000b8;
+}
+
+._ak82._ak72 {
+    background: #fff0;
+}
+
+/* ── Audio boton de play ──────────────────────────────────────── */
+.xomj9j4 {
+    color: var(--wlm-3);
+}
+
+/* ── Barra de progreso al iniciar sesion ──────────────────────────────────────── */
+progress._ak0k {
+    background: radial-gradient(circle at 0 50%, #0000001f 10px, transparent 30px), radial-gradient(circle at 100% 50%, #0000001f 10px, transparent 30px), linear-gradient(180deg, #f3f3f3af, #fcfcfcaf 3px, #dbdbdbaf 6px, #cacacaaf 0, #d5d5d5af), #ddd;
+    border: 1px solid #8e8f8f;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px #f3f3f388, 0 0 0 1px #eaeaea88;
+    height: 15px;
+    color: #0bd82c;
+}
+
+.xqu0tyb{
+    height: 20px;
+}
+
+/* Quitar estilo nativo */
+progress._ak0k {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+}
+
+/* Fondo */
+progress._ak0k::-webkit-progress-bar {
+    background: #ddd;
+}
+
+/* PROGRESO  */
+progress._ak0k::-webkit-progress-value {
+    background-color: #0bd82c;
+    background-image: linear-gradient(180deg,#f3f3f3af,#fcfcfcaf 3px,#dbdbdbaf 6px,transparent 0),radial-gradient(circle at 0 50%,#0000002f 10px,transparent 30px),radial-gradient(circle at 100% 50%,#0000002f 10px,transparent 30px),linear-gradient(180deg,transparent 65%,#ffffff55),linear-gradient(180deg,transparent 6px,#cacaca33 0,#d5d5d533) !important;
+    box-shadow: inset 0 0 0 1px #ffffff1f;
+    height: 100%;
 }

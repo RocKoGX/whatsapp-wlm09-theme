@@ -26,6 +26,13 @@ const IconReplacer = (() => {
         windows7:             chrome.runtime.getURL('assets/icons/pointblank-1.jpg'),
         placeholderContact:   chrome.runtime.getURL('assets/icons/placeholder-pfp-contact.png'),
         placeholderGroup:     chrome.runtime.getURL('assets/icons/placeholder-pfp-group.jpg'),
+        smile:                chrome.runtime.getURL('assets/icons/Smile.png'),
+        volMuted:             chrome.runtime.getURL('assets/icons/vol_muted.png'),
+        chat:                 chrome.runtime.getURL('assets/icons/Chat.png'),
+        group:                chrome.runtime.getURL('assets/icons/Group.png'),
+        status:               chrome.runtime.getURL('assets/icons/Status.png'),
+        channels:             chrome.runtime.getURL('assets/icons/Channels.png'),
+        image:                chrome.runtime.getURL('assets/icons/Image.png'),
     };
 
     // ─── Utilidad: crear y reemplazar SVG por imagen ─────────────────────────
@@ -139,6 +146,83 @@ const IconReplacer = (() => {
         } else if (!typingText && existingIcon) {
             existingIcon.remove();
         }
+    }
+
+    function replaceSmileyIcon() {
+        document.querySelectorAll('svg title').forEach(title => {
+            if (title.textContent === 'wds-ic-sticker-smiley') {
+                const svg = title.closest('svg');
+
+                svgToImg(svg, ICONS.smile, 'Smiley', '24px', '24px');
+            }
+        });
+    }
+
+    function replaceMutedIcon() {
+        document.querySelectorAll('svg title').forEach(title => {
+            if (title.textContent === 'ic-notifications-off') {
+                const svg = title.closest('svg');
+
+                svgToImg(svg, ICONS.volMuted, 'Muted', '24px', '24px');
+            }
+        });
+    }
+
+    function replaceChatFilledIcon() {
+        document.querySelectorAll(`
+            span[data-icon="chat-filled-refreshed"] svg,
+            span[data-icon="chat-refreshed"] svg
+        `).forEach(svg => {
+            svgToImg(svg, ICONS.chat, 'Chat', '24px', '24px');
+        });
+    }
+
+    function replaceCommunityIcon() {
+        document.querySelectorAll(`
+            span[data-icon="community-refreshed-32"] svg,
+            span[data-icon="community-refreshed-filled-32"] svg
+        `).forEach(svg => {
+            svgToImg(svg, ICONS.group, 'Community', '24px', '24px', {
+                paddingLeft: '5px'
+            });
+        });
+    }
+
+    function replaceStatusIcon() {
+        document.querySelectorAll(`
+            span[data-icon="status-refreshed"] svg,
+            span[data-icon="status-filled-refreshed"] svg
+        `).forEach(svg => {
+            svgToImg(svg, ICONS.status, 'Status', '24px', '24px');
+        });
+    }
+
+    function replaceNewsletterIcon() {
+
+        // ✔ caso 1: con data-icon
+        document.querySelectorAll('span[data-icon="newsletter-tab"] svg')
+        .forEach(svg => {
+            svgToImg(svg, ICONS.channels, 'Newsletter', '24px', '24px');
+        });
+
+        // ✔ caso 2: sin data-icon → detectar por <title>
+        document.querySelectorAll('svg').forEach(svg => {
+            const title = svg.querySelector('title');
+
+            if (title && title.textContent === 'wds-ic-channels') {
+                svgToImg(svg, ICONS.channels, 'Newsletter', '24px', '24px');
+            }
+        });
+    }
+
+    function replaceAlbumIcon() {
+        document.querySelectorAll('svg').forEach(svg => {
+            const title = svg.querySelector('title');
+
+            if (title && title.textContent === 'ic-filter') {
+                svgToImg(svg, ICONS.image, 'Filter', '24px', '24px');
+            }
+        });
     }
 
     // ─── Emoticones ──────────────────────────────────────────────────────────
@@ -463,6 +547,14 @@ function injectWLMTitleBar2() {
         replaceFavoritesIcon();
         replaceRecentIcon();
         insertTypingIcon();
+        replaceSmileyIcon();
+        replaceMutedIcon();
+
+        replaceChatFilledIcon();
+        replaceCommunityIcon();
+        replaceStatusIcon();
+        replaceNewsletterIcon();
+        replaceAlbumIcon()
         //replaceEmoticons();
         replaceLargeFrameLeft();
         replaceLargeFrameRight();
