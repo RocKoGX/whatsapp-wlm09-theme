@@ -5,34 +5,38 @@ const IconReplacer = (() => {
 
     // ─── Rutas de assets ────────────────────────────────────────────────────
     const ICONS = {
-        msnLogo:              chrome.runtime.getURL('assets/icons/msn_logo.png'),
-        addFriend:            chrome.runtime.getURL('assets/icons/AddFriend.png'),
-        showMenu:             chrome.runtime.getURL('assets/icons/ShowMenu.png'),
-        archived:             chrome.runtime.getURL('assets/icons/Archived.png'),
-        msnLoading:           chrome.runtime.getURL('assets/icons/MSN_Loading.gif'),
-        star:                 chrome.runtime.getURL('assets/icons/Star.png'),
-        clock:                chrome.runtime.getURL('assets/icons/Clock.png'),
-        typing:               chrome.runtime.getURL('assets/icons/Typing.gif'),
-        thumbsUp:             chrome.runtime.getURL('assets/icons/ThumbsUp.png'),
-        heart:                chrome.runtime.getURL('assets/icons/Heart.png'),
-        grin:                 chrome.runtime.getURL('assets/icons/Grin.png'),
-        surprise:             chrome.runtime.getURL('assets/icons/Surprise.png'),
-        sob:                  chrome.runtime.getURL('assets/icons/Sob.png'),
-        largeFrameOffline:    chrome.runtime.getURL('assets/icons/LargeFrameOffline.png'),
-        largeFrameActive:     chrome.runtime.getURL('assets/icons/LargeFrameActive.png'),
-        xlFrameOffline:       chrome.runtime.getURL('assets/icons/XLFrameOffline.png'),
-        wlmLogo:              chrome.runtime.getURL('assets/icons/wlm_logo.png'),
-        defaultScene:         chrome.runtime.getURL('assets/icons/default-scene.png'),
-        windows7:             chrome.runtime.getURL('assets/icons/pointblank-1.jpg'),
-        placeholderContact:   chrome.runtime.getURL('assets/icons/placeholder-pfp-contact.png'),
-        placeholderGroup:     chrome.runtime.getURL('assets/icons/placeholder-pfp-group.jpg'),
-        smile:                chrome.runtime.getURL('assets/icons/Smile.png'),
-        volMuted:             chrome.runtime.getURL('assets/icons/vol_muted.png'),
-        chat:                 chrome.runtime.getURL('assets/icons/Chat.png'),
-        group:                chrome.runtime.getURL('assets/icons/Group.png'),
-        status:               chrome.runtime.getURL('assets/icons/Status.png'),
-        channels:             chrome.runtime.getURL('assets/icons/Channels.png'),
-        image:                chrome.runtime.getURL('assets/icons/Image.png'),
+        msnLogo:              chrome.runtime.getURL('assets/icons/chat/WLM_Title.png'),
+        addFriend:            chrome.runtime.getURL('assets/icons/menu/AddFriend.png'),
+        showMenu:             chrome.runtime.getURL('assets/icons/menu/ShowMenu.png'),
+        archived:             chrome.runtime.getURL('assets/icons/menu/Archived.png'),
+        msnLoading:           chrome.runtime.getURL('assets/icons/chat/MSN_Loading.gif'),
+        star:                 chrome.runtime.getURL('assets/icons/emoticons/Star.png'),
+        clock:                chrome.runtime.getURL('assets/icons/emoticons/Clock.png'),
+        typing:               chrome.runtime.getURL('assets/icons/chat/Typing.gif'),
+        thumbsUp:             chrome.runtime.getURL('assets/icons/emoticons/ThumbsUp.png'),
+        heart:                chrome.runtime.getURL('assets/icons/emoticons/Heart.png'),
+        grin:                 chrome.runtime.getURL('assets/icons/emoticons/Grin.png'),
+        surprise:             chrome.runtime.getURL('assets/icons/emoticons/Surprise.png'),
+        sob:                  chrome.runtime.getURL('assets/icons/emoticons/Sob.png'),
+        largeFrameOffline:    chrome.runtime.getURL('assets/icons/frames/LargeFrameOffline.png'),
+        largeFrameActive:     chrome.runtime.getURL('assets/icons/frames/LargeFrameActive.png'),
+        xlFrameOffline:       chrome.runtime.getURL('assets/icons/frames/XLFrameOffline.png'),
+        wlmLogo:              chrome.runtime.getURL('assets/icons/chat/wlm_logo.png'),
+        defaultScene:         chrome.runtime.getURL('assets/icons/chat/default-scene.png'),
+        placeholderContact:   chrome.runtime.getURL('assets/icons/frames/placeholder-pfp-contact.png'),
+        placeholderGroup:     chrome.runtime.getURL('assets/icons/frames/placeholder-pfp-group.jpg'),
+        smile:                chrome.runtime.getURL('assets/icons/emoticons/Smile.png'),
+        volMuted:             chrome.runtime.getURL('assets/icons/chat/vol_muted.png'),
+        chat:                 chrome.runtime.getURL('assets/icons/W7Icons/Chat.png'),
+        group:                chrome.runtime.getURL('assets/icons/W7Icons/Group.png'),
+        status:               chrome.runtime.getURL('assets/icons/W7Icons/Status.png'),
+        channels:             chrome.runtime.getURL('assets/icons/W7Icons/Channels.png'),
+        image:                chrome.runtime.getURL('assets/icons/W7Icons/Image.png'),
+        minimize:             chrome.runtime.getURL('assets/icons/Titlebar/Minimize.png'),
+        maximize:             chrome.runtime.getURL('assets/icons/Titlebar/Maximize.png'),
+        close:                chrome.runtime.getURL('assets/icons/Titlebar/Close.png'),
+
+        principalBackground:  chrome.runtime.getURL('background/windows_7_2.jpg'),
     };
 
     // ─── Utilidad: crear y reemplazar SVG por imagen ─────────────────────────
@@ -430,7 +434,7 @@ function injectWLMTitleBar2() {
                 content: "";
                 position: absolute;
                 top: 0; left: 0; right: 0; bottom: 0;
-                background: url('${ICONS.windows7}') no-repeat;
+                background: url('${ICONS.principalBackground}') no-repeat;
                 background-size: cover;
                 z-index: -1;
             }
@@ -522,6 +526,67 @@ function injectWLMTitleBar2() {
             `);
     }
 
+    function injectWindowControlsStyles() {
+    injectCSS('wlm-window-controls', `
+        .title-bar-controls {
+            position: absolute;
+            right: 6px;
+            background: #fff3;
+            border: 1px solid #0000004d;
+            border-radius: 0 0 5px 5px;
+            border-top: 0;
+            box-shadow: 0 1px 0 #fffa, 1px 0 0 #fffa, -1px 0 0 #fffa;
+            display: flex;
+            z-index: 20;
+            border-color: #000000b3;
+        }
+
+        .title-bar-controls button {
+            border: 0;
+            border-radius: 0;
+            border-right: 1px solid #0000004d;
+            cursor: pointer;
+            box-sizing: border-box;
+            min-height: 19px;
+            min-width: 29px;
+            border-color: #000000b3;
+            box-shadow: inset 0 0 0 1px #fffa;
+        }
+
+        .title-bar-controls button:first-child {
+            border-bottom-left-radius: 5px;
+        }
+
+        .title-bar-controls button:last-child {
+            border: 0;
+            border-bottom-right-radius: 5px;
+        }
+
+        button[aria-label="Minimize"] {
+            background:
+                url('${ICONS.minimize}') no-repeat center 10px,
+                linear-gradient(#ffffff80,#ffffff4d 45%,#0000001a 50%,#0000001a 75%,#ffffff80);
+        }
+
+        button[aria-label="Maximize"] {
+            background:
+                url('${ICONS.maximize}') no-repeat center,
+                linear-gradient(#ffffff80,#ffffff4d 45%,#0000001a 50%,#0000001a 75%,#ffffff80);
+        }
+
+        button[aria-label="Close"] {
+            background:
+                url('${ICONS.close}') no-repeat center,
+                linear-gradient(#ffffff80,#ffffff4d 45%,#0000001a 50%,#0000001a 75%,#ffffff80),
+                radial-gradient(circle at -60% 50%,#0007 5% 10%,#0000 50%),
+                radial-gradient(circle at 160% 50%,#0007 5% 10%,#0000 50%),
+                linear-gradient(#e0a197e5,#cf796a 25% 50%,#d54f36 50%);
+            box-shadow: inset 0 0 0 1px #fffa;
+            min-width: 48px;
+        }
+    `);
+}
+
     // ─── Inicialización única de estilos CSS ─────────────────────────────────
     // (se llaman una sola vez, no en cada mutación)
     function initStyles() {
@@ -533,6 +598,7 @@ function injectWLMTitleBar2() {
         injectAvatarFrame();
         keepAvatarFrame();
         injectAvatarNickname();
+        injectWindowControlsStyles();
     }
 
     // ─── Función pública: ejecutar en cada mutación del DOM ──────────────────

@@ -11,7 +11,7 @@
     <!-- ── Barra de título estilo Aero ── -->
     <div class="titlebar">
         <div class="titlebar__left">
-            <img class="titlebar__icon" src="../assets/icons/wlm_logo.png" alt="WLM" />
+            <img class="titlebar__icon" src="../assets/icons/chat/wlm_logo.png" alt="WLM" />
             <span class="titlebar__text">Windows Live Messenger</span>
         </div>
         <div class="titlebar__controls">
@@ -21,99 +21,134 @@
         </div>
     </div>
 
-    <!-- ── Cuerpo principal ── -->
-    <div class="body">
+    <!-- ── Tabs de navegación ── -->
+    <div class="tabs">
+        <button class="tab active" data-tab="appearance">
+            <img src="../assets/icons/menu/Colors.png" alt="" />
+            Apariencia
+        </button>
+        <button class="tab" data-tab="background">
+            <img src="../assets/icons/menu/ChangeLayout.png" alt="" />
+            Fondo de pantalla
+        </button>
+    </div>
 
-        <!-- ── Sección: Tema de color ── -->
+    <!-- ══════════════════════════════════════════════
+         TAB 1: Apariencia
+    ══════════════════════════════════════════════ -->
+    <div class="tab-panel active" id="panel-appearance">
+
+        <!-- ── Tema de color ── -->
         <section class="section">
             <div class="section__header">
-                <span class="section__icon-text">🎨</span>
+                <img class="section__icon" src="../assets/icons/menu/Colors.png" alt="" />
                 <span class="section__title">Tema de color</span>
             </div>
+
+            <div class="auto-row">
+                <div class="theme-swatch theme-swatch--auto" id="swatchAuto"
+                     title="Automático: el tema se ajusta al color de la escena">
+                    <div class="theme-swatch__circle theme-swatch__circle--auto">
+                        <span class="auto-icon">✦</span>
+                    </div>
+                    <span class="theme-swatch__name">Auto</span>
+                </div>
+                <span class="auto-desc" id="autoDesc">Tema fijo</span>
+            </div>
+
             <div class="theme-grid" id="themeGrid"></div>
             <div class="theme-label-row">
                 <span class="theme-active-label" id="themeActiveLabel">Azul (predeterminado)</span>
             </div>
 
-            <!-- ── Toggle: color de texto del avatar ── -->
             <div class="toggle-row">
                 <div class="toggle-info">
                     <span class="toggle-label">Texto del avatar</span>
                     <span class="toggle-desc" id="textColorDesc">Negro sobre claro</span>
                 </div>
-                <button class="toggle-btn" id="textColorToggle" title="Cambiar color de texto del avatar">
-                    <span class="toggle-track">
-                        <span class="toggle-thumb"></span>
-                    </span>
+                <button class="toggle-btn" id="textColorToggle">
+                    <span class="toggle-track"><span class="toggle-thumb"></span></span>
                 </button>
             </div>
-
         </section>
 
-        <!-- ── Sección: Escena de fondo ── -->
+        <!-- ── Escena de fondo ── -->
         <section class="section">
             <div class="section__header">
-                <span class="section__icon-text">🖼️</span>
+                <img class="section__icon" src="../assets/icons/menu/ChangeLayout.png" alt="" />
                 <span class="section__title">Escena de fondo</span>
             </div>
 
-            <div class="scene-preview" id="scenePreview">
-                <span class="scene-preview__placeholder" id="scenePlaceholder">
-                    Usando escena predeterminada
-                </span>
-                <img class="scene-preview__img" id="scenePreviewImg" src="" alt="Escena activa" />
-                <div class="scene-preview__badge" id="sceneBadge"></div>
+            <div class="asset-preview" id="scenePreview">
+                <span class="asset-preview__placeholder" id="scenePlaceholder">Cargando escenas...</span>
+                <img class="asset-preview__img" id="scenePreviewImg" src="" alt="Escena activa" />
+                <div class="asset-preview__badge" id="sceneBadge"></div>
             </div>
-
-            <label class="btn btn--primary" for="sceneInput">
-                <span class="btn__icon">＋</span> Agregar escenas
-            </label>
-            <input type="file" id="sceneInput" accept="image/*" multiple hidden />
 
             <div class="image-grid" id="sceneList"></div>
 
-            <div class="actions">
-                <button class="btn btn--ghost" id="sceneDeleteToggle">
-                    Seleccionar para borrar
-                </button>
-                <button class="btn btn--danger hidden" id="sceneConfirmDelete">
-                    Borrar seleccionadas
-                </button>
-            </div>
+            <p class="folder-hint">
+                <code>assets/scenes/</code> · <code>scenes-index.json</code>
+            </p>
         </section>
 
-        <!-- ── Sección: Banner publicitario ── -->
+        <!-- ── Banner publicitario ── -->
         <section class="section">
             <div class="section__header">
-                <img class="section__icon" src="../assets/icons/msn_logo.png" alt="" />
+                <img class="section__icon" src="../assets/icons/chat/wlm_logo.png" alt="" />
                 <span class="section__title">Banner publicitario</span>
             </div>
 
-            <div class="banner-preview" id="bannerPreview">
-                <span class="banner-preview__placeholder" id="bannerPlaceholder">
-                    Sin imágenes cargadas
-                </span>
-                <img class="banner-preview__img" id="bannerPreviewImg" src="" alt="Banner activo" />
+            <div class="asset-preview asset-preview--short" id="bannerPreview">
+                <span class="asset-preview__placeholder" id="bannerPlaceholder">Cargando banners...</span>
+                <img class="asset-preview__img" id="bannerPreviewImg" src="" alt="Banner activo" />
+                <div class="asset-preview__badge" id="bannerBadge"></div>
             </div>
 
-            <label class="btn btn--primary" for="imageInput">
-                <span class="btn__icon">＋</span> Agregar imágenes
-            </label>
-            <input type="file" id="imageInput" accept="image/*" multiple hidden />
+            <div class="image-grid" id="adList"></div>
 
-            <div class="image-grid" id="imageList"></div>
-
-            <div class="actions">
-                <button class="btn btn--ghost" id="deleteToggle">
-                    Seleccionar para borrar
-                </button>
-                <button class="btn btn--danger hidden" id="confirmDelete">
-                    Borrar seleccionadas
-                </button>
-            </div>
+            <p class="folder-hint">
+                <code>assets/ads/</code> · <code>ads-index.json</code>
+            </p>
         </section>
 
     </div>
+
+    <!-- ══════════════════════════════════════════════
+         TAB 2: Fondo de pantalla
+    ══════════════════════════════════════════════ -->
+    <div class="tab-panel" id="panel-background">
+
+        <section class="section">
+            <div class="section__header">
+                <img class="section__icon" src="../assets/icons/menu/ChangeLayout.png" alt="" />
+                <span class="section__title">Fondo de pantalla</span>
+            </div>
+
+            <!-- Preview del fondo activo -->
+            <div class="asset-preview asset-preview--tall" id="bgPreview">
+                <span class="asset-preview__placeholder" id="bgPlaceholder">Cargando fondos...</span>
+                <img class="asset-preview__img" id="bgPreviewImg" src="" alt="Fondo activo" />
+                <div class="asset-preview__badge" id="bgBadge"></div>
+            </div>
+
+            <!-- Grid de fondos -->
+            <div class="image-grid" id="bgList"></div>
+
+            <!-- Botón restaurar predeterminado -->
+            <button class="btn btn--ghost" id="bgReset">
+                Restaurar fondo predeterminado
+            </button>
+
+            <p class="folder-hint">
+                <code>background/</code> · <code>backgrounds-index.json</code>
+            </p>
+        </section>
+
+    </div>
+
+    <!-- Canvas oculto para análisis de color -->
+    <canvas id="colorCanvas" style="display:none" width="50" height="50"></canvas>
 
     <div class="footer">
         <span>WhatsApp WLM &nbsp;·&nbsp; v1.0</span>

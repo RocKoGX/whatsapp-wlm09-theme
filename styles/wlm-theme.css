@@ -167,7 +167,7 @@
 
 /* ── Check azul (mensaje leído) ─────────────────────────────── */
 .x1rv0e52 {
-    color: var(--wlm-check);
+    color: #14b9ce;
 }
 
 /* ── Texto marcado al encontrar mensaje ─────────────────────── */
@@ -643,6 +643,9 @@ div.x78zum5.x6s0dn4.x1qughib.x1gg8mnh.x1y1aw1k.x1pi30zi.xwib8y2.x1swvt13.xm0mufa
         linear-gradient(315deg, #fff5 70px, transparent 100px),
         linear-gradient(135deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #bbb2 44% 45%, #bbb2 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #bbb2 57% 63%, #0002 67% 69%, #bbb2 69.5% 70%, #0002 73.5% 74%, #bbb2 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #bbb1 90%) 0 / 100vh 100vw no-repeat fixed;
     box-shadow: inset 0 1px 0 #fffd, inset 1px 0 0 #fffd, inset -1px 0 0 #fffd;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
     background-color: #4580c42e;
     z-index: -1;
 }
@@ -692,7 +695,7 @@ div.x78zum5.x6s0dn4.x1qughib.x1gg8mnh.x1y1aw1k.x1pi30zi.xwib8y2.x1swvt13.xm0mufa
 
 /* Barra busqueda seleccionada */
 .x1n2onr6.x11uqc5h.x9f619.x78zum5.x1okw0bk.xl2dz39.xexx8yu.x18d9i69.x1280gxy.x73uwhe.x1qhh985.x1sy0etr.x1phvje8.xcldk2z.x7a106z.x4tpdpg, .xa3a66u {
-    background: linear-gradient(var(--wlm-search-bg), transparent);  /* #e4e9eb */
+    background: linear-gradient(var(--wlm-bg), transparent);  /* #e4e9eb */
     padding-top: 7px;
     height: 55px;
 }
@@ -735,9 +738,9 @@ drop-shadow(0px 0px 3px rgb(255, 255, 255));
     border-radius: 4px;
 }
 
-.xq91m4v:hover:not(:focus-within) { outline-color: #8ac9e0eb; }
+.xq91m4v:hover:not(:focus-within) { outline-color: var(--wlm-1); } /* antes #8ac9e0eb */
 .xxyb0qf:has(input:focus) {
-    outline-color: #8ac9e0ed;
+    outline-color: var(--wlm-1);   /* antes #8ac9e0ed */
     box-shadow: inset 0 0 0 1px #8ac9e066;
 }
 
@@ -1026,11 +1029,16 @@ div#main._ajx_ {
     margin-top: 0;
     font: 9pt "Segoe UI","SegoeUI","Noto Sans",sans-serif;
     position: relative;
+
+    /* FIX */
+    flex: 1;
+    min-height: 0;
 }
 
-
+/*
 @media screen and (max-width: 2800px) { div#main._ajx_ { height: 96%; } }
 @media screen and (max-width: 1570px) { div#main._ajx_ { height: 94%; } }
+*/
 
 .two._aigs._as6h.x1n2onr6.x13vifvy.x1o0tod.x78zum5.xh8yej3.x5yr21d.x6ikm8r.x10wlt62.x1iek97a.x1w3jsh0.xf8xn22.x15mokao.x1ga7v0g.x16uus16.xbiv7yw.x1g0ag68.xcgwb2z.x4afe7t.x1alahoq.x1j6awrg.x1m1drc7.x1unh1gc.x1iygr5g.xitxdhh.x134s4mn.x1s928wv.x1setqd9 {
     background: linear-gradient(transparent 20%, #ffffffb3 40%, transparent 41%), linear-gradient(to right,#ffffff66,#0000001a,#ffffff33), var(--wlm-aero);
@@ -1063,7 +1071,11 @@ div#main._ajx_ {
     border: 1px solid #000000b3;
     box-shadow: 2px 2px 10px 1px #000000b3, inset 0 0 0 1px #fffa;
     border-radius: 6px;
-    /*z-index: 2;*/
+
+    /* FIX */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .x1h3rtpe {	/* transparente el fondo blanco */
@@ -1895,6 +1907,7 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
     border: 0.8px solid;
     box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
     border-color: #5b5b5b52;
+    border-radius: 100%;
 }
 
 .x1pb5qga.xauphjq.x1cz6cy1.xlv9dir.x10l6tqk.x1osxwv1 .x17t9dm2 {
@@ -1907,6 +1920,7 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
     border: 0.8px solid;
     box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
     border-color: #5b5b5b52;
+    border-radius: 100%;
 }
 
 .x1pb5qga.xauphjq.x145ocyf.x1p6ui73.x10l6tqk.x1fm9i1x .x17t9dm2 {
@@ -1984,9 +1998,10 @@ progress._ak0k {
     color: #0bd82c;
 }
 
+/*
 .xqu0tyb{
     height: 20px;
-}
+}*/
 
 /* Quitar estilo nativo */
 progress._ak0k {
@@ -2007,4 +2022,99 @@ progress._ak0k::-webkit-progress-value {
     background-image: linear-gradient(180deg,#f3f3f3af,#fcfcfcaf 3px,#dbdbdbaf 6px,transparent 0),radial-gradient(circle at 0 50%,#0000002f 10px,transparent 30px),radial-gradient(circle at 100% 50%,#0000002f 10px,transparent 30px),linear-gradient(180deg,transparent 65%,#ffffff55),linear-gradient(180deg,transparent 6px,#cacaca33 0,#d5d5d533) !important;
     box-shadow: inset 0 0 0 1px #ffffff1f;
     height: 100%;
+}
+
+/* ── Etiquetas de ayuda (POPUPS) ──────────────────────────────────────── */
+/* popup fondo */
+.xpip370 {
+    background: linear-gradient(to bottom, #c6def9, #e9f6fd 70%, #e9f6fd 30%, #dff0fe);
+    border-left: 1.5px solid #eff5fe;
+    border-top: 1.5px solid #eff5fe;
+    border-bottom: 1.5px solid #5ed1f3;
+    border-right: 1.5px solid #5ed1f3;
+    box-shadow: inset 0 0 0 1px #ffffff80, 0 0 16px #000;
+}
+
+/* letras y svg */
+.x9f619.x1n2onr6.x1ja2u2z.x78zum5.xdt5ytf.x1iyjqo2.x10b6aqq.x1yrsyyn.x25sj25.x1icxu4v .xowaa7l, .xowaa7l, .x9f619.x1n2onr6.x1ja2u2z.x78zum5.xdt5ytf.x10b6aqq.x1yrsyyn.x25sj25.x1icxu4v .x17t9dm2 {
+    color: black;
+}
+
+/* boton fondo */
+.x1rk1j4g {
+    background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
+    border: 0.8px solid;
+    border-radius: 4px;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b52;
+}
+
+
+
+/* ── Apartado de Archivos Multimedia (General) ──────────────────────────────────────── */
+/* BOTTOM */
+.x9f619.x78zum5.x1c4vz4f.x2lah0s.xdl72j9.xdt5ytf.x16w0wmm.x6ikm8r.x10wlt62.x1xn7y0n.x1uxb8k9.x1vmbcc8.x16xm01d.xs2e80n.x1n2onr6.x15o75uv.x8fmnwm.xu9qebc.x5mc7k8.xjd8us4.xkdlbmv.xexx8yu.xyri2b.x18d9i69.x1c1uobl{
+    border-width: 1px;
+    background: linear-gradient(to bottom, var(--wlm-body-2) 1%, #fff, #fff, var(--wlm-body-4));
+}
+
+/* Segunda columna */
+.x1c4vz4f.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x1oa3qoh.x12fk4p8.xe93d63.x1wh94ac.xeuugli.x2lwn1j.x1nhvcw1.x1q0g3np.x6s0dn4.xn3w4p2.x1phvje8.xcldk2z.x120ee7l.x1q0q8m5.x1co6499.x7wzq59.x13vifvy.x16w0wmm.x12xzxwr.x2lah0s{
+    border-width: 1px;
+    background: linear-gradient(to bottom, var(--wlm-body-3), var(--wlm-body-2), var(--wlm-body-2), var(--wlm-body-3));
+}
+    
+/* TOP */
+.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x12fk4p8.xeuugli.x2lwn1j.x1qughib.x1q0g3np.xuk3077.x1peatla.xh8yej3.xamitd3.x1co6499.x1q0q8m5.x120ee7l {
+    background: linear-gradient(to bottom, var(--wlm-1), var(--wlm-2) 50%, var(--wlm-3) 50%, var(--wlm-4));
+    outline: solid thin rgba(51, 51, 51, .49);
+    box-shadow: inset 0 0 0 1px #ffffff80, 0 0 16px var(--wlm-aero);
+    display: flex;
+    align-items: center;
+    height: 65px;
+}
+
+/* Font y svg negro a blanco */
+.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x12fk4p8.xeuugli.x2lwn1j.x1qughib.x1q0g3np.xuk3077.x1peatla.xh8yej3.xamitd3.x1co6499.x1q0q8m5.x120ee7l .x14ug900, 
+.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x12fk4p8.xeuugli.x2lwn1j.x1qughib.x1q0g3np.xuk3077.x1peatla.xh8yej3.xamitd3.x1co6499.x1q0q8m5.x120ee7l .xhslqc4, 
+.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x12fk4p8.xeuugli.x2lwn1j.x1qughib.x1q0g3np.xuk3077.x1peatla.xh8yej3.xamitd3.x1co6499.x1q0q8m5.x120ee7l .xuwfzo9 {
+    color: #fff;
+}
+
+/* ── Ventana de chat estilo Windows 7 (REDIMENSION) ──────────────────────────────────────── */
+
+/* == IZQUIERDA == */
+
+._aigw._as6h.x9f619.x1n2onr6.x5yr21d.x17dzmu4.x1i1dayz.x2ipvbc.xjdofhw.x78zum5.xdt5ytf.x12xzxwr.x1plvlek.xryxfnj.x570efc.x18dvir5.xxljpkc.xwfak60.x18pi947{
+    margin-left: 0.3%;
+    margin-top: 0.3%;
+    height: 99%;
+    backdrop-filter: blur(2px);
+    position: relative; 
+    z-index: 199;
+}
+
+/* == DERECHA == */
+.x9f619.x1n2onr6.xupqr0c.x5yr21d.x6ikm8r.x10wlt62.x17dzmu4.x1i1dayz.x2ipvbc.xjdofhw.xyyilfv.x1iyjqo2 { 
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-top: 0.5%;
+    height: 95%;
+    backdrop-filter: blur(2px);
+    position: relative; 
+    z-index: 100;
+}
+
+/* Eliminar borde extraño entre las dos ventanas */
+.x9f619.x1n2onr6.x5yr21d.x6ikm8r.x10wlt62.x17dzmu4.x1i1dayz.x2ipvbc.xjdofhw.xyyilfv.x1iyjqo2.xpilrb4.x1t7ytsu.x1vb5itz.x12xzxwr {
+    border: none;
+}
+
+/* ── Fondo de la barra de tareas lateral transparente ──────────────────────────────────────── */
+.x12xzxwr.x1n2onr6.x9f619.x78zum5.x6s0dn4.xq3y45c.xbyj736.x5yr21d.x1h3rtpe.x1g0dm76.xpdmqnj.x889kno.x1a8lsjc::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #fff0 !important;
+    background-size: cover !important;
 }

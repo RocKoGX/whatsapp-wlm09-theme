@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "WhatsApp Live Messenger ULTIMATE",
-  "version": "1.3.0",
-  "description": "Tema completo de Windows Live Messenger para WhatsApp Web. Incluye colores y banners personalizados ",
+  "version": "1.4.0",
+  "description": "Tema completo de Windows Live Messenger para WhatsApp Web. Incluye colores, banners y fondos de pantalla personalizados",
 
   "icons": {
     "48": "icons/icon.png"
@@ -23,6 +23,7 @@
     {
       "matches": ["https://web.whatsapp.com/*"],
       "js": [
+        "content/drag-windows.js",
         "content/style-injector.js",
         "content/icon-replacer.js",
         "content/ad-banner.js",
@@ -37,38 +38,16 @@
     {
       "resources": [
         "styles/wlm-theme.css",
-        "assets/icons/msn_logo.png",
-        "assets/icons/AddFriend.png",
-        "assets/icons/ShowMenu.png",
-        "assets/icons/Archived.png",
-        "assets/icons/MSN_Loading.gif",
-        "assets/icons/Star.png",
-        "assets/icons/Clock.png",
-        "assets/icons/Typing.gif",
-        "assets/icons/ThumbsUp.png",
-        "assets/icons/Heart.png",
-        "assets/icons/Grin.png",
-        "assets/icons/Surprise.png",
-        "assets/icons/Sob.png",
-        "assets/icons/Smile.png",
-        "assets/icons/vol_muted.png",
-        "assets/icons/Chat.png",
-        "assets/icons/Group.png",
-        "assets/icons/Status.png",
-        "assets/icons/Channels.png",
-        "assets/icons/Image.png",
-        "assets/icons/LargeFrameOffline.png",
-        "assets/icons/LargeFrameActive.png",
-        "assets/icons/XLFrameOffline.png",
-        "assets/icons/wlm_logo.png",
-        "assets/icons/default-scene.png",
-        "assets/icons/frutiger-1.jpg",
-        "assets/icons/windows7.jpg",
-        "assets/icons/pointblank-1.jpg",
-        "assets/icons/placeholder-pfp-contact.png",
-        "assets/icons/placeholder-pfp-group.jpg"
+        "assets/icons/*.png",
+        "assets/icons/*.gif",
+        "assets/icons/*.jpg",
+        "assets/scenes/*",
+        "assets/ads/*",
+        "background/*",
+        "background/*.jpg",
+        "background/*.gif"
       ],
-      "matches": ["https://web.whatsapp.com/*"]
+      "matches": ["https://web.whatsapp.com/*", "<all_urls>"]
     }
   ]
 }
