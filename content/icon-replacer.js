@@ -269,10 +269,18 @@ const IconReplacer = (() => {
         });
     }
 
+    function saveUsername(name) {
+        localStorage.setItem('wlm_username', name);
+    }
+
+    function loadUsername() {
+        return localStorage.getItem('wlm_username');
+    }
+
     function moveProfileButtonToHeader() {
         const logo = document.querySelector('span[data-icon="wa-wordmark-refreshed"]');
 
-        const container = document.querySelector('button[aria-label="Tú"]')?.closest('div.x1c4vz4f');
+        const container = document.querySelector('#side header button')?.closest('div.x1c4vz4f');
 
         if (!logo || !container) return;
         if (container.dataset.moved) return;
@@ -288,17 +296,47 @@ const IconReplacer = (() => {
         container.style.top = '7px';
         container.style.left = '-7px';
 
-        // 🔥 mover el nodo REAL
         logo.replaceWith(container);
 
-        // 👇 TEXTO AL LADO DEL AVATAR
+        // Nickname
         if (!container.querySelector('.wlm-userinfo')) {
             const userInfo = document.createElement('div');
             userInfo.className = 'wlm-userinfo';
 
             const name = document.createElement('div');
             name.className = 'wlm-username';
-            name.textContent = 'RocKo24';
+            const savedName = loadUsername();
+            name.textContent = savedName || 'Username';
+
+            name.style.cursor = 'text';
+
+            name.addEventListener('click', () => {
+
+                name.contentEditable = "true";
+                name.focus();
+
+                // seleccionar texto
+                document.execCommand('selectAll', false, null);
+
+            });
+
+            // guardar con Enter
+            name.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    name.blur();
+                }
+            });
+
+            // guardar al salir
+            name.addEventListener('blur', () => {
+                name.contentEditable = "false";
+
+                const newName = name.textContent.trim() || 'Usuario';
+                name.textContent = newName;
+
+                saveUsername(newName);
+            });
 
             const status = document.createElement('div');
             status.className = 'wlm-status';
@@ -310,7 +348,6 @@ const IconReplacer = (() => {
             container.appendChild(userInfo);
         }
 
-        // ✅ 👇 AGREGA ESTA LÍNEA
         container.classList.add('wlm-avatar-frame');
         container.style.overflow = 'visible';
 
@@ -319,7 +356,7 @@ const IconReplacer = (() => {
 
     function keepAvatarFrame() {
         const observer = new MutationObserver(() => {
-            const container = document.querySelector('button[aria-label="Tú"]')?.closest('div.x1c4vz4f');
+            const container = document.querySelector('#side header button')?.closest('div.x1c4vz4f');
 
             if (container && !container.classList.contains('wlm-avatar-frame')) {
                 container.classList.add('wlm-avatar-frame');

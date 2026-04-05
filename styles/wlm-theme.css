@@ -352,7 +352,7 @@
     background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
     border: 0.8px solid;
     box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
-    border-color: #5b5b5b52;
+    border-color: #5b5b5b9c;
 }
 
 .xjb2p0i.xk390pu.x1heor9g.x1ypdohk.x972fbf.x10w94by.x1qhh985.x14e42zd.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.xhji94x.x6s0dn4.x1ew7x2d.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x78zum5.xdt5ytf.xl56j7k.x1n2onr6.x1qvou4u.x889kno.x2vl965.x1a8lsjc.xe2zdcy .xhslqc4{
@@ -1341,7 +1341,7 @@ div.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.
     border: 0.8px solid;
     border-radius: 4px;
     box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
-    border-color: #5b5b5b52;
+    border-color: #5b5b5b9c;
 }
     
 .x78zum5.x1311tq3.x1y1aw1k.xf159sx.xwib8y2.xmzvs34.xxymvpz.x10l6tqk.x13vifvy.x1o0tod.xg01cxk.xvh3i5d.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x19991ni.x1wsgiic.x1so62im.x1oy9qf3 .x4wrhlh{
@@ -1545,7 +1545,7 @@ div.xfect85 { color: #686868; }
     border: 0.8px solid;
     border-radius: 4px;
     box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
-    border-color: #5b5b5b52;
+    border-color: #5b5b5b9c;
 }
 
 .x9f619.x78zum5.x6s0dn4.xl56j7k.xpvyfi4.x2lah0s.x1c4vz4f.x1fns5xo.x1ba4aug.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x1pse0pq.xpcyujq .x1pse0pq:hover{
@@ -1842,24 +1842,24 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
 .x1iorvi4.x10b6aqq.x106a9eq.x2vl965.x1280gxy.x78zum5.x1q0g3np.xozqiw3.x2lah0s.xfex06f.xeuugli.x2lwn1j.x6ikm8r.x10wlt62 .x1sftees:after, .x1wb366y:hover:after {
     background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
     border: 0.8px solid;
-    border-radius: 4px;
+    border-radius: 2px;
     box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
-    border-color: #5b5b5b52;
+    border-color: #5b5b5b9c;
 }
 
 .x1wjp2x:hover:after {
     background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
     border: 0.8px solid;
-    border-radius: 4px;
+    border-radius: 2px;
     box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
-    border-color: #5b5b5b52;
+    border-color: #5b5b5b9c;
 }
 
 /* ── Botones para algunas opciones seleccionadas (toolbar) ──────────────────────────────────────── */
 .x1iorvi4.x10b6aqq.x106a9eq.x2vl965.x1280gxy.x78zum5.x1q0g3np.xozqiw3.x2lah0s.xfex06f.xeuugli.x2lwn1j.x6ikm8r.x10wlt62 .x1abdmlv, .x4wrhlh {
     background: linear-gradient(#00000036 1%, #0000000d 50%, #0000001a 1%, #00000024);
     border: 0.8px solid;
-    border-radius: 3px;
+    border-radius: 2px;
     box-shadow: inset 0 0.5px 1px 1px rgba(0, 0, 0, .14), inset 0 0 0 #00000021, 0 0 3px 0.4px #00000021;
     border-color: #00000075;
     /* - Mas oscuro -
@@ -1877,7 +1877,7 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
     border: 0.8px solid;
     border-radius: 4px !important;
     box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
-    border-color: #5b5b5b52;
+    border-color: #5b5b5b9c;
 }
     
 .x1iorvi4.x10b6aqq.x106a9eq.x2vl965.x1280gxy.x78zum5.x1q0g3np.xozqiw3.x2lah0s.xfex06f.xeuugli.x2lwn1j.x6ikm8r.x10wlt62 .xk4n5i7 {
@@ -1906,7 +1906,7 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
     background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
     border: 0.8px solid;
     box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
-    border-color: #5b5b5b52;
+    border-color: #5b5b5b9c;
     border-radius: 100%;
 }
 
@@ -1919,7 +1919,7 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
     background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
     border: 0.8px solid;
     box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
-    border-color: #5b5b5b52;
+    border-color: #5b5b5b9c;
     border-radius: 100%;
 }
 
@@ -1968,7 +1968,7 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
     border: 0.8px solid;
     border-radius: 4px;
     box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
-    border-color: #5b5b5b52;
+    border-color: #5b5b5b9c;
 }
 
 .x1hlseku:after {
@@ -2046,7 +2046,7 @@ progress._ak0k::-webkit-progress-value {
     border: 0.8px solid;
     border-radius: 4px;
     box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
-    border-color: #5b5b5b52;
+    border-color: #5b5b5b9c;
 }
 
 
@@ -2086,9 +2086,9 @@ progress._ak0k::-webkit-progress-value {
 /* == IZQUIERDA == */
 
 ._aigw._as6h.x9f619.x1n2onr6.x5yr21d.x17dzmu4.x1i1dayz.x2ipvbc.xjdofhw.x78zum5.xdt5ytf.x12xzxwr.x1plvlek.xryxfnj.x570efc.x18dvir5.xxljpkc.xwfak60.x18pi947{
-    margin-left: 0.3%;
-    margin-top: 0.3%;
-    height: 99%;
+    margin-left: 0%;
+    margin-top: 0%;
+    height: 100%;
     backdrop-filter: blur(2px);
     position: relative; 
     z-index: 199;
@@ -2096,10 +2096,10 @@ progress._ak0k::-webkit-progress-value {
 
 /* == DERECHA == */
 .x9f619.x1n2onr6.xupqr0c.x5yr21d.x6ikm8r.x10wlt62.x17dzmu4.x1i1dayz.x2ipvbc.xjdofhw.xyyilfv.x1iyjqo2 { 
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    margin-top: 0.5%;
-    height: 95%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0%;
+    height: 100%;
     backdrop-filter: blur(2px);
     position: relative; 
     z-index: 100;
@@ -2117,4 +2117,23 @@ progress._ak0k::-webkit-progress-value {
     top: 0; left: 0; right: 0; bottom: 0;
     background: #fff0 !important;
     background-size: cover !important;
+}
+
+/* ── Nombre de usuario en header ──────────────────────────────────────── */
+.wlm-username:hover{
+    background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
+    border: 0.8px solid;
+    border-radius: 2px;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b9c;
+}
+.wlm-username:focus{
+    background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
+    border: 0.8px solid;
+    border-radius: 2px;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b9c;
+}
+.wlm-username::selection{
+    background: var(--wlm-aero-2);
 }

@@ -72,13 +72,18 @@ const DragWindow = (() => {
 
             if (clickY > TITLEBAR_HEIGHT) return;
 
+            const { x, y } = getTranslateValues(ventana.style.transform);
+
+            currentX = x;
+            currentY = y;
+
+            initialX = currentX;
+            initialY = currentY;
+
             isDragging = true;
 
             startX = e.clientX;
             startY = e.clientY;
-
-            initialX = currentX;
-            initialY = currentY;
 
             document.body.style.userSelect = 'none';
         });
@@ -98,6 +103,8 @@ const DragWindow = (() => {
         document.addEventListener('mouseup', () => {
             isDragging = false;
             document.body.style.userSelect = '';
+
+            ventana.dataset.prevTransform = ventana.style.transform || '';
         });
     }
 
@@ -117,6 +124,63 @@ const DragWindow = (() => {
         `;
 
         ventana.appendChild(controls);
+
+        const [minBtn, maxBtn, closeBtn] = controls.querySelectorAll('button');
+
+        // =========================
+        // MAXIMIZE
+        // =========================
+        maxBtn.addEventListener('click', () => {
+
+            const isMaximized = ventana.dataset.maximized === "true";
+
+            if (!isMaximized) {
+
+                if (!ventana.dataset.prevTransform) {
+                    ventana.dataset.prevTransform = ventana.style.transform || '';
+                }
+
+                // MAXIMIZAR
+                ventana.style.transform = 'translate(0px, 0px)';
+                ventana.style.marginLeft = "0%";
+                ventana.style.marginRight = "0%";
+                ventana.style.marginTop = "0%";
+                ventana.style.height = "100%";
+
+                ventana.dataset.maximized = "true";
+
+            } else {
+
+                // RESTAURAR
+                ventana.style.transform = ventana.dataset.prevTransform || '';
+
+                if (ventana.classList.contains('_aigw')) {
+                    ventana.style.marginLeft = "0.2%";
+                    ventana.style.marginTop = "0%";
+                    ventana.style.height = "96%";
+                } else {
+                    ventana.style.marginLeft = "2.5%";
+                    ventana.style.marginRight = "2.5%";
+                    ventana.style.marginTop = "0%";
+                    ventana.style.height = "85%";
+                }
+
+                ventana.dataset.maximized = "false";
+            }
+        });
+
+    }
+
+    function getTranslateValues(transform) {
+        if (!transform || transform === 'none') return { x: 0, y: 0 };
+
+        const match = transform.match(/translate\(([-\d.]+)px,\s*([-\d.]+)px\)/);
+        if (!match) return { x: 0, y: 0 };
+
+        return {
+            x: parseFloat(match[1]),
+            y: parseFloat(match[2])
+        };
     }
 
     function swapZIndex(a, b) {
