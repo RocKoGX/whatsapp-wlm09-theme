@@ -203,13 +203,13 @@ const IconReplacer = (() => {
 
     function replaceNewsletterIcon() {
 
-        // ✔ caso 1: con data-icon
+        // caso 1: con data-icon
         document.querySelectorAll('span[data-icon="newsletter-tab"] svg')
         .forEach(svg => {
             svgToImg(svg, ICONS.channels, 'Newsletter', '24px', '24px');
         });
 
-        // ✔ caso 2: sin data-icon → detectar por <title>
+        // caso 2: sin data-icon → detectar por <title>
         document.querySelectorAll('svg').forEach(svg => {
             const title = svg.querySelector('title');
 
@@ -229,7 +229,7 @@ const IconReplacer = (() => {
         });
     }
 
-    // ─── Emoticones ──────────────────────────────────────────────────────────
+    // ─── Emoticones (no funcional aun) ──────────────────────────────────────────────────────────
 
     const EMOTICON_MAP = [
         { alt: '👍', src: ICONS.thumbsUp,  label: 'ThumbsUp' },
@@ -269,6 +269,26 @@ const IconReplacer = (() => {
         });
     }
 
+    function getProfileContainer() {
+
+        const labels = [
+            "Tú",       // Español
+            "You",      // Inglés
+            "Você",     // Portugués
+            "Vous",     // Francés
+            "Du"        // Alemán
+        ];
+
+        for (const label of labels) {
+            const btn = document.querySelector(`button[aria-label="${label}"]`);
+            if (btn) {
+                return btn.closest('div.x1c4vz4f');
+            }
+        }
+
+        return null;
+    }
+
     function saveUsername(name) {
         localStorage.setItem('wlm_username', name);
     }
@@ -280,7 +300,7 @@ const IconReplacer = (() => {
     function moveProfileButtonToHeader() {
         const logo = document.querySelector('span[data-icon="wa-wordmark-refreshed"]');
 
-        const container = document.querySelector('#side header button')?.closest('div.x1c4vz4f');
+        const container = getProfileContainer();
 
         if (!logo || !container) return;
         if (container.dataset.moved) return;
@@ -356,11 +376,13 @@ const IconReplacer = (() => {
 
     function keepAvatarFrame() {
         const observer = new MutationObserver(() => {
-            const container = document.querySelector('#side header button')?.closest('div.x1c4vz4f');
+
+            const container = getProfileContainer();
 
             if (container && !container.classList.contains('wlm-avatar-frame')) {
                 container.classList.add('wlm-avatar-frame');
             }
+
         });
 
         observer.observe(document.body, {
@@ -611,7 +633,7 @@ function injectWLMTitleBar2() {
                 linear-gradient(#ffffff80,#ffffff4d 45%,#0000001a 50%,#0000001a 75%,#ffffff80);
         }
 
-        button[aria-label="Close"] {
+        button[aria-label="CloseW7"] {
             background:
                 url('${ICONS.close}') no-repeat center,
                 linear-gradient(#ffffff80,#ffffff4d 45%,#0000001a 50%,#0000001a 75%,#ffffff80),

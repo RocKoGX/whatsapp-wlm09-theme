@@ -120,7 +120,7 @@ const DragWindow = (() => {
         controls.innerHTML = `
             <button aria-label="Minimize"></button>
             <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
+            <button aria-label="CloseW7"></button>
         `;
 
         ventana.appendChild(controls);
