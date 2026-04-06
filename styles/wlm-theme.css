@@ -74,11 +74,6 @@
     background: linear-gradient(180deg, var(--wlm-pale) 0%, white 35%, white 67%, var(--wlm-bg) 100%) !important;
 }
 
-/* ── Fondo de chat (previsualización en info de mensaje) ─────── */
-.x1n2onr6.x1h678fw.xyo0t3i.xv6tirj.xdylf7x.x1q80dvb.x15406qy.x1d8287x.xwji4o3.xyi3aci.xwf5gio.x1p453bz.x1suzm8a {
-    background: linear-gradient(180deg, var(--wlm-1) 0%, white 35%, white 67%, var(--wlm-bg) 100%) !important;
-}
-
 /* ── Barra superior de chat (contacto, grupo) ───────────────── */
 .x1n2onr6.x9f619.x78zum5.x6s0dn4.xh8yej3.x7j6532.x1j6awrg.x1te75w5.x1iygr5g.x4eaejv.xcock1l.xl9llhp.x1qj619r.x1r9ni5o.xb1pvdl.x42zw1d.x889kno.x1a8lsjc.xf7dkkf.xv54qhq.x1s928wv.x1h1zc6f.x1280gxy.xstzfhl.x11iowje {
     background: linear-gradient(to bottom, var(--wlm-1), var(--wlm-2) 50%, var(--wlm-3) 50%, var(--wlm-4));
@@ -357,6 +352,14 @@
 
 .xjb2p0i.xk390pu.x1heor9g.x1ypdohk.x972fbf.x10w94by.x1qhh985.x14e42zd.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.xhji94x.x6s0dn4.x1ew7x2d.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x78zum5.xdt5ytf.xl56j7k.x1n2onr6.x1qvou4u.x889kno.x2vl965.x1a8lsjc.xe2zdcy .xhslqc4{
     color: #246191;
+}
+
+/* ── Burbuja para crear nueva lista (+) ── */
+.x1m2oepg:hover {
+    background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
+    border: 0.8px solid;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b9c;
 }
 
 /* ── Bolita de mensajes no leídos (flechita) ────────────────── */
@@ -801,8 +804,13 @@ drop-shadow(0px 0px 3px rgb(255, 255, 255));
     color: #000;
 }
 
-/* ── Color para alertas, links y "escribiendo..." ────────────── */
-.xo1mcw5, a, .x1ph7ams, .x1v5yvga {
+/* ── Color de texto en botones "Todos", "No leídos", "Favoritos", "Grupos" ─────── */
+.x1iorvi4.x10b6aqq.x106a9eq.x2vl965.x1280gxy.x78zum5.x1q0g3np.xozqiw3.x2lah0s.xfex06f.xeuugli.x2lwn1j.x6ikm8r.x10wlt62 .xhslqc4{
+    color: rgba(29, 47, 127, .7) !important;
+}
+
+/* ── Color para alertas, links y "escribiendo...", icono de grupo ────────────── */
+.xo1mcw5, a, .x1ph7ams, .x1v5yvga{
     color: var(--wlm-link);
 }
 
@@ -896,17 +904,33 @@ body.dark.color-refresh {
     color: #222;
 }
 
-.xfn3atn { background: #0000; }
-
-.x9f619.x78zum5.x6s0dn4.xl56j7k.xpvyfi4.x2lah0s.x1c4vz4f.x1fns5xo.x1ba4aug.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x1pse0pq.xpcyujq.xfn3atn.x1ypdohk.x1m2oepg .xxk0z11.xvy4d1p {
-    color: #000;
+/* Iconos de Comunidades */
+.xfn3atn { 
+    background: linear-gradient(to bottom, var(--wlm-1), var(--wlm-2) 50%, var(--wlm-3) 50%, var(--wlm-4));
+    border-color: var(--wlm-3);
 }
 
-/* Hover botón OK */
-.html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1syfmzz.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xjbqb8w.xo1mcw5.xy0j11r.xg268so.x1b4bgnk.x1wjp2x.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x2lah0s.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xvtqlqk.xdx6fka.xeq5yr9:hover {
+/* Color de icono para enviar mensaje */
+.x9f619.x78zum5.x6s0dn4.xl56j7k.xpvyfi4.x2lah0s.x1c4vz4f.x1fns5xo.x1ba4aug.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x1pse0pq.xpcyujq.xfn3atn.x1ypdohk.x1m2oepg .xxk0z11.xvy4d1p {
+    color: #ffffffe8;
+}
+
+/* Hover botón OK estilo Windows 7 */
+.x1yxkqql:hover:after {
     border: 1px solid #ECF7FD;
     box-shadow: 0 0 0 1px #3C7FB1;
     background: linear-gradient(to bottom, #EAF6FD 0%, #D9F0FC 50%, #BEE6FD 51%, #A7D9F5 100%);
+    font: normal 13px sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+/* active botón OK estilo Windows 7 */
+.html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xfn3atn.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x6nhntm.x2lah0s.xeq5yr9.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xfijbtm.xfenqrj.xgy0gl7.x19igvu.xfimr68 {
+    padding: 4px 25px;
+    border: 1px solid #73A7C4;
+    box-shadow: 0 0 0 1px #2C628B;
+    background: linear-gradient(to bottom, #E5F4FC 0%, #C4E5F6 50%, #98D1EF 51%, #68B3DB 100%);
     font: normal 13px sans-serif;
     color: black;
     text-decoration: none;
@@ -942,17 +966,6 @@ body.dark.color-refresh {
         height: 23px;
     }
 
-/* Active botón OK */
-.x889kno.x1a8lsjc.x13jy36j.x64bnmy.x1n2onr6.x1rg5ohu.xk50ysn.x1f6kntn.xyesn5m.x1rl75mt.x19t5iym.xz7t8uv.x13xmedi.x178xt8z.x1lun4ml.xso031l.xpilrb4.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x1v8p93f.x1o3jo1z.x16stqrj.xv5lvn5.x1hl8ikr.xfagghw.x9dyr19.x9lcvmn.x1pse0pq.xcjl5na.xfn3atn.x1k3x3db.x9qntcr.xuxw1ft.xv52azi:active {
-    padding: 4px 25px;
-    border: 1px solid #73A7C4;
-    box-shadow: 0 0 0 1px #2C628B;
-    background: linear-gradient(to bottom, #E5F4FC 0%, #C4E5F6 50%, #98D1EF 51%, #68B3DB 100%);
-    font: normal 13px sans-serif;
-    color: black;
-    text-decoration: none;
-}
-
 /* Botón iluminado */
 .x889kno.x1a8lsjc.x13jy36j.x64bnmy.x1n2onr6.x1rg5ohu.xk50ysn.x1f6kntn.xyesn5m.x1rl75mt.x19t5iym.xz7t8uv.x13xmedi.x178xt8z.x1lun4ml.xso031l.xpilrb4.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x1v8p93f.x1o3jo1z.x16stqrj.xv5lvn5.x1hl8ikr.xfagghw.x9dyr19.x9lcvmn.x1fk166o.x1qd5adx.x17dtpw8.xcjl5na.x1k3x3db.xuxw1ft.xv52azi {
     padding: 4px 25px;
@@ -975,10 +988,15 @@ body.dark.color-refresh {
     }
 
 /* ── Switch Button ──────────────────────────────────────────── */
-.x19mwmfm {
+.xs7vtfe {
     border: 1px solid #F3F3F3;
     box-shadow: 0 0 0 1px #707070;
     background: linear-gradient(to bottom, #F2F2F2 0%, #EBEBEB 50%, #DDDDDD 51%, #CFCFCF 100%);
+}
+
+/* Fondo del switch */ 
+.x1a2a7pz.x1h3rtpe.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x972fbf.x10w94by.x1qhh985.x14e42zd.x9f619.x1rg5ohu.xjwf9q1.x1fns5xo.x6ikm8r.x10wlt62.xexx8yu.xyri2b.x18d9i69.x1c1uobl.x1n2onr6.xzkaem6.x1nkjj8i.xnnj0qo.x1fpiwec.x1xp25i {
+    background: #fff;
 }
 
 .x78zum5.x1q0g3np.x10l6tqk.x13vifvy.x17qophe.xh8yej3.x5yr21d.xrmlzy3.x1g2r6go.x18sm2im.xwji4o3.x16cd2qt {
@@ -988,6 +1006,31 @@ body.dark.color-refresh {
     border-radius: 50%;
     box-shadow: inset 0 0 0 1.5px #f4f4f4, inset 1px 1px 0 1.5px #aeaeae, inset -1px 0 0 1.5px #ddd, inset 3px 3px 6px #ccc;
     box-sizing: border-box;
+}
+
+/* SWITCH Fondo (ON) */
+.x1a2a7pz.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x972fbf.x10w94by.x1qhh985.x14e42zd.x9f619.x1rg5ohu.xjwf9q1.x1fns5xo.x6ikm8r.x10wlt62.xexx8yu.xyri2b.x18d9i69.x1c1uobl.x1n2onr6.xzkaem6.x1nkjj8i.xnnj0qo.x1fpiwec.x1xp25i.xfn3atn{
+background: linear-gradient(to bottom, #F2F2F2 0%, #EBEBEB 50%, #DDDDDD 51%, #CFCFCF 100%);
+border: 1px solid;
+border-color: #8e8f8f;
+box-shadow: inset 0 0 0 1.5px #f4f4f4, inset 1px 1px 0 1.5px #aeaeae, inset -1px 0 0 1.5px #ddd, inset 3px 3px 6px #ccc;
+box-sizing: border-box;
+}
+
+/* SWITCH Fondo (OFF) */
+.x1ja2u2z.xgcd1z6.x1ey2m1c.x9f619.xtijo5x.x1o0tod.x10l6tqk.x13vifvy.x1pyc6se.x1mlb2bo.x16pkwpw.xqe4bef.xamhcws.x1alpsbp.xlxy82.xyumdvf.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x6nvzda.x4i4b9w.xhl9efl.xj65ea0{
+background: linear-gradient(to bottom, #F2F2F2 0%, #EBEBEB 50%, #DDDDDD 51%, #CFCFCF 100%);
+border: 1px solid;
+border-color: #8e8f8f;
+box-shadow: inset 0 0 0 1.5px #f4f4f4, inset 1px 1px 0 1.5px #aeaeae, inset -1px 0 0 1.5px #ddd, inset 3px 3px 6px #ccc;
+box-sizing: border-box;
+}
+
+/* SWITCH Bolita (ON) */
+.x9f619.x1ja2u2z.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x10l6tqk.xx9udhw.xd00j3c.xndqk7f.xlup9mm.x1kky2od.xep993w.x1igoeyj.x1i4sgur.x15481yp, .x9f619.x1ja2u2z.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x10l6tqk.xx9udhw.xd00j3c.xndqk7f.xlup9mm.xep993w.x1igoeyj.x1i4sgur.x15481yp.xw4jnvo{
+        border: 1px solid #F3F3F3;
+box-shadow: 0 0 0 1px #707070;
+background: linear-gradient(to bottom, var(--wlm-1), var(--wlm-2) 50%, var(--wlm-3) 50%, var(--wlm-4));
 }
 
 /* ── Input para mensaje más hacia arriba ────────────────────── */
@@ -1174,17 +1217,6 @@ div#main._ajx_ {
     border: 2px solid var(--wlm-3) !important;
 }
 
-/* ── Botón enviar mensaje (W7) ──────────────────────────────── */
-.x78zum5.x6s0dn4.xl56j7k.xexx8yu.x4uap5.x18d9i69.xkhd6sd.x1f6kntn.xk50ysn.xtvhhri.x14yjl9h.xudhj91.x18nykt9.xww2gxu.xu306ak.x12s1jxh.xkdsq27.xwwtwea.x1gfkgh9.x1247r65.xng8ra.x1pse0pq.xfn3atn {
-    border: 1px solid #F3F3F3;
-    box-shadow: 0 0 0 1px #707070;
-    background: linear-gradient(to bottom, #F2F2F2 0%, #EBEBEB 50%, #DDDDDD 51%, #CFCFCF 100%);
-    font: normal 13px sans-serif;
-    color: black;
-    text-decoration: none;
-    border-radius: 10%;
-}
-
 .x78zum5.x6s0dn4.xl56j7k.xexx8yu.x4uap5.x18d9i69.xkhd6sd.x1f6kntn.xk50ysn.xtvhhri.x14yjl9h.xudhj91.x18nykt9.xww2gxu.xu306ak.x12s1jxh.xkdsq27.xwwtwea.x1gfkgh9.x1247r65.xng8ra.x1pse0pq.xfn3atn:hover {
     border: 1px solid #ECF7FD;
     box-shadow: 0 0 0 1px #3C7FB1;
@@ -1239,7 +1271,7 @@ div.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.
 [data-icon="wa-square-icon"] { display: none; }
 
 /* ── Texto "Ver todos" en Comunidades ───────────────────────── */
-._ak8c ._ak8q { color: #00c2ff; }
+._ak8c ._ak8q { color: var(--wlm-2); }
 
 /* ── Fondo de inicio al iniciar sesión ──────────────────────── */
 .x14zpict, ._alyo, [id*='startup'] {
@@ -1294,13 +1326,21 @@ div.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.
     color: #fff;
 }
 
-.x1pse0pq { color: #000000cb; }
+/* ── Redondos de Admins del grupo ──────────────────────────── */
+.x78zum5.x6s0dn4.x1v9usgg.x1k7wse1.x1gabggj.xk35gh9.xaso8d8.x1ncwhqj.xo5v014.x178xt8z.x1lun4ml.xso031l.xpilrb4.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x1abdmlv.xk4n5i7.xlbpjqr.xlt81dz.x148b211.xso6r1.xrlxcrs.x7g1fbw.xxl59ln.xmw6rta {
+    background: linear-gradient(to bottom, var(--wlm-1), var(--wlm-2) 50%, var(--wlm-3) 50%, var(--wlm-4));
+    color: #fff;
+    border-color: var(--wlm-3);
+}
+
+.x1pse0pq { color: #fff; }
 .x1n2onr6._ak9y .x1pse0pq { color: #fff; }
 
 /* ── Cuadro de menú de opciones ─────────────────────────────── */
 .x1qjc9v5.x9f619.x78zum5.xdt5ytf.x129bwdz.x1trrmfo.xt7fyls.x1tiyuxx.x1nbhmlj.x181vq82.x1uc92m.x1280gxy.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x1ekq09l.xlmuga0.x54tcbp.xlzwp1d.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x178xt8z.x1lun4ml.xso031l.xpilrb4.xvktan5.x4afe7t.xuqacwm.x10e4vud.xf68679.xf6vlc6.x65gd29,
 .x1qjc9v5.x9f619.x78zum5.xdt5ytf.x129bwdz.x1trrmfo.xt7fyls.x1tiyuxx.x1nbhmlj.x181vq82.x1uc92m.x1280gxy.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x1ekq09l.xlmuga0.x54tcbp.xlzwp1d.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x178xt8z.x1lun4ml.xso031l.xpilrb4.xvktan5.x4afe7t.xuqacwm.x10e4vud.xf6vlc6.x65gd29,
-.x1qjc9v5.x9f619.x78zum5.xdt5ytf.x129bwdz.x1trrmfo.xt7fyls.x1tiyuxx.x1nbhmlj.x181vq82.x1uc92m.x1280gxy.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x1ekq09l.xlmuga0.x54tcbp.xlzwp1d.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x178xt8z.x1lun4ml.xso031l.xpilrb4.xvktan5.x4afe7t.xuqacwm.x10e4vud.xf68679.xf6vlc6.xet5ma0{
+.x1qjc9v5.x9f619.x78zum5.xdt5ytf.x129bwdz.x1trrmfo.xt7fyls.x1tiyuxx.x1nbhmlj.x181vq82.x1uc92m.x1280gxy.x6nvzda.x4i4b9w.xhl9efl.xj65ea0.x1ekq09l.xlmuga0.x54tcbp.xlzwp1d.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x178xt8z.x1lun4ml.xso031l.xpilrb4.xvktan5.x4afe7t.xuqacwm.x10e4vud.xf68679.xf6vlc6.xet5ma0,
+._ak4w._ap4-._ap4_{
     background: linear-gradient(to bottom, #c6def9, #e9f6fd 70%, #e9f6fd 30%, #dff0fe);
     border-left: 1.5px solid #eff5fe;
     border-top: 1.5px solid #eff5fe;
@@ -1311,6 +1351,16 @@ div.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.
 
 .x1n2onr6.x1qyhdoi.x78zum5.x1okw0bk.x6s0dn4.x1fx07b1.xhslqc4.x1k70j0n.x1ys307a.xat24cr.xyqm7xq.x16w0wmm.x972fbf.x10w94by.x1qhh985.x14e42zd.x1ypdohk {
     background: transparent;
+}
+
+/* ── Cuadro de menú de opciones (HOVER) ─────────────────────────────── */
+
+._aj-r._aj-s{
+    border-width: 1px;
+    background: linear-gradient(to bottom, #f0f9ff40, #e3f4ff66 50%, #e3f4ff66 50%, #e3f4ff66);
+    text-decoration: none;
+    box-shadow: inset 0 0 0 1px #c7eaff;
+    color: #000;
 }
 
 /* ── Cuadro menú reaccionar a un mensaje ────────────────────── */
@@ -1712,7 +1762,7 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
 .x1n2onr6.x1vjfegm.x78zum5.xdt5ytf.x1iyjqo2.x1odjw0f.x1280gxy,
 .x13mwh8y.x1q3qbx4.x1wg5k15.x1n2onr6.x1c4vz4f.x2lah0s.xdl72j9.xyorhqc.x1280gxy.xyinxu5.x5zjp28.x1a8lsjc.x162tt16,
 .x1yrsyyn.x5zjp28.x1g2khh7.x162tt16.x1280gxy.x1bnvlk4,
-.x3psx0u.xat24cr.x1280gxy.x1h678fw.xv6tirj.x1c1uobl.xyri2b, .x1n2onr6.x1c4vz4f.xdl72j9.x1280gxy.xat24cr.x1sk1jro.x2lah0s, ._alzb {
+.x3psx0u.xat24cr.x1280gxy.x1h678fw.xv6tirj.x1c1uobl.xyri2b, .x1n2onr6.x1c4vz4f.xdl72j9.x1280gxy.xat24cr.x1sk1jro.x2lah0s, ._alzb, .x1280gxy{
     background: #fff0;
 }
 
@@ -2144,4 +2194,85 @@ progress._ak0k::-webkit-progress-value {
     text-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 1px #fff,
                     0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff,
                     0 0 5px #fff, 0 0 1px #fff;
+}
+
+/* ── Bordes extraños en fotos de empresas ──────────────────────────────────────── */
+.x1y9zq84.xt9xd2u.x3tsejo.x1ahzpo1.xvs2etk.xg3wpu6.x1jwbhkm.xgg4q86.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x1kr8tdy.xburx9h.xqm4iv.x8u93l6 {
+    border: none;
+}
+
+/* ── Eliminar fondo en focus de barra de busqueda - archivos multimedia ──────────────────────────────────────── */
+.x8qhm2e:has(input:focus) {
+    background-color: #fff0;
+}
+
+/* ── Borde al hacer focus en algo (barra de busqueda) ──────────────────────────────────────── */
+._alcs ._alc_ {
+    border-bottom: 2px solid var(--wlm-2);
+}
+
+/* ── Burbuja para crear estado (+) ── */
+.x78zum5.x6s0dn4.xl56j7k.x1f6kntn.xk50ysn.xtvhhri.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x12s1jxh.xwwtwea.x1gfkgh9.x1ta3ar0.x1se2ifz.x13b0p5u.x1gnnqk1.x1pse0pq.x10l6tqk.x1t6nodo.xupqr0c.x11dcrhx.x1280gxy.x1gxa6cn.x1j8ymqv.xa0aww2.x4tra6z{
+    background: linear-gradient(#fff 1%, #ffffffc9 50%, #dbdbdbd6 1%, #ffffffab);
+    border: 0.8px solid;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b9c;
+}
+
+/* ── Borde al hacer ESQ en algo (aro) ──────────────────────────────────────── */
+.xtnn1bt:focus-visible {
+    outline-color: var(--wlm-3);
+}
+
+/* ── Icono de Aviso (Megafono) ──────────────────────────────────────── */
+.x78zum5.x6s0dn4.xl56j7k.x1q0g3np.xh8yej3.x5yr21d.x6ikm8r.x10wlt62.x1f2iure.x1abdmlv{
+    background: linear-gradient(to bottom, var(--wlm-1), var(--wlm-2) 50%, var(--wlm-3) 50%, var(--wlm-4));
+    border-color: var(--wlm-3);
+}
+
+.x78zum5.x6s0dn4.xl56j7k.x1q0g3np.xh8yej3.x5yr21d.x6ikm8r.x10wlt62.x1f2iure.x1abdmlv .xk4n5i7{
+    color: #ffffffed;
+}
+
+/* ── Icono mensajes temporales (header y lista de chats) ──────────────────────────────────────── */
+.x10l6tqk.xhu3bip.x48lskh.x16uhe5s.x9f619.xw4jnvo.x1qx5ct2.x47corl.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x4p5aij.x1ccui7m.x1j85h84.x18pi947.x1280gxy, 
+.x10l6tqk.xhu3bip.x48lskh.x16uhe5s.x9f619.xw4jnvo.x1qx5ct2.x47corl.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x4p5aij.x1ccui7m.x1j85h84.x18pi947.x8b8lpe{
+    background: linear-gradient(#fff 1%, #ffffffc9 50%, #dbdbdbd6 1%, #ffffffab);
+    border: 0.8px solid;
+    box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
+    border-color: #5b5b5b9c;
+}
+
+.x10l6tqk.xhu3bip.x48lskh.x16uhe5s.x9f619.xw4jnvo.x1qx5ct2.x47corl.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x4p5aij.x1ccui7m.x1j85h84.x18pi947.x1280gxy svg{
+    color: #000;
+}
+
+/* ── EDITAR MENSAJE ──────────────────────────────────────── */
+/* header */
+.x12lqup9.x1o1kx08.x5yr21d .x570efc.x9f619.x78zum5.x1okw0bk.x6s0dn4.xdiz9cm.x14ug900.x1280gxy.x1fqc64z.xs83zq4.xexx8yu.x18d9i69.x1xnnf8n.xe2zdcy{
+    background: linear-gradient(to bottom, var(--wlm-1), var(--wlm-2) 50%, var(--wlm-3) 50%, var(--wlm-4));
+    outline: solid thin rgba(51, 51, 51, .49);
+    box-shadow: inset 0 0 0 1px #ffffff80, 0 0 16px var(--wlm-shadow);
+    display: flex;
+    align-items: center;
+    z-index: 9;
+}
+
+/* burbuja de mensaje preview */
+.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x2lwn1j.xozqiw3.x1oa3qoh.x12fk4p8.x1g5lz36.xp43t2z.x5j5mwf.xptal55.xjodkme.x1gfrnbc.xt7fyls.x1ja2u2z.x1n2onr6{
+    border-width: 1px;
+    background: linear-gradient(to bottom, #ffffff40, #fff6 50%, #ffffff40 50%, #ffffff1a);
+    text-decoration: none;
+    box-shadow: inset 0 0 0 1px #ffffff80;
+    color: #000;
+}
+
+/* Fondo de chat (previsualización en info de mensaje) */
+.x1n2onr6.x1q80dvb.x15406qy.x1d8287x.xwji4o3.xw8ag78.x10e4vud.xdylf7x.x5s3kwk.x131uzpj.x1cnzs8.xx6bls6.xiv7p99.xyi3aci.xwf5gio.x1p453bz.x1suzm8a{
+    background: linear-gradient(180deg, var(--wlm-1) 0%, white 35%, white 67%, var(--wlm-bg) 100%);
+}
+
+/* icono de cerrar */
+.x12lqup9.x1o1kx08.x5yr21d .x570efc.x9f619.x78zum5.x1okw0bk.x6s0dn4.xdiz9cm.x14ug900.x1280gxy.x1fqc64z.xs83zq4.xexx8yu.x18d9i69.x1xnnf8n.xe2zdcy svg{
+    color: #fff;
 }

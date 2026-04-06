@@ -585,6 +585,33 @@ function injectWLMTitleBar2() {
             `);
     }
 
+    function injectXLFrame() {
+        injectCSS('wlm-xl-frame', `
+            .x13mwh8y.x1q3qbx4.x1wg5k15.x3psx0u.xat24cr.x1280gxy.x1h678fw.xcldk2z.xv6tirj.x1phvje8 {
+                position: relative !important;
+            }
+
+            .x13mwh8y.x1q3qbx4.x1wg5k15.x3psx0u.xat24cr.x1280gxy.x1h678fw.xcldk2z.xv6tirj.x1phvje8::after {
+                content: '';
+                position: absolute;
+
+                top: -5px;
+                left: -3px;
+
+                width: 100%;
+                height: 187px;
+
+                background: url('${ICONS.xlFrameOffline}') no-repeat;
+
+                background-size: contain;
+                background-position: center;
+
+                pointer-events: none;
+                z-index: 5;
+            }
+        `);
+    }
+
     function injectWindowControlsStyles() {
     injectCSS('wlm-window-controls', `
         .title-bar-controls {
@@ -658,6 +685,7 @@ function injectWLMTitleBar2() {
         keepAvatarFrame();
         injectAvatarNickname();
         injectWindowControlsStyles();
+        injectXLFrame();
     }
 
     // ─── Función pública: ejecutar en cada mutación del DOM ──────────────────

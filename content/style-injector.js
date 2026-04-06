@@ -19,6 +19,13 @@
                 0 0 5px #fff, 0 0 1px #fff; 
         }
 
+        .x140p0ai.x1gufx9m.x1s928wv.xhkezso.x1gmr53x.x1cpjm7i.x1fgarty.x1943h6x.x193iq5w.xeuugli.x13faqbe.x1vvkbs.x1lliihq.x1fj9vlw.x14ug900.x1hx0egp.x1aueamr.xjb2p0i.xo1l8bm.xladpa3.x1ic7a3i {
+            color: black;
+            text-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 1px #fff,
+                        0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff,
+                        0 0 5px #fff, 0 0 1px #fff;
+        }
+
     `;
 
     const TEXT_INVERTED = `
@@ -36,6 +43,13 @@
                 0 0 2px #000, 0 0 1px #000, 0 0 1px #000,
                 0 0 5px #000, 0 0 1px #000;
         }
+
+    .x140p0ai.x1gufx9m.x1s928wv.xhkezso.x1gmr53x.x1cpjm7i.x1fgarty.x1943h6x.x193iq5w.xeuugli.x13faqbe.x1vvkbs.x1lliihq.x1fj9vlw.x14ug900.x1hx0egp.x1aueamr.xjb2p0i.xo1l8bm.xladpa3.x1ic7a3i {
+        color: white;
+        text-shadow: 0 0 2px #000, 0 0 10px #000, 0 0 1px #000,
+                     0 0 2px #000, 0 0 1px #000, 0 0 1px #000,
+                     0 0 5px #000, 0 0 1px #000;
+    }
 
     `;
 
