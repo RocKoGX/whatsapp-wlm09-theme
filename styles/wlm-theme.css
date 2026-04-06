@@ -2278,7 +2278,7 @@ progress._ak0k::-webkit-progress-value {
 }
 
 /* Botones de "Seguir" en canales ──────────────────────────────────────── */
-.x1abdmlv {
+.html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.x1abdmlv.xk4n5i7.x1wjp2x.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x3oybdh.x6nhntm.x2lah0s.xeq5yr9.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x10w6t97.xdx6fka.xvtqlqk {
     background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
     border: 0.8px solid;
     border-radius: 2px;
@@ -2300,4 +2300,24 @@ progress._ak0k::-webkit-progress-value {
 /* icono de cerrar */
 .x570efc.x9f619.x78zum5.x1okw0bk.x6s0dn4.xdiz9cm.x14ug900.x1280gxy.x1fqc64z.xs83zq4.xexx8yu.x18d9i69.x1xnnf8n.xe2zdcy svg{
     color: #fff;
+}
+
+/* ── Mensajes destacados fondo de barra de busqueda corregido ──────────────────────────────────────── */
+.x1n2onr6.x1c4vz4f.x2lah0s.xdl72j9.x1280gxy.xat24cr {
+    background: linear-gradient(to bottom, var(--wlm-body), #fff, var(--wlm-body), var(--wlm-body));
+}
+
+.xdeyfa3:hover {
+    border-color: var(--wlm-1);
+}
+
+/* ── Color de fondo de animacion al ir a un mensaje ──────────────────────────────────────── */
+@keyframes x4dpwp4-B {
+    50% {
+        border-width: 1px;
+        background: linear-gradient(to bottom, #f0f9ff40, #9dd8ff66 50%, #9dd8ff66 50%, #9dd8ff66);
+        text-decoration: none;
+        box-shadow: inset 0 0 0 1px #c7eaff;
+        color: #000;
+    }
 }

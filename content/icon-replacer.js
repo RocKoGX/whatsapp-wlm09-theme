@@ -104,16 +104,9 @@ const IconReplacer = (() => {
         });
     }
 
-    function replaceLoadingIcon() {
-        const svg = document.querySelector('div._aqdy._alyr span svg');
-        svgToImg(svg, ICONS.msnLoading, 'Loading', 'auto', 'auto', {
-            display: 'block',
-            margin: '0 auto'
-        });
-    }
-
     function replaceLoadingMessagesIcon() {
-        const svg = document.querySelector('div[title="cargando mensajes…"] span svg');
+        const svg = document.querySelector('span[data-visualcompletion="loading-state"] svg');
+        if (!svg) return;
         svgToImg(svg, ICONS.msnLoading, 'Cargando mensajes', 'auto', 'auto');
     }
 
@@ -125,6 +118,8 @@ const IconReplacer = (() => {
             });
         });
     }
+
+
 
     function replaceFavoritesIcon() {
         const svg = document.querySelector('div[title="Favoritos"] span[data-icon="panel-starred"] svg');
@@ -694,7 +689,6 @@ function injectWLMTitleBar2() {
         replaceNewChatIcon();
         replaceMenuIcon();
         replaceArchivedIcon();
-        replaceLoadingIcon();
         replaceLoadingMessagesIcon();
         replaceLoginLoadingIcon();
         replaceFavoritesIcon();
