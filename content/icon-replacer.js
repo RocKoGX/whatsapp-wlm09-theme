@@ -521,6 +521,14 @@ function injectWLMTitleBar2() {
             .x10l6tqk.x13vifvy.x1o0tod.x78zum5.x6s0dn4.xl56j7k.xh8yej3.x5yr21d span[data-icon="default-group-refreshed"] svg, .x78zum5.x6s0dn4.xl56j7k.x1q0g3np.xh8yej3.x5yr21d.x6ikm8r.x10wlt62.xvs2etk.xg3wpu6.x1jwbhkm.xgg4q86.x1od0jb8 span[data-icon="default-group-refreshed"] svg {
                 visibility: hidden;
             }
+
+            .x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.xl56j7k.x1q0g3np.x6s0dn4.x1od0jb8 span[data-icon="default-contact-refreshed"] {
+                background-image: url('${ICONS.placeholderContact}');
+                background-size: cover;
+            }
+            .x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.xl56j7k.x1q0g3np.x6s0dn4.x1od0jb8 span[data-icon="default-contact-refreshed"] svg {
+                visibility: hidden;
+            }
         `);
     }
 

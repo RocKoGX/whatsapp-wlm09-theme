@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "WhatsApp Live Messenger ULTIMATE",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Tema completo de Windows Live Messenger para WhatsApp Web. Incluye colores, banners y fondos de pantalla personalizados",
 
   "icons": {
@@ -27,7 +27,8 @@
         "content/style-injector.js",
         "content/icon-replacer.js",
         "content/ad-banner.js",
-        "content/main.js"
+        "content/main.js",
+        "content/sound-injector.js"
       ]
     }
   ],
@@ -44,8 +45,8 @@
         "assets/scenes/*",
         "assets/ads/*",
         "background/*",
-        "background/*.jpg",
-        "background/*.gif"
+        "assets/sounds/msn_message_sound.mp3",
+        "content/sound-modifier.js"
       ],
       "matches": ["https://web.whatsapp.com/*", "<all_urls>"]
     }
