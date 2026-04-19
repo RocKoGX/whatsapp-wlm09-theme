@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "WhatsApp Live Messenger ULTIMATE",
-  "version": "1.4.3",
+  "version": "1.5",
   "description": "Tema completo de Windows Live Messenger para WhatsApp Web. Incluye colores, banners y fondos de pantalla personalizados",
 
   "icons": {
@@ -38,14 +38,33 @@
   "web_accessible_resources": [
     {
       "resources": [
+        "manifest-assets.json",
         "styles/wlm-theme.css",
         "assets/icons/*.png",
         "assets/icons/*.gif",
         "assets/icons/*.jpg",
-        "assets/scenes/*",
-        "assets/ads/*",
-        "background/*",
-        "assets/sounds/msn_message_sound.mp3",
+        "assets/icons/chat/*",
+        "assets/icons/menu/*",
+        "assets/icons/emoticons/*",
+        "assets/icons/frames/*",
+        "assets/icons/W7Icons/*",
+        "assets/icons/scrollbar/*",
+        "assets/icons/titlebar/*",
+        "assets/scenes/default/*",
+        "assets/scenes/aerochat-scenes/*",
+        "assets/scenes/lol-scenes/*",
+        "assets/scenes/custom/*",
+        "assets/ads/aerochat/*",
+        "assets/ads/bannerdepot/*",
+        "assets/ads/default/*",
+        "assets/ads/other/*",
+        "assets/ads/custom/*",
+        "background/default/*",
+        "background/windows-7/*",
+        "background/windows-vista/*",
+        "background/windows-xp/*",
+        "background/custom/*",
+        "assets/sounds/*",
         "content/sound-modifier.js"
       ],
       "matches": ["https://web.whatsapp.com/*", "<all_urls>"]

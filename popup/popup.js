@@ -221,11 +221,6 @@ const scenePreviewImg  = document.getElementById('scenePreviewImg');
 const scenePlaceholder = document.getElementById('scenePlaceholder');
 const sceneBadge       = document.getElementById('sceneBadge');
 
-const adList           = document.getElementById('adList');
-const bannerPreviewImg = document.getElementById('bannerPreviewImg');
-const bannerPlaceholder= document.getElementById('bannerPlaceholder');
-const bannerBadge      = document.getElementById('bannerBadge');
-
 const bgList           = document.getElementById('bgList');
 const bgPreviewImg     = document.getElementById('bgPreviewImg');
 const bgPlaceholder    = document.getElementById('bgPlaceholder');
@@ -255,7 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadSavedTheme();
     loadTextColorToggle();
     loadScenes();
-    loadAds();
     loadBackgrounds();
 });
 
@@ -354,55 +348,125 @@ textColorToggle.addEventListener('click', () => {
 //   ESCENAS DE FONDO
 // ══════════════════════════════════════════════════════════════
 function loadScenes() {
-    fetch(chrome.runtime.getURL('assets/scenes/scenes-index.json'))
+    fetch(chrome.runtime.getURL('manifest-assets.json'))
         .then(r => r.json())
-        .then(files => {
+        .then(manifest => {
             chrome.storage.local.get(KEY_SCENE_SEL, result => {
                 const sel = result[KEY_SCENE_SEL] || null;
-                if (!files.length) { scenePlaceholder.textContent = 'No hay escenas en assets/scenes/'; return; }
+                const scenesObj = manifest.scenes || {};
+                const categories = Object.keys(scenesObj);
+
+                if (!categories.length || categories.every(c => !scenesObj[c].length)) {
+                    scenePlaceholder.textContent = 'No hay escenas disponibles';
+                    return;
+                }
                 scenePlaceholder.style.display = 'none';
-                files.forEach(f => addAssetItem(sceneList, f, chrome.runtime.getURL(`assets/scenes/${f}`), sel, 'scene'));
+
+                categories.forEach(cat => {
+                    const files = scenesObj[cat];
+                    if (!files.length) return;
+
+                    // Cabecera de categoría
+                    const header = document.createElement('div');
+                    header.classList.add('asset-category-header');
+                    header.textContent = cat;
+                    sceneList.appendChild(header);
+
+                    files.forEach(f => {
+                        const filename = `${cat}/${f}`;
+                        const url = chrome.runtime.getURL(`assets/scenes/${filename}`);
+                        addAssetItem(sceneList, filename, url, sel, 'scene');
+                    });
+                });
+
                 updateAssetPreview(sel, 'assets/scenes/', scenePreviewImg, scenePlaceholder, sceneBadge);
             });
         })
-        .catch(() => { scenePlaceholder.textContent = 'No se encontró scenes-index.json'; });
+        .catch(() => { scenePlaceholder.textContent = 'No se encontró manifest-assets.json'; });
 }
 
 // ══════════════════════════════════════════════════════════════
 //   BANNERS PUBLICITARIOS
 // ══════════════════════════════════════════════════════════════
 function loadAds() {
-    fetch(chrome.runtime.getURL('assets/ads/ads-index.json'))
+    fetch(chrome.runtime.getURL('manifest-assets.json'))
         .then(r => r.json())
-        .then(files => {
+        .then(manifest => {
             chrome.storage.local.get(KEY_AD_SEL, result => {
                 const sel = result[KEY_AD_SEL] || null;
-                if (!files.length) { bannerPlaceholder.textContent = 'No hay banners en assets/ads/'; return; }
+                const adsObj = manifest.ads || {};
+                const categories = Object.keys(adsObj);
+
+                if (!categories.length || categories.every(c => !adsObj[c].length)) {
+                    bannerPlaceholder.textContent = 'No hay banners disponibles';
+                    return;
+                }
                 bannerPlaceholder.style.display = 'none';
-                files.forEach(f => addAssetItem(adList, f, chrome.runtime.getURL(`assets/ads/${f}`), sel, 'ad'));
-                updateAssetPreview(sel || files[0], 'assets/ads/', bannerPreviewImg, bannerPlaceholder, bannerBadge,
+
+                let firstFilename = null;
+                categories.forEach(cat => {
+                    const files = adsObj[cat];
+                    if (!files.length) return;
+
+                    const header = document.createElement('div');
+                    header.classList.add('asset-category-header');
+                    header.textContent = cat;
+                    adList.appendChild(header);
+
+                    files.forEach(f => {
+                        const filename = `${cat}/${f}`;
+                        if (!firstFilename) firstFilename = filename;
+                        const url = chrome.runtime.getURL(`assets/ads/${filename}`);
+                        addAssetItem(adList, filename, url, sel, 'ad');
+                    });
+                });
+
+                const previewFile = sel || firstFilename;
+                updateAssetPreview(previewFile, 'assets/ads/', bannerPreviewImg, bannerPlaceholder, bannerBadge,
                     sel ? `fijo: ${sel}` : 'aleatorio');
             });
         })
-        .catch(() => { bannerPlaceholder.textContent = 'No se encontró ads-index.json'; });
+        .catch(() => { bannerPlaceholder.textContent = 'No se encontró manifest-assets.json'; });
 }
 
 // ══════════════════════════════════════════════════════════════
 //   FONDO DE PANTALLA
 // ══════════════════════════════════════════════════════════════
 function loadBackgrounds() {
-    fetch(chrome.runtime.getURL('background/backgrounds-index.json'))
+    fetch(chrome.runtime.getURL('manifest-assets.json'))
         .then(r => r.json())
-        .then(files => {
+        .then(manifest => {
             chrome.storage.local.get(KEY_BG_SEL, result => {
                 const sel = result[KEY_BG_SEL] || null;
-                if (!files.length) { bgPlaceholder.textContent = 'No hay fondos en background/'; return; }
+                const bgsObj = manifest.backgrounds || {};
+                const categories = Object.keys(bgsObj);
+
+                if (!categories.length || categories.every(c => !bgsObj[c].length)) {
+                    bgPlaceholder.textContent = 'No hay fondos en background/';
+                    return;
+                }
                 bgPlaceholder.style.display = 'none';
-                files.forEach(f => addAssetItem(bgList, f, chrome.runtime.getURL(`background/${f}`), sel, 'bg'));
+
+                categories.forEach(cat => {
+                    const files = bgsObj[cat];
+                    if (!files.length) return;
+
+                    const header = document.createElement('div');
+                    header.classList.add('asset-category-header');
+                    header.textContent = cat;
+                    bgList.appendChild(header);
+
+                    files.forEach(f => {
+                        const filename = `${cat}/${f}`;
+                        const url = chrome.runtime.getURL(`background/${filename}`);
+                        addAssetItem(bgList, filename, url, sel, 'bg');
+                    });
+                });
+
                 updateAssetPreview(sel, 'background/', bgPreviewImg, bgPlaceholder, bgBadge);
             });
         })
-        .catch(() => { bgPlaceholder.textContent = 'No se encontró backgrounds-index.json'; });
+        .catch(() => { bgPlaceholder.textContent = 'No se encontró manifest-assets.json'; });
 }
 
 // Restaurar fondo predeterminado
@@ -448,7 +512,7 @@ function selectAd(filename) {
         if (current === filename) {
             document.querySelectorAll('#adList .image-item').forEach(el => el.classList.remove('active'));
             chrome.storage.local.set({ [KEY_AD_SEL]: null });
-            updateAssetPreview(filename, 'assets/ads/', bannerPreviewImg, bannerPlaceholder, bannerBadge, 'aleatorio');
+            updateAssetPreview(null, 'assets/ads/', bannerPreviewImg, bannerPlaceholder, bannerBadge, 'aleatorio');
         } else {
             document.querySelectorAll('#adList .image-item').forEach(el =>
                 el.classList.toggle('active', el.dataset.filename === filename)
@@ -506,12 +570,10 @@ function injectPrincipalBackground(imageUrl) {
     if (!el) { el = document.createElement('style'); el.id = 'wlm-principal-bg'; document.head.appendChild(el); }
 
     if (!imageUrl) {
-        // Sin URL → vaciar el override, icon-replacer.js retoma el control con su valor predeterminado
         el.textContent = '';
         return;
     }
 
-    // El fondo principal se aplica al ::before de .x1h3rtpe (barra lateral izquierda)
     el.textContent = `
         .x1h3rtpe::before {
             background: url('${imageUrl}') no-repeat !important;

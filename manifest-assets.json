@@ -1,0 +1,39 @@
+{
+  "scenes": {
+    "default": [
+      "default-scene.png",
+      "0001.png",
+      "0002.png",
+      "0003.png",
+      "0004.png",
+      "0005.png",
+      "0006.png",
+      "0007.png",
+      "0008.png",
+      "ButterflyPattern.png",
+      "CarbonFiber.png",
+      "DottieGreen.png",
+      "Graffiti.png",
+      "MesmerizingWhite.png",
+      "Morty.png",
+      "Robot.png",
+      "Silhouette.png",
+      "zune_01.png",
+      "zune_02.png",
+      "zune_03.png",
+      "zune_04.png",
+      "zune_05.png",
+      "zune_06.png"
+    ]
+  },
+  "ads": {
+    "default": [
+      "wlm-ori.png"
+    ]
+  },
+  "backgrounds": {
+    "default": [
+      "windows_7_2.jpg"
+    ]
+  }
+}

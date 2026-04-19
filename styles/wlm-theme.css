@@ -698,7 +698,7 @@ div.x78zum5.x6s0dn4.x1qughib.x1gg8mnh.x1y1aw1k.x1pi30zi.xwib8y2.x1swvt13.xm0mufa
 
 /* Barra busqueda seleccionada */
 .x1n2onr6.x11uqc5h.x9f619.x78zum5.x1okw0bk.xl2dz39.xexx8yu.x18d9i69.x1280gxy.x73uwhe.x1qhh985.x1sy0etr.x1phvje8.xcldk2z.x7a106z.x4tpdpg, .xa3a66u {
-    background: linear-gradient(var(--wlm-bg), transparent);  /* #e4e9eb */
+    background: linear-gradient(var(--wlm-search-bg), transparent);  /* #e4e9eb */
     padding-top: 7px;
     height: 55px;
 }
@@ -865,118 +865,137 @@ body.dark.color-refresh {
     color: #000;
 }
 
-/* ── Botones estilo Windows 7 ───────────────────────────────── */
-.html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1syfmzz.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xjbqb8w.xo1mcw5.xy0j11r.xg268so.x1b4bgnk.x1wjp2x.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x2lah0s.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xvtqlqk.xdx6fka.xeq5yr9,
-.html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xfn3atn.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x3oybdh.x6nhntm.x2lah0s.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xeq5yr9,
-.html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x1n2onr6.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xjbqb8w.x178xt8z.x1lun4ml.xso031l.xpilrb4.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.xnj1f2r.x2uibgs.xkveyfu.x12llq9.xo1mcw5.x1wjp2x.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x3oybdh.x6nhntm.x2lah0s.xeq5yr9.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5 {
-    border: 1px solid #F3F3F3;
-    box-shadow: 0 0 0 1px #707070;
-    border-radius: 3px;
-    background: linear-gradient(to bottom, #F2F2F2 0%, #EBEBEB 50%, #DDDDDD 51%, #CFCFCF 100%);
-    color: black;
-    text-decoration: none;
-    height: 23px;
-}
-
-.x140p0ai.x1gufx9m.x1s928wv.xhkezso.x1gmr53x.x1cpjm7i.x1fgarty.x1943h6x.x193iq5w.xeuugli.x13faqbe.x1vvkbs.x1lliihq.x1fj9vlw.x1pse0pq.x87ps6o.x1f6kntn.xjb2p0i.xfjzk2p.x8r4c90.x1ic7a3i.x12xpedu,
-.x140p0ai.x1gufx9m.x1s928wv.xhkezso.x1gmr53x.x1cpjm7i.x1fgarty.x1943h6x.x193iq5w.xeuugli.x13faqbe.x1vvkbs.x1lliihq.x1fj9vlw.xo1mcw5.x87ps6o.x1f6kntn.xjb2p0i.xfjzk2p.x8r4c90.x1ic7a3i.x12xpedu {
-    color: #000;
-    font: 9pt "Segoe UI","SegoeUI","Noto Sans",sans-serif;
-}
-
-.x9f619.x78zum5.x6s0dn4.xl56j7k.xpvyfi4.x2lah0s.x1c4vz4f.x1fns5xo.x1ba4aug.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x1pse0pq.xpcyujq.xfn3atn.x1ypdohk.x1m2oepg,
-.x78zum5.x6s0dn4.xl56j7k.xexx8yu.xyri2b.x18d9i69.x1c1uobl.x1f6kntn.xk50ysn.xtvhhri.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.xu306ak.x12s1jxh.xkdsq27.xwwtwea.x1gfkgh9.x1247r65.xng8ra.x1pse0pq.xfn3atn,
-.x78zum5.x6s0dn4.xl56j7k.x3x2bpi.xwvwv9b.xexx8yu.xyri2b.x18d9i69.x1c1uobl.x1f6kntn.xk50ysn.xtvhhri.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.xu306ak.x12s1jxh.xkdsq27.xwwtwea.x1gfkgh9.x1pse0pq.xfn3atn {
-    border: 1px solid #F3F3F3;
-    box-shadow: 0 0 0 1px #707070;
-    background: linear-gradient(to bottom, #F2F2F2 0%, #EBEBEB 50%, #DDDDDD 51%, #CFCFCF 100%);
-    font: normal 13px sans-serif;
-    color: black;
-    text-decoration: none;
-}
-
-.xh8yej3.x18qnofl {
-    background: linear-gradient(#f2f2f2 45%, #ebebeb 45%, #cfcfcf);
-    border: 1px solid #8e8f8f91;
-    border-radius: 3px;
-    box-shadow: inset 0 0 0 1px #fffc;
-    box-sizing: border-box;
-    color: #222;
-}
-
-/* Iconos de Comunidades */
+/* ── Iconos de Comunidades ───────────────────────────────────── */
 .xfn3atn { 
     background: linear-gradient(to bottom, var(--wlm-1), var(--wlm-2) 50%, var(--wlm-3) 50%, var(--wlm-4));
     border-color: var(--wlm-3);
 }
 
-/* Color de icono para enviar mensaje */
+/* ── Color de icono para enviar mensaje ───────────────────────────────────── */
 .x9f619.x78zum5.x6s0dn4.xl56j7k.xpvyfi4.x2lah0s.x1c4vz4f.x1fns5xo.x1ba4aug.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x1pse0pq.xpcyujq.xfn3atn.x1ypdohk.x1m2oepg .xxk0z11.xvy4d1p {
     color: #ffffffe8;
 }
 
-/* Hover botón OK estilo Windows 7 */
-.x1yxkqql:hover:after {
-    border: 1px solid #ECF7FD;
-    box-shadow: 0 0 0 1px #3C7FB1;
-    background: linear-gradient(to bottom, #EAF6FD 0%, #D9F0FC 50%, #BEE6FD 51%, #A7D9F5 100%);
-    font: normal 13px sans-serif;
-    color: black;
-    text-decoration: none;
+/* ── Popups ──────────────────────────────────────── */
+.x9f619.x78zum5.x1c4vz4f.x2lah0s.xdl72j9.xdt5ytf.xvue9z.x1xy6bms.x64bnmy.xx6bls6.x13jy36j.x16w0wmm.x6ikm8r.x10wlt62.x1xn7y0n.x1uxb8k9.x1vmbcc8.x16xm01d.xs2e80n {
+    background: linear-gradient(to bottom, var(--wlm-body), #fff, var(--wlm-body), var(--wlm-body));
+    box-shadow: inset 0 1px 0 rgba(11, 36, 49, .2);
+    border: 0.5px solid #000000ab;
+    border-radius: 10px;
 }
 
-/* active botón OK estilo Windows 7 */
-.html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xfn3atn.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x6nhntm.x2lah0s.xeq5yr9.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xfijbtm.xfenqrj.xgy0gl7.x19igvu.xfimr68 {
-    padding: 4px 25px;
-    border: 1px solid #73A7C4;
-    box-shadow: 0 0 0 1px #2C628B;
-    background: linear-gradient(to bottom, #E5F4FC 0%, #C4E5F6 50%, #98D1EF 51%, #68B3DB 100%);
-    font: normal 13px sans-serif;
-    color: black;
-    text-decoration: none;
-}
+/* ── INICIO: Botones estilo Windows 7 en popups ───────────────────────────────────── */
+    /* -- 1. Botones estilo Windows 7 (STANDARD BUTTON) - FONDO -- */
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1syfmzz.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xjbqb8w.xo1mcw5.xy0j11r.xg268so.x1b4bgnk.x1wjp2x.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x2lah0s.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xvtqlqk.xdx6fka.xeq5yr9,
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x1n2onr6.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xjbqb8w.x178xt8z.x1lun4ml.xso031l.xpilrb4.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.xnj1f2r.x2uibgs.xkveyfu.x12llq9.xo1mcw5.x1wjp2x.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x3oybdh.x6nhntm.x2lah0s.xeq5yr9.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5 {
+        border: 1px solid #F3F3F3;
+        box-shadow: 0 0 0 1px #707070;
+        border-radius: 3px;
+        background: linear-gradient(to bottom, #F2F2F2 0%, #EBEBEB 50%, #DDDDDD 51%, #CFCFCF 100%);
+        color: black;
+        text-decoration: none;
+        height: 23px;
+    }
+    
+    /* -- 1 Botones estilo Windows 7 (STANDARD BUTTON) - FONT -- */
+    .x140p0ai.x1gufx9m.x1s928wv.xhkezso.x1gmr53x.x1cpjm7i.x1fgarty.x1943h6x.x193iq5w.xeuugli.x13faqbe.x1vvkbs.x1lliihq.x1fj9vlw.x1pse0pq.x87ps6o.x1f6kntn.xjb2p0i.xfjzk2p.x8r4c90.x1ic7a3i.x12xpedu,
+    .x140p0ai.x1gufx9m.x1s928wv.xhkezso.x1gmr53x.x1cpjm7i.x1fgarty.x1943h6x.x193iq5w.xeuugli.x13faqbe.x1vvkbs.x1lliihq.x1fj9vlw.xo1mcw5.x87ps6o.x1f6kntn.xjb2p0i.xfjzk2p.x8r4c90.x1ic7a3i.x12xpedu {
+        color: #000;
+        font: 9pt "Segoe UI","SegoeUI","Noto Sans",sans-serif;
+    }
+    
+    /* -- 1 Botones estilo Windows 7 (STANDARD HOVER BUTTON) - Fondo -- */
 
-/* Hover botón enviar */
-.x9f619.x78zum5.x6s0dn4.xl56j7k.xpvyfi4.x2lah0s.x1c4vz4f.x1fns5xo.x1ba4aug.x14yjl9h.xudhj91.x18nykt9.xww2gxu.x1pse0pq.x8j4wrb.xfn3atn.x1ypdohk.x1m2oepg:hover,
-.x78zum5.x6s0dn4.xl56j7k.xexx8yu.xyri2b.x18d9i69.x1c1uobl.x1f6kntn.xk50ysn.xtvhhri.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.xu306ak.x12s1jxh.xkdsq27.xwwtwea.x1gfkgh9.x1247r65.xng8ra.x1pse0pq.xfn3atn:hover {
-    border: 1px solid #ECF7FD;
-    box-shadow: 0 0 0 1px #3C7FB1;
-    background: linear-gradient(to bottom, #EAF6FD 0%, #D9F0FC 50%, #BEE6FD 51%, #A7D9F5 100%);
-    font: normal 13px sans-serif;
-    color: black;
-    text-decoration: none;
-}
-
-/* Hover botón buscar, video, voz en contacto */
-.xh8yej3.x18qnofl:hover {
-    border: 0.5px solid #73a7c499;
-    box-shadow: 0 0 0 0.2px #2C628B;
-    background: linear-gradient(to bottom, #E5F4FC 0%, #C4E5F6 50%, #98D1EF 51%, #68B3DB 100%);
-}
-
-/* Hover botón descartar */
-.html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xfn3atn.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x6nhntm.x2lah0s.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xeq5yr9.xfijbtm.xfenqrj.xgy0gl7.x19igvu.x89bh2v{
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x1n2onr6.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xjbqb8w.x178xt8z.x1lun4ml.xso031l.xpilrb4.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.xnj1f2r.x2uibgs.xkveyfu.x12llq9.xo1mcw5.x1wjp2x.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x3oybdh.x6nhntm.x2lah0s.xeq5yr9.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5:hover,
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1syfmzz.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xjbqb8w.xo1mcw5.xy0j11r.xg268so.x1b4bgnk.x1wjp2x.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x2lah0s.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xvtqlqk.xdx6fka.xeq5yr9:hover{
         border: 1px solid #ECF7FD;
         box-shadow: 0 0 0 1px #3C7FB1;
         background: linear-gradient(to bottom, #EAF6FD 0%, #D9F0FC 50%, #BEE6FD 51%, #A7D9F5 100%);
         font: normal 13px sans-serif;
         color: black;
         text-decoration: none;
-        border-radius: 3px;
         height: 23px;
+        border-radius: 3px;
     }
 
-/* Botón iluminado */
-.x889kno.x1a8lsjc.x13jy36j.x64bnmy.x1n2onr6.x1rg5ohu.xk50ysn.x1f6kntn.xyesn5m.x1rl75mt.x19t5iym.xz7t8uv.x13xmedi.x178xt8z.x1lun4ml.xso031l.xpilrb4.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x1v8p93f.x1o3jo1z.x16stqrj.xv5lvn5.x1hl8ikr.xfagghw.x9dyr19.x9lcvmn.x1fk166o.x1qd5adx.x17dtpw8.xcjl5na.x1k3x3db.xuxw1ft.xv52azi {
-    padding: 4px 25px;
-    border: 1.5px solid #46cef3;
-    box-shadow: 0 0 0 1px #2C628B;
-    border-radius: 3px;
-    background: linear-gradient(to bottom, #F2F2F2 0%, #EBEBEB 50%, #DDDDDD 51%, #CFCFCF 100%);
-    font: normal 13px sans-serif;
-    color: black;
-    text-decoration: none;
-}
+    /* -- 1 Botones estilo Windows 7 (STANDARD HOVER BUTTON) - Eliminar hover antiguo -- */
+    
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x1n2onr6.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xjbqb8w.x178xt8z.x1lun4ml.xso031l.xpilrb4.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.xnj1f2r.x2uibgs.xkveyfu.x12llq9.xo1mcw5.x1wjp2x.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x3oybdh.x6nhntm.x2lah0s.xeq5yr9.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5:hover:after,
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1syfmzz.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xjbqb8w.xo1mcw5.xy0j11r.xg268so.x1b4bgnk.x1wjp2x.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x2lah0s.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xvtqlqk.xdx6fka.xeq5yr9:hover:after{
+        background: none;
+        border: none;
+        box-shadow: none;
+    }  
+    
+    /* -- 1 Botones estilo Windows 7 (STANDARD ACTIVE BUTTON) - Fondo -- */
+    
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x1n2onr6.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xjbqb8w.x178xt8z.x1lun4ml.xso031l.xpilrb4.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.xnj1f2r.x2uibgs.xkveyfu.x12llq9.xo1mcw5.x1wjp2x.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x6nhntm.x2lah0s.xeq5yr9.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xfijbtm.xfenqrj.xgy0gl7.x19igvu.xfimr68{
+        border-radius: 2px;
+        height: 23px;
+        border: 1px solid #ECF7FD;
+        box-shadow: inset 1px 1px 0 #0003,inset -1px 1px 0 #0001;
+        background-image: linear-gradient(#eaf6fd 45%,#bee6fd 0,#a7d9f5);
+        border-color: #5586a3;
+        font: normal 13px sans-serif;
+        color: black;
+        text-decoration: none;
+    }
+    
+    /* -- 2. Botones estilo Windows 7 (DEFAULT BUTTON) - FONDO -- */
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xk0ssx3.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x3oybdh.x6nhntm.x2lah0s.xeq5yr9.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5, 
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xfn3atn.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x3oybdh.x6nhntm.x2lah0s.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xeq5yr9 {
+        height: 23px;
+        border-radius: 3px;
+        border: 1px solid #ECF7FD;
+        box-shadow: 0 0 0 1px #3c7fb1;
+        background-image: linear-gradient(#eaf6fd 45%,#bee6fd 0,#a7d9f5);
+        border-color: #5586a3;
+        font: normal 13px sans-serif;
+        color: black;
+        text-decoration: none;
+    }
+    
+    /* -- 2. Botones estilo Windows 7 (DEFAULT HOVER BUTTON) - FONDO -- */
+    
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xk0ssx3.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x6nhntm.x2lah0s.xeq5yr9.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xfijbtm.xfenqrj.xgy0gl7.x19igvu.x89bh2v, 
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xk0ssx3.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x6nhntm.x2lah0s.xeq5yr9.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xfijbtm.xfenqrj.xgy0gl7.x19igvu.x89bh2v:hover,
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xfn3atn.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x6nhntm.x2lah0s.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xeq5yr9.xfijbtm.xfenqrj.xgy0gl7.x19igvu.x89bh2v:hover{
+        border: 1px solid #ECF7FD;
+        box-shadow: 0 0 0 1px #3C7FB1;
+        background: linear-gradient(to bottom, #EAF6FD 0%, #D9F0FC 50%, #BEE6FD 51%, #A7D9F5 100%);
+        font: normal 13px sans-serif;
+        color: black;
+        text-decoration: none;
+        height: 23px;
+        border-radius: 3px;
+    }
+    
+    /* -- 2 Botones estilo Windows 7 (DEFAULT HOVER BUTTON) - Eliminar hover antiguo -- */
+    
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xk0ssx3.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x6nhntm.x2lah0s.xeq5yr9.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xfijbtm.xfenqrj.xgy0gl7.x19igvu.x89bh2v:hover:after,
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xfn3atn.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x6nhntm.x2lah0s.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xeq5yr9.xfijbtm.xfenqrj.xgy0gl7.x19igvu.x89bh2v:hover:after{
+        background: none;
+        border: none;
+        box-shadow: none;
+    }  
+    
+    /* -- 2 Botones estilo Windows 7 (DEFAULT ACTIVE BUTTON) - Fondo -- */
+    
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xk0ssx3.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x6nhntm.x2lah0s.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xeq5yr9.xfijbtm.xfenqrj.xgy0gl7.x19igvu.xfimr68, 
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xfn3atn.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x6nhntm.x2lah0s.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xeq5yr9.xfijbtm.xfenqrj.xgy0gl7.x19igvu.x89bh2v, 
+    .html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1n2onr6.x1ejq31n.x18oe1m7.x1sy0etr.xstzfhl.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.xfn3atn.x1pse0pq.x1yxkqql.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x6nhntm.x2lah0s.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xyo0t3i.xb0esv5.xeq5yr9.xfijbtm.xfenqrj.xgy0gl7.x19igvu.xfimr68{
+        border-radius: 2px;
+        height: 23px;
+        border: 1px solid #ECF7FD;
+        box-shadow: inset 1px 1px 0 #0003,inset -1px 1px 0 #0001;
+        background-image: linear-gradient(#eaf6fd 45%,#bee6fd 0,#a7d9f5);
+        border-color: #5586a3;
+        font: normal 13px sans-serif;
+        color: black;
+        text-decoration: none;
+    }
+
+/* ── FIN: Botones estilo Windows 7 en popups ───────────────────────────────────── */
 
 /* ── Fotos de perfil cuadradas ───────────────────────────────── */
 .x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p { border-radius: 2%; }
@@ -1373,7 +1392,8 @@ div.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.
 }
 
 /* ── Cuadro menú reaccionar a un mensaje ────────────────────── */
-.x78zum5.x1q0g3np.x6s0dn4.xuqqiot.x1lkg3h2.x17mbzc4.xcouhex.x1tiyuxx.x181vq82.xa0aww2.x1j8ymqv.x1n2onr6.x16w0wmm.xvktan5.x1ekq09l.xlmuga0.x54tcbp.xlzwp1d.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x178xt8z.x1lun4ml.xso031l.xpilrb4,
+.x78zum5.x1q0g3np.x6s0dn4.xuqqiot.x1lkg3h2.x17mbzc4.xcouhex.x1tiyuxx.x181vq82.xa0aww2.x1j8ymqv.x1n2onr6.xjbqb8w.x1cpjm7i.x1hmns74.x1682cnc.x1y3wzot.x1rmj1tg.xszcg87.x1xkdbmx.x1gli9xx.x13u126r.xfd7154.x1izptsd.xbfqeeh.x1wr5goe.x71iooo.xkhwigo.x4vc7s6.xnvurfn.x1v3rft4.x1opv7go.x1rovbrg.xm4vf9w.x1ggjbpq.xu20p9z.x1t6kmxa.xy5mcqj.x1ox0wv9.x4vjblf.xmksmyx.x9bpk4s.x11jsb0w.xihg8qz.x7awuxw,
+.x78zum5.x1q0g3np.x6s0dn4.xuqqiot.x1lkg3h2.x17mbzc4.xcouhex.x1tiyuxx.x181vq82.xa0aww2.x1j8ymqv.x1n2onr6.xjbqb8w.x1cpjm7i.x1hmns74.x1682cnc.x1y3wzot.x1rmj1tg.xszcg87.x1xkdbmx.x1gli9xx.x13u126r.xfd7154.x1izptsd.xbfqeeh.x1wr5goe.x71iooo.xkhwigo.x4vc7s6.xnvurfn.x1v3rft4.x1opv7go.x1rovbrg.xm4vf9w.x1ggjbpq.xu20p9z.x1t6kmxa.xy5mcqj.x1ox0wv9.x4vjblf.xmksmyx.x9bpk4s.x11jsb0w.xihg8qz.xfqct0e,
 .x13vifvy.xtijo5x.x1ey2m1c.x1o0tod.x1n2onr6 {
     background: linear-gradient(to bottom, #c6def9, #e9f6fd 70%, #e9f6fd 30%, #dff0fe);
     border-left: 1.5px solid #eff5fe;
@@ -1457,6 +1477,10 @@ div.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.
     left: 2px;
     position: absolute;
     top: -2px;
+}
+
+.x1n2onr6.x1ja2u2z.x9f619.xmix8c7.x1xp8n7a.x2lah0s.xbrszos.xea3l6g.x18isctg.x2q3nzr.xamhcws.x1alpsbp.xlxy82.xyumdvf.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x6s0dn4.xl56j7k.x3nfvp2.xlze6vy.x47fsot.x1rrvw3c.x18djku1.xfn3atn svg{
+    opacity: 0;
 }
 
 .x1n2onr6._ak9y .x1pse0pq { color: #ffffff00; }
@@ -1596,13 +1620,11 @@ div.xfect85 { color: #686868; }
     box-sizing: border-box;
 }
 
-
-
 /* ── Hover para micrófono ───────────────────────────────────── */
 .x9f619.x78zum5.x6s0dn4.xl56j7k.xpvyfi4.x2lah0s.x1c4vz4f.x1fns5xo.x1ba4aug.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x1pse0pq.xpcyujq .x1yxkqql:hover:after{
     background: linear-gradient(#ffffffa3 1%, #fff6 50%, #dbdbdb66 1%, #fff0);
     border: 0.8px solid;
-    border-radius: 4px;
+    border-radius: 200px;
     box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
     border-color: #5b5b5b9c;
 }
@@ -1782,7 +1804,8 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
 
 /* ── Separador dentro del cuerpo y eliminacion de fade extraño en imagenes ────────────────────────────── */
 .xsm26vf {
-    background: linear-gradient(to bottom, #b8c7da00, #fff0 50%, #b8c7da7a 10%, #e0eaf400);
+    background: linear-gradient(to bottom, #b8c7da00, #fff0 50%, var(--wlm-bg) 10%, #e0eaf400);
+    opacity: 0.5;
 }
 
 .xsm26vf.x10l6tqk.x1ey2m1c.xoxg7ud.x9f619.x78zum5.xdt5ytf.x6s0dn4.x1nhvcw1.xh8yej3.xpyat2d.x6ikm8r.x10wlt62.x13fuv20.x178xt8z.xx42vgk.xg01cxk.xqu7myx{
@@ -2004,7 +2027,9 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
 }
 
 /* ── Barra superior e inferior cuando se ve archivos multimedia ──────────────────────────────────────── */
-.x1c7u0tx {
+.x78zum5.x1c7u0tx.x1co6499.x1q0q8m5.xkveyfu, 
+.x78zum5.x1c7u0tx.xdt5ytf.x6s0dn4.x2b8uid.x178xt8z.x13fuv20.xx42vgk.x1p57kb1.xvpt6g3, 
+.xlqzeqv.xz9dl7a.x1q3ajuy.xsag5q8.xbmws1g.x178xt8z.x13fuv20.xx42vgk {
     border-width: 1px;
     background: linear-gradient(to bottom, var(--wlm-body-4), var(--wlm-body-2) 50%, var(--wlm-body-2) 50%, var(--wlm-body-3));
     /*
@@ -2013,6 +2038,12 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
     */
     box-shadow: inset 0 0 0 1px #ffffff80, 0 0 16px var(--wlm-search-bg);
     outline: solid 2px var(--wlm-body-3);
+}
+
+/* Fondo cuando se ve archivos multimedia */
+.x1c7u0tx {
+    background: linear-gradient(to bottom, var(--wlm-body), #fff, var(--wlm-body), var(--wlm-body));
+    box-shadow: inset 0 1px 0 rgba(11, 36, 49, .2);
 }
 
 /* ── Error en rojo al enviar un mensaje ──────────────────────────────────────── */
@@ -2107,8 +2138,6 @@ progress._ak0k::-webkit-progress-value {
     box-shadow: inset 0 0.5px 2px 1px rgba(255, 255, 255, .57), inset 0 -0.1em 0.1em #cdcdcd33, 0 0 3px 0.4px #0000004a;
     border-color: #5b5b5b9c;
 }
-
-
 
 /* ── Apartado de Archivos Multimedia (General) ──────────────────────────────────────── */
 /* BOTTOM */
@@ -2276,8 +2305,9 @@ progress._ak0k::-webkit-progress-value {
     color: #000;
 }
 
-/* Fondo de chat (previsualización en info de mensaje) */
-.x1n2onr6.x1q80dvb.x15406qy.x1d8287x.xwji4o3.xw8ag78.x10e4vud.xdylf7x.x5s3kwk.x131uzpj.x1cnzs8.xx6bls6.xiv7p99.xyi3aci.xwf5gio.x1p453bz.x1suzm8a{
+/* Fondo de chat (previsualización en info de mensaje e info de mensaje) */
+.x1n2onr6.x1q80dvb.x15406qy.x1d8287x.xwji4o3.xw8ag78.x10e4vud.xdylf7x.x5s3kwk.x131uzpj.x1cnzs8.xx6bls6.xiv7p99.xyi3aci.xwf5gio.x1p453bz.x1suzm8a,
+.x8xanyk.x6ikm8r.x1odjw0f.x1phvje8.xcldk2z.xdqhqc9 .x1q80dvb {
     background: linear-gradient(180deg, var(--wlm-1) 0%, white 35%, white 67%, var(--wlm-bg) 100%);
 }
 
@@ -2314,6 +2344,11 @@ progress._ak0k::-webkit-progress-value {
 /* ── Mensajes destacados fondo de barra de busqueda corregido ──────────────────────────────────────── */
 .x1n2onr6.x1c4vz4f.x2lah0s.xdl72j9.x1280gxy.xat24cr {
     background: linear-gradient(to bottom, var(--wlm-body), #fff, var(--wlm-body), var(--wlm-body));
+}
+
+/* eliminar fondo en pestaña de Editar perfil */
+.x1n2onr6.xupqr0c.x78zum5.x1r8uery.x1iyjqo2.xdt5ytf.x6ikm8r.x1odjw0f.x1hc1fzr .x1n2onr6.x1c4vz4f.x2lah0s.xdl72j9.x1280gxy.xat24cr{
+    background: #ffffff00;
 }
 
 .xdeyfa3:hover {
@@ -2372,3 +2407,25 @@ progress._ak0k::-webkit-progress-value {
     box-shadow: inset 0 0 0 1px #ffffff80, 0 0 16px #000000b8;
     border-radius: 10px;
 }
+
+/* ── Eliminar margin y fondo en icono de play de video (play.png) ──────────────────────────────────────── */
+.xwklpps {
+    margin-inline-start: 0;
+}
+
+.x6s0dn4.x191g5wg.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p.x17t9dm2.x78zum5.x10wjd1d.xl56j7k.x1n2onr6.x1pju0fl{
+    box-shadow: none;
+    background: none;
+    border: none;
+}
+
+/* ── Boton para editar en pestaña "Editar perfil" ──────────────────────────────────────── */
+.html-button.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.x18d9i69.x1n2onr6.x1so62im.x1ja2u2z.x1ypdohk.x1s928wv.x1j6awrg.x4eaejv.x1wsn0xg.x1r0yslu.x2q1x1w.xapdjt.xr6f91l.x5rv0tg.x1akc3lz.xikp0eg.x1xl5mkn.x1mfml39.x1l5mzlr.xgmdoj8.x1f1wgk5.x1x3ic1u.x178xt8z.x1lun4ml.xso031l.xpilrb4.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.xnj1f2r.x2uibgs.xkveyfu.x12llq9.xo1mcw5.x1wjp2x.xtnn1bt.x9v5kkp.xmw7ebm.xrdum7p.x3oybdh.x6nhntm.x2lah0s.xeq5yr9.x1lliihq.xk8lq53.x9f619.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.x1vqgdyp.xdx6fka.xvtqlqk.x1280gxy{
+    background: linear-gradient(var(--wlm-body-2), #fff, var(--wlm-bg));
+}
+
+/* ── Bordes para radio button ──────────────────────────────────────── */
+.x1n2onr6.x1ja2u2z.x9f619.xisnujt.xt4ypqs.xt8t1vi.x1xc408v.x129tdwq.x15urzxu.xamhcws.x1alpsbp.xlxy82.xyumdvf.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x78zum5.x6s0dn4.xl56j7k.xlze6vy.x47fsot.x1rrvw3c.x18djku1{
+    border-color: var(--wlm-3);
+}
+

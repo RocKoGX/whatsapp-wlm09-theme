@@ -27,6 +27,8 @@ const IconReplacer = (() => {
         placeholderGroup:     chrome.runtime.getURL('assets/icons/frames/placeholder-pfp-group.jpg'),
         smile:                chrome.runtime.getURL('assets/icons/emoticons/Smile.png'),
         volMuted:             chrome.runtime.getURL('assets/icons/chat/vol_muted.png'),
+        download:             chrome.runtime.getURL('assets/icons/chat/Download.png'),
+        play:                 chrome.runtime.getURL('assets/icons/chat/Play.png'),
         chat:                 chrome.runtime.getURL('assets/icons/W7Icons/Chat.png'),
         group:                chrome.runtime.getURL('assets/icons/W7Icons/Group.png'),
         status:               chrome.runtime.getURL('assets/icons/W7Icons/Status.png'),
@@ -36,7 +38,7 @@ const IconReplacer = (() => {
         maximize:             chrome.runtime.getURL('assets/icons/Titlebar/Maximize.png'),
         close:                chrome.runtime.getURL('assets/icons/Titlebar/Close.png'),
 
-        principalBackground:  chrome.runtime.getURL('background/windows_7_2.jpg'),
+        principalBackground:  chrome.runtime.getURL('background/default/windows_7_2.jpg'),
     };
 
     // ─── Utilidad: crear y reemplazar SVG por imagen ─────────────────────────
@@ -167,6 +169,18 @@ const IconReplacer = (() => {
         });
     }
 
+    function replaceDownloadIcon() {
+        document.querySelectorAll('span[data-icon="audio-download"] svg').forEach(svg => {
+            svgToImg(svg, ICONS.download, 'Download', '24px', '24px');
+        });
+    }
+
+    function replacePlayIcon() {
+        document.querySelectorAll('span[data-icon="media-play"] svg').forEach(svg => {
+            svgToImg(svg, ICONS.play, 'Play', '40px', '40px');
+        });
+    }
+
     function replaceChatFilledIcon() {
         document.querySelectorAll(`
             span[data-icon="chat-filled-refreshed"] svg,
@@ -179,7 +193,8 @@ const IconReplacer = (() => {
     function replaceCommunityIcon() {
         document.querySelectorAll(`
             span[data-icon="community-refreshed-32"] svg,
-            span[data-icon="community-refreshed-filled-32"] svg
+            span[data-icon="community-refreshed-filled-32"] svg,
+            span[data-icon="community-filled-refreshed"] svg
         `).forEach(svg => {
             svgToImg(svg, ICONS.group, 'Community', '24px', '24px', {
                 paddingLeft: '5px'
@@ -199,7 +214,7 @@ const IconReplacer = (() => {
     function replaceNewsletterIcon() {
 
         // caso 1: con data-icon
-        document.querySelectorAll('span[data-icon="newsletter-tab"] svg')
+        document.querySelectorAll('span[data-icon="newsletter-tab"] svg, span[data-icon="newsletter"] svg')
         .forEach(svg => {
             svgToImg(svg, ICONS.channels, 'Newsletter', '24px', '24px');
         });
@@ -704,6 +719,8 @@ function injectWLMTitleBar2() {
         insertTypingIcon();
         replaceSmileyIcon();
         replaceMutedIcon();
+        replaceDownloadIcon();
+        replacePlayIcon();
 
         replaceChatFilledIcon();
         replaceCommunityIcon();

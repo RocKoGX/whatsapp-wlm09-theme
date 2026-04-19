@@ -6,8 +6,7 @@
 const AdBanner = (() => {
 
     const BANNER_SELECTOR = '.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.xl56j7k.x1q0g3np.x6s0dn4.x2kejxg.x3nfvp2';
-    const INDEX_URL       = chrome.runtime.getURL('assets/ads/ads-index.json');
-    const ROTATION_MS     = 20_000; // 20 segundos
+    const ROTATION_MS     = 90_000; // 90 segundos
 
     let adUrls      = [];
     let isApplied   = false;
@@ -16,18 +15,17 @@ const AdBanner = (() => {
 
     // ─── Cargar índice de archivos ────────────────────────────
     function loadAds() {
-        fetch(INDEX_URL)
+        fetch(chrome.runtime.getURL('manifest-assets.json'))
             .then(r => r.json())
-            .then(files => {
-                adUrls = files.map(f => chrome.runtime.getURL(`assets/ads/${f}`));
-
-                // Si solo hay un banner no tiene sentido rotar,
-                // pero el timer igual corre sin problema (siempre muestra el mismo)
+            .then(manifest => {
+                const adsObj = manifest.ads || {};
+                // Aplanar todas las subcarpetas en una lista de URLs
+                adUrls = Object.entries(adsObj).flatMap(([cat, files]) =>
+                    files.map(f => chrome.runtime.getURL(`assets/ads/${cat}/${f}`))
+                );
                 if (adUrls.length > 0) startRotation();
             })
-            .catch(() => {
-                adUrls = [];
-            });
+            .catch(() => { adUrls = []; });
     }
 
     // ─── Elegir índice aleatorio distinto al actual ───────────
