@@ -22,6 +22,7 @@ const IconReplacer = (() => {
         largeFrameActive:     chrome.runtime.getURL('assets/icons/frames/LargeFrameActive.png'),
         xlFrameOffline:       chrome.runtime.getURL('assets/icons/frames/XLFrameOffline.png'),
         wlmLogo:              chrome.runtime.getURL('assets/icons/chat/wlm_logo.png'),
+        dmLogo:               chrome.runtime.getURL('assets/icons/chat/DirectMessage.ico'),
         defaultScene:         chrome.runtime.getURL('assets/icons/chat/default-scene.png'),
         placeholderContact:   chrome.runtime.getURL('assets/icons/frames/placeholder-pfp-contact.png'),
         placeholderGroup:     chrome.runtime.getURL('assets/icons/frames/placeholder-pfp-group.jpg'),
@@ -407,7 +408,7 @@ const IconReplacer = (() => {
                 content: 'Windows Live Messenger (Chat)';
                 align-items: center;
                 
-                background-image: url('${ICONS.wlmLogo}'), linear-gradient(135deg,#fff5 70px,transparent 100px),
+                background-image: url('${ICONS.dmLogo}'), linear-gradient(135deg,#fff5 70px,transparent 100px),
                                 linear-gradient(225deg,#fff5 70px,transparent 100px),
                                 linear-gradient(54deg,#0002 0 4%,#6661 6% 6%,#0002 8% 10%,#0002 15% 16%,#aaa1 17% 18%,#0002 23% 24%,#bbb2 25% 26%,#0002 31% 33%,#0002 34% 34.5%,#bbb2 36% 40%,#0002 41% 41.5%,#bbb2 44% 45%,#bbb2 46% 47%,#0002 48% 49%,#0002 50% 50.5%,#0002 56% 56.5%,#bbb2 57% 63%,#0002 67% 69%,#bbb2 69.5% 70%,#0002 73.5% 74%,#bbb2 74.5% 79%,#0002 80% 84%,#aaa2 85% 86%,#0002 87%,#bbb1 90%);
                 background-repeat:
@@ -417,7 +418,7 @@ const IconReplacer = (() => {
                     no-repeat;
 
                 background-position:
-                    5px center,
+                    8px center,
                     0 0,
                     0 0,
                     left center;
