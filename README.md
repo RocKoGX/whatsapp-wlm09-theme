@@ -1,8 +1,16 @@
-# WhatsApp WLM 2009 Theme
 
-A complete visual theme that transforms the frontend of WhatsApp Web into **Windows Live Messenger 2009**.
+<h1 align="center">
+  <br>
+<img src="https://rocko24.neocities.org/images/headers/whatsapp-wlm-banner.png" alt="WhatsApp Live Messenger 09">
+  <br>
+WhatsApp Live Messenger by <a href="https://github.com/RocKoGX">RocKo24</a>
 
----
+</h1>
+
+A complete visual theme that transforms the frontend of WhatsApp Web into Windows Live Messenger 2009.
+
+<img src="https://raw.githubusercontent.com/RocKoGX/whatsapp-wlm09-theme/refs/heads/main/images/Preview-1.png" width="100%"/>
+<img src="https://raw.githubusercontent.com/RocKoGX/whatsapp-wlm09-theme/refs/heads/main/images/Preview-2.png" width="100%"/>
 
 ## Features
 
@@ -12,8 +20,6 @@ A complete visual theme that transforms the frontend of WhatsApp Web into **Wind
 * Replacement of some WhatsApp icons
 * Draggable Windows 7-style windows with functional maximize button
 * Editable username in the header
-
----
 
 ## Customization (Wallpapers & Scenes)
 
@@ -32,7 +38,7 @@ You can add your own custom wallpapers and chat scenes:
 3. Register the image in:
 
    ```
-   assets/scenes/scenes-index.json
+   manifest-assets.json
    ```
 
 ---
@@ -50,7 +56,7 @@ You can add your own custom wallpapers and chat scenes:
 3. Register the image in:
 
    ```
-   background/backgrounds-index.json
+   manifest-assets.json
    ```
 
 ---
@@ -84,12 +90,16 @@ If you don’t add the image name to the `.json` files, it will not appear in th
 
 ---
 
+<span color="red">⚠ **Before installing, we recommend that you first select the light theme and a background without WhatsApp Doodles in Settings > Chats > Display.**  </span>
+
+---
+
 ## Important Notes
 
 * This extension modifies the WhatsApp Web DOM (React), so some features may break if WhatsApp updates its interface.
 * This project is not affiliated with or endorsed by WhatsApp or Meta.
-
----
+* Windows Live Messenger visual style belongs to Microsoft Corporation
+* This project is not affiliated with Meta, WhatsApp, or Microsoft
 
 ## Contributing
 
