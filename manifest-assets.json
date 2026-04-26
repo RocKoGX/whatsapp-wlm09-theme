@@ -26,14 +26,14 @@
       "zune_06.png"
     ]
   },
-  "ads": {
-    "default": [
-      "wlm-ori.png"
-    ]
-  },
   "backgrounds": {
     "default": [
       "windows_7_2.jpg"
+    ]
+  },
+  "ads": {
+    "default": [
+      "wlm-ori.png"
     ]
   }
 }
