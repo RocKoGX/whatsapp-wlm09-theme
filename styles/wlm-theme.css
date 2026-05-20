@@ -61,7 +61,7 @@
 }
 
 /* ── Fondo de bienvenida y estados ──────────────────────────── */
-.x6egj2d, ._al_c {
+.x6egj2d, ._al_c, section[data-testid="intro-panel"] {
     background: linear-gradient(180deg, var(--wlm-pale) 0%, white 35%, white 67%, var(--wlm-bg) 100%);
     /*margin: 6px;
     margin-top: 0;
@@ -665,7 +665,8 @@ div.x78zum5.x6s0dn4.x1qughib.x1gg8mnh.x1y1aw1k.x1pi30zi.xwib8y2.x1swvt13.xm0mufa
 }
 
 /* ── Input para mensaje ─────────────────────────────────────── */
-._ak1r .xk7ee7b {
+.x9f619.x12lumcd.x1qrby5j.xeuugli.x6prxxf.x1fcty0u.x1fc57z9.xk7ee7b.x1716072.x1ygal6x.x89wmna.x1rbbhm9.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1a2a7pz.x13w7htt.x78zum5.x123j3cw.x1gabggj.xs9asl8.xaso8d8.x1diwwjn.xbmvrgn.xod5an3.x1wiwyrm.xt7dq6l.x17m9png.x91sizk.x1vva9xg.x1jfkl46.x6s0dn4.xkfubxc.x1p0mfcu,
+.x9f619.x12lumcd.x1qrby5j.xeuugli.x6prxxf.x1fcty0u.x1fc57z9.xk7ee7b.x1716072.x1ygal6x.x89wmna.x1rbbhm9.x13fuv20.x18b5jzi.x1q0q8m5.x1t7ytsu.x178xt8z.x1lun4ml.xso031l.xpilrb4.x1a2a7pz.x13w7htt.x78zum5.x123j3cw.x1gabggj.xs9asl8.xaso8d8.x1diwwjn.xbmvrgn.xod5an3.x1wiwyrm.xt7dq6l.x1vva9xg.x1jfkl46.x6s0dn4.x1bczwif.x17un8ov.xz16w4b.x1m0b2ad {
     background: linear-gradient(180deg, var(--wlm-input-bg) 0%, white 35%, white 67%, var(--wlm-input-bg) 100%);
     border-radius: 10px;
     border: 1px solid var(--wlm-input-br);
@@ -1058,7 +1059,7 @@ background: linear-gradient(to bottom, var(--wlm-1), var(--wlm-2) 50%, var(--wlm
 }
 
 /* ── Fecha de mensaje, mensajes anteriores, emojis ───────────── */
-.x1n2onr6.x9f619.x1rg5ohu.x1okw0bk.x193iq5w.x1tiyuxx.x1nbhmlj.x1iw51ew.xde1mab.xhslqc4.x2b8uid.x1k43qru.xrxyp3c.xv0oops.x1isl5vh.xn8zj9a.x148chh3,
+.x1n2onr6.x9f619.x1rg5ohu.x1okw0bk.x193iq5w.x1tiyuxx.x1nbhmlj.x1iw51ew.xde1mab.xhslqc4.x2b8uid.x1iyt1tq.xrxyp3c.xv0oops.x1isl5vh.xn8zj9a.x1d403nt,
 .x1bvqhpb.x6f6fmj.x1b9z3ur.x9f619.x1rg5ohu.x1okw0bk.x193iq5w.x123j3cw.xpdmqnj.x10b6aqq.x1g0dm76.x13a8xbf.xdod15v.x2b8uid.x1obq294.x5a5i1n.xde0f50.x15x8krk {
     border-width: 1px;
     background: linear-gradient(to bottom, #ffffff40, #fff6 50%, #ffffff40 50%, #2020201a);
@@ -2078,7 +2079,7 @@ div.x10l6tqk.x1ey2m1c.x17qophe.x9f619.xh8yej3.x1bmpntp.x18u7nx2.x4py3vj { backgr
 }
 
 /* ── Barra de progreso al iniciar sesion ──────────────────────────────────────── */
-progress._ak0k {
+progress {
     background: radial-gradient(circle at 0 50%, #0000001f 10px, transparent 30px), radial-gradient(circle at 100% 50%, #0000001f 10px, transparent 30px), linear-gradient(180deg, #f3f3f3af, #fcfcfcaf 3px, #dbdbdbaf 6px, #cacacaaf 0, #d5d5d5af), #ddd;
     border: 1px solid #8e8f8f;
     border-radius: 3px;
@@ -2093,7 +2094,7 @@ progress._ak0k {
 }*/
 
 /* Quitar estilo nativo */
-progress._ak0k {
+progress {
     appearance: none;
     -webkit-appearance: none;
     width: 100%;
@@ -2101,12 +2102,12 @@ progress._ak0k {
 }
 
 /* Fondo */
-progress._ak0k::-webkit-progress-bar {
+progress::-webkit-progress-bar {
     background: #ddd;
 }
 
 /* PROGRESO  */
-progress._ak0k::-webkit-progress-value {
+progress::-webkit-progress-value {
     background-color: #0bd82c;
     background-image: linear-gradient(180deg,#f3f3f3af,#fcfcfcaf 3px,#dbdbdbaf 6px,transparent 0),radial-gradient(circle at 0 50%,#0000002f 10px,transparent 30px),radial-gradient(circle at 100% 50%,#0000002f 10px,transparent 30px),linear-gradient(180deg,transparent 65%,#ffffff55),linear-gradient(180deg,transparent 6px,#cacaca33 0,#d5d5d533) !important;
     box-shadow: inset 0 0 0 1px #ffffff1f;

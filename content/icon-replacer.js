@@ -71,7 +71,7 @@ const IconReplacer = (() => {
     function replaceProfileLogo() {
         // Ocultar el SVG animado de WhatsApp
         const svgContainer = document.querySelector(
-            '.x1rjt51p.x16w0wmm.x1g83kfv.x3qq2k7.x2x8art.x1qor8vf.xl7twdi.xyo0t3i.xvg22vi.xb0esv5.x98l61r.xviac27.x1ua1l7f.xlese2p.x1j3ira4.xrdqr27.x9f619.xg7h5cd.x78zum5.xdt5ytf.x6s0dn4'
+            '.x1rjt51p.x1280gxy.x1g83kfv.x3qq2k7.x2x8art.x1qor8vf.xl7twdi.xyo0t3i.xvg22vi.xb0esv5.x98l61r.xviac27.x1ua1l7f.xlese2p.x1j3ira4.xrdqr27.x9f619.xg7h5cd.x78zum5.xdt5ytf.x6s0dn4'
         );
 
         if (svgContainer && !svgContainer.classList.contains('wlm-replaced')) {
@@ -183,15 +183,25 @@ const IconReplacer = (() => {
     }
 
     function replaceChatFilledIcon() {
+        /*
         document.querySelectorAll(`
             span[data-icon="chat-filled-refreshed"] svg,
             span[data-icon="chat-refreshed"] svg
         `).forEach(svg => {
             svgToImg(svg, ICONS.chat, 'Chat', '24px', '24px');
         });
+        */
+        document.querySelectorAll('svg').forEach(svg => {
+            const title = svg.querySelector('title');
+
+            if (title && (title.textContent === 'wds-ic-chat-filled' || title.textContent === 'wds-ic-chat')) {
+                svgToImg(svg, ICONS.group, 'Community', '24px', '24px');
+            }
+        });
     }
 
     function replaceCommunityIcon() {
+        /*
         document.querySelectorAll(`
             span[data-icon="community-refreshed-32"] svg,
             span[data-icon="community-refreshed-filled-32"] svg,
@@ -200,6 +210,14 @@ const IconReplacer = (() => {
             svgToImg(svg, ICONS.group, 'Community', '24px', '24px', {
                 paddingLeft: '5px'
             });
+        });
+        */
+        document.querySelectorAll('svg').forEach(svg => {
+            const title = svg.querySelector('title');
+
+            if (title && (title.textContent === 'wds-ic-communities' || title.textContent === 'wds-ic-communities-filled')) {
+                svgToImg(svg, ICONS.group, 'Community', '24px', '24px');
+            }
         });
     }
 
@@ -293,7 +311,7 @@ const IconReplacer = (() => {
         for (const label of labels) {
             const btn = document.querySelector(`button[aria-label="${label}"]`);
             if (btn) {
-                return btn.closest('div.x1c4vz4f');
+                return btn.closest('.html-span.xdj266r.x14z9mp.xat24cr.x1lziwak.xexx8yu.xyri2b.x18d9i69.x1c1uobl.x1hl2dhg.x16tdsg8.x1vvkbs.x4k7w5x.x1h91t0o.x1h9r5lt.x1jfb8zj.xv2umb2.x1beo9mf.xaigb6o.x12ejxvf.x3igimt.xarpa2k.xedcshv.x1lytzrv.x1t2pt76.x7ja8zs.x1qrby5j');
             }
         }
 
@@ -324,10 +342,11 @@ const IconReplacer = (() => {
 
         container.style.transform = 'scale(1.7)';
         container.style.transformOrigin = 'left center';
-        container.style.top = '7px';
+  
         container.style.left = '-7px';
 
         logo.replaceWith(container);
+        container.classList.add('wlm-profile-container');
 
         // Nickname
         if (!container.querySelector('.wlm-userinfo')) {
@@ -387,13 +406,13 @@ const IconReplacer = (() => {
 
     function keepAvatarFrame() {
         const observer = new MutationObserver(() => {
-
             const container = getProfileContainer();
 
-            if (container && !container.classList.contains('wlm-avatar-frame')) {
+            if (container) {
                 container.classList.add('wlm-avatar-frame');
+                container.classList.add('wlm-profile-container');
+                container.style.overflow = 'visible';
             }
-
         });
 
         observer.observe(document.body, {
@@ -558,7 +577,6 @@ function injectWLMTitleBar2() {
             .wlm-avatar-frame::after {
                 content: '';
                 position: absolute;
-                top: -2px;
                 left: -3px;
                 width: 45px;
                 height: 46px;
@@ -574,9 +592,8 @@ function injectWLMTitleBar2() {
 
         injectCSS('wlm-username-style', `
             .wlm-avatar-frame {
-                display: flex !important;
                 align-items: center !important;
-                gap: 12px;
+                gap: 6px;
             }
 
             /* contenedor vertical */
@@ -584,7 +601,6 @@ function injectWLMTitleBar2() {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                margin-left: 32px;
             }
 
             /* nombre */
